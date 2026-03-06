@@ -1,5 +1,15 @@
 # Stuyvesant Freshman caucus 25-26 website
 
+## Stack
+
+- React
+- TailwindCSS
+- Next.js App router
+- Postcss
+- Motion
+- Simple Icons
+- Lucide Icons
+
 ## Development
 
 ### Building
@@ -8,18 +18,6 @@
 2. Run build command `pnpm build`
 
 - To run dev server, run `pnpm dev`
-
-### Starting a new file
-
-- Use `<main>`
-- Use classes
-  - flex
-  - min-h-screen
-  - w-full
-  - px-4
-  - py-8
-  - sm:px-6
-  - lg:px-8
 
 ### TODO
 
