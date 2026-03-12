@@ -3,15 +3,11 @@
 import { FloatingCard } from "@/components/FloatingCard";
 import { Stagger } from "@/components/TransitionProvider";
 import { flavors } from "@/lib/theme";
+import copy from "@/util/copy";
 import { ArrowUpRight, Copy, Mail, MailPlus, MapPin } from "lucide-react";
-import mapboxgl from "mapbox-gl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { siInstagram } from "simple-icons/icons";
-
-import "mapbox-gl/dist/mapbox-gl.css";
-
-import copy from "@/util/copy";
 
 const socials = [
 	{
@@ -46,12 +42,12 @@ const contacts = [
 	},
 ];
 
-export default function Connect() {
+export default function Contact() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
 			<div className="text-center">
 				<Stagger>
-					<h1>Connect</h1>
+					<h1>Contact</h1>
 				</Stagger>
 				<Stagger>
 					<p className="mt-3 sm:mt-4">Get in touch with our cabinet!</p>
@@ -87,20 +83,6 @@ export default function Connect() {
 							))}
 						</div>
 					</FloatingCard>
-				</Stagger>
-
-				<Stagger>
-					<div className="relative aspect-4/3 w-full overflow-hidden rounded-xl border border-ctp-overlay1/40 bg-ctp-surface0/40 shadow-[0px_10px_30px_rgba(0,0,0,0.2)]">
-						<Image
-							src=""
-							alt="Team photo"
-							fill
-							priority
-							className="object-cover"
-							sizes="(min-width: 1024px) 50vw, 100vw"
-						/>
-						<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-transparent via-transparent to-ctp-crust/40" />
-					</div>
 				</Stagger>
 			</section>
 

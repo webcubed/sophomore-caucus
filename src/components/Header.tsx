@@ -4,14 +4,11 @@ import "@/styles/globals.css";
 
 import type { Flavor } from "@/lib/theme";
 import { useTheme } from "@/hooks/use-theme";
+import { pages } from "@/lib/constants";
 import { flavors } from "@/lib/theme";
-import { Check, Menu } from "lucide-react";
+import { Check, Icon, Menu, Trash } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-
-const pages: Array<{ href: string; label: string }> = [
-	{ href: "/connect", label: "Connect" },
-];
 
 export default function Header() {
 	const { flavor, setFlavor, mounted } = useTheme();
@@ -122,32 +119,21 @@ export default function Header() {
 
 	const currentFlavor = flavors.find((entry) => entry.value === flavor);
 
-	const wordmarkStart = currentFlavor ? currentFlavor.swatch[1] : "#ffffff";
-	const wordmarkEnd = currentFlavor ? currentFlavor.swatch[2] : "#ffffff";
-
 	return (
 		<>
 			<header
 				ref={headerRef}
-				className={`fixed top-3 left-0 right-0 z-40 mx-4 sm:mx-auto max-w-4xl rounded-lg border border-ctp-overlay1/60 bg-linear-to-br from-ctp-surface0/75 via-ctp-base/65 to-ctp-surface0/55 px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-2xl shadow-[0px_18px_38px_rgba(0,0,0,0.35),0px_0px_24px_rgba(148,163,184,0.16)] ring-1 ring-ctp-overlay1/35 transition duration-200 ${hidden ? "-translate-y-[150%] opacity-0" : "translate-y-0 opacity-100"}`}
+				className={`fixed top-3 left-0 right-0 z-40 mx-4 sm:mx-auto max-w-7xl rounded-lg border border-ctp-overlay1/60 bg-linear-to-br from-ctp-surface0/75 via-ctp-base/65 to-ctp-surface0/55 px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-2xl shadow-[0px_18px_38px_rgba(0,0,0,0.35),0px_0px_24px_rgba(148,163,184,0.16)] ring-1 ring-ctp-overlay1/35 transition duration-200 ${hidden ? "-translate-y-[150%] opacity-0" : "translate-y-0 opacity-100"}`}
 			>
-				{/* Logo */}
 				<div className="flex flex-wrap items-center justify-between gap-3 sm:gap-8">
 					<div className="shrink-0">
 						<a
 							href="/"
 							className="inline-flex items-center gap-3 text-ctp-text hover:text-ctp-lavender transition-colors duration-200"
 						>
-							<img
-								src="/logo.png"
-								alt="Freshman Caucus logo"
-								className="h-10 w-10 select-none rounded-full"
-								loading="lazy"
-								decoding="async"
-							/>
-							<span className="font-semibold text-base sm:inline">
+							<h1 className="font-semibold text-base sm:inline colorful">
 								Freshman Caucus
-							</span>
+							</h1>
 						</a>
 					</div>
 					{/* Navigation */}
@@ -158,12 +144,14 @@ export default function Header() {
 						>
 							{pages.map((page) => {
 								const isActive = pathname === page.href;
+								const PageIcon = page.icon;
 								return (
 									<a
 										key={page.href}
 										href={page.href}
-										className={`rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-ctp-lavender/60 cursor-pointer ${isActive ? "text-ctp-lavender bg-ctp-surface1/70 backdrop-blur-md border border-ctp-overlay1/40 shadow-[0px_8px_16px_rgba(0,0,0,0.2)] ring-1 ring-ctp-lavender/20" : "text-ctp-text hover:bg-ctp-surface1/60 hover:text-ctp-lavender hover:ring-1 hover:ring-ctp-lavender/30 hover:shadow-[0px_8px_16px_rgba(202,166,247,0.1)]"}`}
+										className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-ctp-lavender/60 cursor-pointer ${isActive ? "text-ctp-lavender bg-ctp-surface1/70 backdrop-blur-md border border-ctp-overlay1/40 shadow-[0px_8px_16px_rgba(0,0,0,0.2)] ring-1 ring-ctp-lavender/20" : "text-ctp-text hover:bg-ctp-surface1/60 hover:text-ctp-lavender hover:ring-1 hover:ring-ctp-lavender/30 hover:shadow-[0px_8px_16px_rgba(202,166,247,0.1)]"}`}
 									>
+										<PageIcon className="w-4 h-4" />
 										{page.label}
 									</a>
 								);
@@ -186,7 +174,7 @@ export default function Header() {
 							<Menu className="h-4 w-4" aria-hidden />
 						</button>
 						{/* TEMPORARILY DISABLED */}
-						<div className="relative hidden">
+						<div className="relative ">
 							<button
 								type="button"
 								disabled={!mounted}

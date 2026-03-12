@@ -1,5 +1,5 @@
-import { Card } from "@/components/Card";
 import { Stagger } from "@/components/TransitionProvider";
+import { Card } from "@/components/ui/Card";
 
 export default function Home() {
 	return (
@@ -14,7 +14,7 @@ export default function Home() {
 					</p>
 				</Stagger>
 			</div>
-			<div className="bg-ctp-mantle flex w-full h-max rounded-lg px-8 sm:px-16 py-12">
+			<div className="bg-ctp-mantle/60 border border-ctp-overlay1/60 from-ctp-surface0/75 via-ctp-base/65 to-ctp-surface0/55 flex w-full h-max rounded-lg backdrop-blur-2xl px-8 sm:px-16 py-12">
 				<Card>ni hao</Card>
 			</div>
 		</main>
