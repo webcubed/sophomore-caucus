@@ -2,11 +2,8 @@
 
 import { FloatingCard } from "@/components/FloatingCard";
 import { Stagger } from "@/components/TransitionProvider";
-import { flavors } from "@/lib/theme";
 import copy from "@/util/copy";
-import { ArrowUpRight, Copy, Mail, MailPlus, MapPin } from "lucide-react";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, Copy, Mail, MailPlus } from "lucide-react";
 import { siInstagram } from "simple-icons/icons";
 
 const socials = [

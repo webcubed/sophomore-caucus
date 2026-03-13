@@ -1,5 +1,5 @@
 import type { Roles } from "@/lib/members";
-import { roleColors } from "@/lib/members";
+import { roleMeta } from "@/lib/members";
 import React from "react";
 
 import "@/styles/globals.css";
@@ -20,9 +20,9 @@ export const Profile: React.FC<ProfileProps> = ({
 }) => {
 	return (
 		<div className="flex flex-col rounded-lg border border-ctp-overlay0 p-8 bg-ctp-mantle/20 hover:-translate-y-1.5 hover:bg-ctp-mantle/10 transition-all cursor-pointer backdrop-blur-2xl">
-			{imagePath ?? <img src={imagePath} />}
+			{imagePath ? <img src={imagePath} alt={name} /> : null}
 			<h2>{name}</h2>
-			<span className={`text-ctp-${roleColors[role]}`}>{role}</span>
+			<span className={`text-ctp-${roleMeta[role].color}`}>{role}</span>
 			<p>{description}</p>
 		</div>
 	);
