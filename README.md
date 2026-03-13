@@ -21,7 +21,7 @@
 
 ### TODO
 
-- [x] Rewrite to be for fr. cauc
+- [ ] Explore alternatives to writing out classes for each role
 - [ ] Rewrite header
 - [ ] Rewrite card
 - [ ] Unite gradient background in css class, use radia gradients
