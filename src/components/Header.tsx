@@ -173,7 +173,6 @@ export default function Header() {
 						>
 							<Menu className="h-4 w-4" aria-hidden />
 						</button>
-						{/* TEMPORARILY DISABLED */}
 						<div className="relative ">
 							<button
 								type="button"
@@ -280,12 +279,14 @@ export default function Header() {
 						<div className="flex flex-col gap-2">
 							{pages.map((page) => {
 								const isActive = pathname === page.href;
+								const PageIcon = page.icon;
 								return (
 									<a
 										key={page.href}
 										href={page.href}
-										className={`rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-ctp-lavender/60 cursor-pointer ${isActive ? "text-ctp-lavender bg-ctp-surface1/70 backdrop-blur-md border border-ctp-overlay1/40 shadow-[0px_8px_16px_rgba(0,0,0,0.2)] ring-1 ring-ctp-lavender/20" : "text-ctp-text hover:bg-ctp-surface1/60 hover:text-ctp-lavender hover:ring-1 hover:ring-ctp-lavender/30 hover:shadow-[0px_8px_16px_rgba(202,166,247,0.1)]"}`}
+										className={`flex gap-1 items-center rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-ctp-lavender/60 cursor-pointer ${isActive ? "text-ctp-lavender bg-ctp-surface1/70 backdrop-blur-md border border-ctp-overlay1/40 shadow-[0px_8px_16px_rgba(0,0,0,0.2)] ring-1 ring-ctp-lavender/20" : "text-ctp-text hover:bg-ctp-surface1/60 hover:text-ctp-lavender hover:ring-1 hover:ring-ctp-lavender/30 hover:shadow-[0px_8px_16px_rgba(202,166,247,0.1)]"}`}
 									>
+										<PageIcon className="w-4 h-4" />
 										{page.label}
 									</a>
 								);
