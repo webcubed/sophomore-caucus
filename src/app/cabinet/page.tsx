@@ -13,6 +13,9 @@ export default function About() {
 	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
 
 	useEffect(() => {
+		const isMobile = globalThis.matchMedia("(max-width: 1023px)").matches;
+		const rootMargin = isMobile ? "-112px 0px -70% 0px" : "-96px 0px -70% 0px";
+
 		const observer = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
@@ -21,7 +24,7 @@ export default function About() {
 				}
 			},
 			{
-				rootMargin: "-96px 0px -70% 0px",
+				rootMargin,
 				threshold: 0,
 			}
 		);
@@ -129,7 +132,10 @@ export default function About() {
 					{roles.map((role) => (
 						<div key={role} className="space-y-4">
 							<div className="border-b border-ctp-overlay0/50 pb-3">
-								<h2 id={role} className={`scroll-mt-28 ${roleMeta[role].text}`}>
+								<h2
+									id={role}
+									className={`scroll-mt-36 sm:scroll-mt-32 lg:scroll-mt-28 ${roleMeta[role].text}`}
+								>
 									{roleMeta[role].label}
 								</h2>
 							</div>
