@@ -5,6 +5,10 @@ import { memberLevelMeta, members, roleMeta, roleStyles } from "@/lib/members";
 import { useEffect, useState } from "react";
 import { Profile } from "./components/Profile";
 
+function sortByName<T extends { name: string }>(list: T[]): T[] {
+	return [...list].sort((a, b) => a.name.localeCompare(b.name));
+}
+
 export default function About() {
 	const [activeRole, setActiveRole] = useState<
 		keyof typeof roleMeta | undefined
@@ -156,10 +160,10 @@ export default function About() {
 						const membersByLevel = memberLevels
 							.map((level) => ({
 								level,
-								members: roleMembers[level] ?? [],
+								members: sortByName(roleMembers[level] ?? []),
 							}))
 							.filter((group) => group.members.length > 0);
-						const ungroupedMembers = roleMembers.ungrouped ?? [];
+						const ungroupedMembers = sortByName(roleMembers.ungrouped ?? []);
 
 						return (
 							<div key={role} className="space-y-4">
@@ -175,30 +179,16 @@ export default function About() {
 									</h2>
 								</div>
 								{membersByLevel.map((group) => {
-									const memberCount = group.members.length;
-									const roleGridClass =
-										memberCount === 1
-											? "sm:grid-cols-1 xl:grid-cols-1"
-											: memberCount === 2
-												? "sm:grid-cols-2 xl:grid-cols-2"
-												: "sm:grid-cols-2 xl:grid-cols-3";
-
 									return (
 										<div key={group.level} className="space-y-3">
 											<h3 className="text-sm font-semibold uppercase tracking-wide text-ctp-subtext0">
 												{memberLevelMeta[group.level].label}
 											</h3>
-											<div
-												className={`my-4 grid grid-cols-1 gap-5 ${roleGridClass}`}
-											>
+											<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
 												{group.members.map((member) => (
 													<div
 														key={`${member.name}-${role}-${group.level}`}
-														className={
-															memberCount === 1
-																? "mx-auto h-full w-full max-w-lg"
-																: "h-full"
-														}
+														className="h-full"
 													>
 														<Stagger>
 															<Profile
@@ -217,23 +207,11 @@ export default function About() {
 								})}
 								{ungroupedMembers.length > 0 ? (
 									<div className="space-y-3">
-										<div
-											className={`my-4 grid grid-cols-1 gap-5 ${
-												ungroupedMembers.length === 1
-													? "sm:grid-cols-1 xl:grid-cols-1"
-													: ungroupedMembers.length === 2
-														? "sm:grid-cols-2 xl:grid-cols-2"
-														: "sm:grid-cols-2 xl:grid-cols-3"
-											}`}
-										>
+										<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
 											{ungroupedMembers.map((member) => (
 												<div
 													key={`${member.name}-${role}-ungrouped`}
-													className={
-														ungroupedMembers.length === 1
-															? "mx-auto h-full w-full max-w-lg"
-															: "h-full"
-													}
+													className="h-full"
 												>
 													<Stagger>
 														<Profile

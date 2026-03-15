@@ -19,29 +19,29 @@ export const roleMeta = {
 		label: "Chief of Staff",
 		icon: Briefcase,
 	},
-	"it-director": {
-		label: "IT Director",
-		icon: CloudCog,
-	},
 	"media-graphics-director": {
-		label: "Media & Graphics Director",
+		label: "Media & Graphics",
 		icon: Palette,
 	},
-	"externals-outreach-director": {
-		label: "Externals/Outreach Director",
-		icon: Megaphone,
-	},
 	"finance-director": {
-		label: "Finance Director",
+		label: "Finance",
 		icon: BadgeDollarSign,
 	},
 	"events-director": {
-		label: "Events Director",
+		label: "Events",
 		icon: CalendarDays,
 	},
 	"internals-director": {
-		label: "Internals Director",
+		label: "Internals",
 		icon: Users,
+	},
+	"externals-outreach-director": {
+		label: "Externals/Outreach",
+		icon: Megaphone,
+	},
+	"it-director": {
+		label: "I.T.",
+		icon: CloudCog,
 	},
 } as const;
 
@@ -69,26 +69,12 @@ export const roleStyles: Record<
 		hoverText: "hover:text-ctp-lavender",
 		border: "border-ctp-lavender",
 	},
-	"it-director": {
-		bg: "bg-ctp-blue/20",
-		text: "text-ctp-blue",
-		hoverBg: "hover:bg-ctp-blue/20",
-		hoverText: "hover:text-ctp-blue",
-		border: "border-ctp-blue",
-	},
 	"media-graphics-director": {
 		bg: "bg-ctp-mauve/20",
 		text: "text-ctp-mauve",
 		hoverBg: "hover:bg-ctp-mauve/20",
 		hoverText: "hover:text-ctp-mauve",
 		border: "border-ctp-mauve",
-	},
-	"externals-outreach-director": {
-		bg: "bg-ctp-green/20",
-		text: "text-ctp-green",
-		hoverBg: "hover:bg-ctp-green/20",
-		hoverText: "hover:text-ctp-green",
-		border: "border-ctp-green",
 	},
 	"finance-director": {
 		bg: "bg-ctp-yellow/20",
@@ -110,6 +96,20 @@ export const roleStyles: Record<
 		hoverBg: "hover:bg-ctp-teal/20",
 		hoverText: "hover:text-ctp-teal",
 		border: "border-ctp-teal",
+	},
+	"externals-outreach-director": {
+		bg: "bg-ctp-green/20",
+		text: "text-ctp-green",
+		hoverBg: "hover:bg-ctp-green/20",
+		hoverText: "hover:text-ctp-green",
+		border: "border-ctp-green",
+	},
+	"it-director": {
+		bg: "bg-ctp-blue/20",
+		text: "text-ctp-blue",
+		hoverBg: "hover:bg-ctp-blue/20",
+		hoverText: "hover:text-ctp-blue",
+		border: "border-ctp-blue",
 	},
 };
 
@@ -146,67 +146,37 @@ export type RoleMembers = Partial<Record<MemberLevel, MemberProfile[]>> & {
 
 export const members: Record<Roles, RoleMembers> = {
 	"caucus-president": {
-		ungrouped: [{ name: "Julius Caesar" }, { name: "Cleopatra" }],
+		ungrouped: [{ name: "Ella Lee" }, { name: "Richard Lin" }],
 	},
 	"chief-of-staff": {
-		director: [{ name: "Marie Curie" }],
-		"assistant-director": [{ name: "Aristotle" }],
-		member: [{ name: "Amelia Earhart" }, { name: "Saladin" }],
-	},
-	"it-director": {
-		director: [{ name: "Ada Lovelace" }],
-		"assistant-director": [{ name: "Galileo Galilei" }],
-		member: [
-			{ name: "Frida Kahlo" },
-			{ name: "Harriet Tubman" },
-			{ name: "Marco Polo" },
-		],
+		director: [{ name: "Olivia Zhou" }, { name: "Thomas Vichaidith" }],
 	},
 	"media-graphics-director": {
-		director: [{ name: "Napoleon Bonaparte" }],
-		"assistant-director": [{ name: "Charles Darwin" }],
-		member: [
-			{ name: "Nikola Tesla" },
-			{ name: "Abraham Lincoln" },
-			{ name: "Ferdinand Magellan" },
+		director: [
+			{ name: "Harper Chen" },
+			{ name: "Kathy Zhang" },
+			{ name: "Violet Randall" },
+			{ name: "Ethan Li" },
 		],
-	},
-	"externals-outreach-director": {
-		director: [{ name: "Joan of Arc" }],
-		"assistant-director": [{ name: "Genghis Khan" }],
-		member: [
-			{ name: "Ludwig van Beethoven" },
-			{ name: "George Washington" },
-			{ name: "Zheng He" },
-		],
+		"assistant-director": [{ name: "Riley Chan" }, { name: "Claire Jiang" }],
 	},
 	"finance-director": {
-		director: [{ name: "Leonardo da Vinci" }],
-		"assistant-director": [
-			{
-				name: "Sun Tzu",
-				image:
-					"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZcmBHOX_JBejsj1nKY8nkwHaIe%3Fpid%3DApi&f=1&ipt=eacc5c869d557f1f837b996b06658aa2a08e3c1b9f396921563f20437890717d&ipo=images",
-			},
-		],
-		member: [
-			{ name: "Wolfgang Amadeus Mozart" },
-			{ name: "Queen Victoria" },
-			{ name: "Akbar the Great" },
-		],
+		director: [{ name: "Sici Ma" }, { name: "Allen Chen" }],
+		"assistant-director": [{ name: "Celine Park" }],
 	},
 	"events-director": {
-		director: [{ name: "Isaac Newton" }],
-		"assistant-director": [{ name: "Socrates" }],
-		member: [
-			{ name: "Vincent van Gogh" },
-			{ name: "Catherine the Great" },
-			{ name: "Hammurabi" },
-		],
+		director: [{ name: "Theresa Boabach" }, { name: "Sophie Yeh" }],
+		"assistant-director": [{ name: "Alexa Yuan" }],
 	},
 	"internals-director": {
-		director: [{ name: "Albert Einstein" }],
-		"assistant-director": [{ name: "Plato" }],
-		member: [{ name: "William Shakespeare" }, { name: "Mansa Musa" }],
+		director: [{ name: "Pearl Lin" }, { name: "Stephen Ha" }],
+		"assistant-director": [{ name: "Zhiyue Chen" }],
+	},
+	"externals-outreach-director": {
+		director: [{ name: "Calista Loo" }, { name: "Emily Lei Du" }],
+		"assistant-director": [{ name: "Linda Zheng" }],
+	},
+	"it-director": {
+		director: [{ name: "Makayla Kong-Kho" }, { name: "Nathan Lai" }],
 	},
 };
