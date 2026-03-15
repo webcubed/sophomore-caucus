@@ -36,11 +36,6 @@ type gridItem = heroCard | spacerItem;
 
 const heroCards: gridItem[] = [
 	{
-		spacer: true,
-		height: 1,
-		width: 1,
-	},
-	{
 		title: "Announcements",
 		description: "Latest updates",
 		height: 1,
@@ -56,20 +51,13 @@ const heroCards: gridItem[] = [
 		icon: CalendarClock,
 		href: "/cabinet",
 	},
+
 	{
-		title: "Class Notes",
-		description: "Shared docs",
-		height: 1,
-		width: 1,
-		icon: BookOpen,
-		href: "/cabinet",
-	},
-	{
-		title: "Feedback",
-		description: "Tell us anything",
+		title: "Meet our cabinet",
+		description: "Who we are",
 		height: 2,
-		width: 1,
-		icon: MessageSquare,
+		width: 3,
+		icon: ShelvingUnit,
 		href: "/cabinet",
 	},
 	{
@@ -81,19 +69,11 @@ const heroCards: gridItem[] = [
 		href: "/cabinet",
 	},
 	{
-		title: "Community",
-		description: "Find your people",
-		height: 1,
-		width: 1,
-		icon: Users,
-		href: "/cabinet",
-	},
-	{
-		title: "Meet our cabinet",
-		description: "Who we are",
+		title: "Feedback",
+		description: "Tell us anything",
 		height: 2,
-		width: 3,
-		icon: ShelvingUnit,
+		width: 1,
+		icon: MessageSquare,
 		href: "/cabinet",
 	},
 	{
@@ -110,15 +90,15 @@ const heroCards: gridItem[] = [
 		height: 1,
 		width: 2,
 		icon: Toolbox,
-		href: "/cabinet",
+		href: "/resources",
 	},
 	{
-		title: "Social",
-		description: "Outside class",
+		title: "Contact",
+		description: "Our socials",
 		height: 1,
 		width: 1,
 		icon: Users,
-		href: "/cabinet",
+		href: "/contact",
 	},
 	// Example spacer (disabled): reserve an empty 1x1 slot by uncommenting.
 	// { spacer: true, height: 1, width: 1 },
