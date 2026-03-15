@@ -205,7 +205,7 @@ export default function About() {
 																name={member.name}
 																role={role}
 																level={group.level}
-																imagePath={member.imagePath}
+																image={member.image}
 																description={member.description}
 															/>
 														</Stagger>
@@ -239,7 +239,7 @@ export default function About() {
 														<Profile
 															name={member.name}
 															role={role}
-															imagePath={member.imagePath}
+															image={member.image}
 															description={member.description}
 														/>
 													</Stagger>

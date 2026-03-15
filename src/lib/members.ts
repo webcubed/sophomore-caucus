@@ -137,7 +137,7 @@ export type MemberLevel = keyof typeof memberLevelMeta;
 export type MemberProfile = {
 	name: string;
 	description?: string;
-	imagePath?: string;
+	image?: string;
 };
 
 export type RoleMembers = Partial<Record<MemberLevel, MemberProfile[]>> & {
@@ -185,7 +185,7 @@ export const members: Record<Roles, RoleMembers> = {
 		"assistant-director": [
 			{
 				name: "Sun Tzu",
-				imagePath:
+				image:
 					"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZcmBHOX_JBejsj1nKY8nkwHaIe%3Fpid%3DApi&f=1&ipt=eacc5c869d557f1f837b996b06658aa2a08e3c1b9f396921563f20437890717d&ipo=images",
 			},
 		],
