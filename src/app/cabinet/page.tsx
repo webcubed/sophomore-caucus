@@ -149,6 +149,16 @@ export default function About() {
 				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-ctp-overlay0/70 bg-ctp-crust/40 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.16)] backdrop-blur-2xl sm:p-6 lg:p-8">
 					{roles.map((role) => {
 						const RoleIcon = roleMeta[role].icon;
+						const roleMembers = members.filter(
+							(member) => member.role === role
+						);
+						const roleMemberCount = roleMembers.length;
+						const roleGridClass =
+							roleMemberCount === 1
+								? "sm:grid-cols-1 xl:grid-cols-1"
+								: roleMemberCount === 2
+									? "sm:grid-cols-2 xl:grid-cols-2"
+									: "sm:grid-cols-2 xl:grid-cols-3";
 
 						return (
 							<div key={role} className="space-y-4">
@@ -163,20 +173,26 @@ export default function About() {
 										</span>
 									</h2>
 								</div>
-								<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 *:h-full">
-									{members.map(
-										(member) =>
-											member.role === role && (
-												<Stagger key={`${member.name}-${member.role}`}>
-													<Profile
-														name={member.name}
-														role={member.role}
-														imagePath={member.imagePath}
-														description={member.description}
-													/>
-												</Stagger>
-											)
-									)}
+								<div className={`my-4 grid grid-cols-1 gap-5 ${roleGridClass}`}>
+									{roleMembers.map((member) => (
+										<div
+											key={`${member.name}-${member.role}`}
+											className={
+												roleMemberCount === 1
+													? "mx-auto h-full w-full max-w-lg"
+													: "h-full"
+											}
+										>
+											<Stagger>
+												<Profile
+													name={member.name}
+													role={member.role}
+													imagePath={member.imagePath}
+													description={member.description}
+												/>
+											</Stagger>
+										</div>
+									))}
 								</div>
 							</div>
 						);

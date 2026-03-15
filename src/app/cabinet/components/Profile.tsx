@@ -1,5 +1,5 @@
 import type { Roles } from "@/lib/members";
-import { roleMeta } from "@/lib/members";
+import { roleMeta, roleStyles } from "@/lib/members";
 import React from "react";
 
 import "@/styles/globals.css";
@@ -46,7 +46,7 @@ export const Profile: React.FC<ProfileProps> = ({
 			<div className="flex flex-1 flex-col gap-3 p-5">
 				<h2 className="text-xl leading-tight">{name}</h2>
 				<span
-					className={`inline-flex w-fit rounded-full border px-2.5 py-1 text-xs font-medium ${roleMeta[role].text} ${roleMeta[role].bg} ${roleMeta[role].border}`}
+					className={`inline-flex w-fit rounded-full border px-2.5 py-1 text-xs font-medium ${roleStyles[role].text} ${roleStyles[role].bg} ${roleStyles[role].border}`}
 				>
 					{roleMeta[role].label}
 				</span>
