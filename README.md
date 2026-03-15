@@ -21,12 +21,11 @@
 
 ### TODO
 
-- [ ] Explore alternatives to writing out classes for each role
+- [ ] Emails, feedback form, socials go in contact page
+- [ ] Make announcements/news page
 - [ ] Rewrite header
 - [ ] Rewrite card
 - [ ] Unite gradient background in css class, use radia gradients
-- [ ] Investigate mobile layout
 - [ ] Invesigate implementation of theme switching
   - Automatic or + user choice?
-- [ ] Establish more components
 - [ ] Reduced-motion support (TransitionProvider)

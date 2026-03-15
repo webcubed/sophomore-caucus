@@ -1,10 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import {
-	MessageSquare,
-	MessagesSquare,
-	ShelvingUnit,
-	Toolbox,
-} from "lucide-react";
+import { MessagesSquare, ShelvingUnit, Toolbox } from "lucide-react";
 
 export const pages: Array<{ href: string; label: string; icon: LucideIcon }> = [
 	{ href: "/contact", label: "Contact", icon: MessagesSquare },

@@ -8,12 +8,12 @@ import {
 	HandHeart,
 	Megaphone,
 	MessageSquare,
+	MessagesSquare,
 	Newspaper,
 	Orbit,
 	ShelvingUnit,
 	Sparkles,
 	Toolbox,
-	Users,
 } from "lucide-react";
 
 type heroCard = {
@@ -62,7 +62,7 @@ const heroCards: gridItem[] = [
 	},
 	{
 		title: "News",
-		description: "What we're doing",
+		description: "What we've been up to",
 		height: 1,
 		width: 2,
 		icon: Newspaper,
@@ -97,7 +97,7 @@ const heroCards: gridItem[] = [
 		description: "Our socials",
 		height: 1,
 		width: 1,
-		icon: Users,
+		icon: MessagesSquare,
 		href: "/contact",
 	},
 	// Example spacer (disabled): reserve an empty 1x1 slot by uncommenting.
