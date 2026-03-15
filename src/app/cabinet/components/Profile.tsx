@@ -1,5 +1,5 @@
-import type { Roles } from "@/lib/members";
-import { roleMeta, roleStyles } from "@/lib/members";
+import type { MemberLevel, Roles } from "@/lib/members";
+import { memberLevelMeta, roleMeta, roleStyles } from "@/lib/members";
 import React from "react";
 
 import "@/styles/globals.css";
@@ -7,14 +7,16 @@ import "@/styles/globals.css";
 type ProfileProps = {
 	name: string;
 	role: Roles;
+	level?: MemberLevel;
 	imagePath?: string;
-	description: string;
+	description?: string;
 };
 
 // Headshot on top, info on bottom including role in bold/accent color kinda like an egg
 export const Profile: React.FC<ProfileProps> = ({
 	name,
 	role,
+	level,
 	imagePath,
 	description,
 }) => {
@@ -45,14 +47,23 @@ export const Profile: React.FC<ProfileProps> = ({
 			)}
 			<div className="flex flex-1 flex-col gap-3 p-5">
 				<h2 className="text-xl leading-tight">{name}</h2>
-				<span
-					className={`inline-flex w-fit rounded-full border px-2.5 py-1 text-xs font-medium ${roleStyles[role].text} ${roleStyles[role].bg} ${roleStyles[role].border}`}
-				>
-					{roleMeta[role].label}
-				</span>
-				<p className="text-sm leading-relaxed text-ctp-subtext0 sm:text-base">
-					{description}
-				</p>
+				<div className="flex flex-wrap items-center gap-2">
+					<span
+						className={`inline-flex w-fit rounded-full border px-2.5 py-1 text-xs font-medium ${roleStyles[role].text} ${roleStyles[role].bg} ${roleStyles[role].border}`}
+					>
+						{roleMeta[role].label}
+					</span>
+					{level ? (
+						<span className="inline-flex w-fit rounded-full border border-ctp-overlay1 bg-ctp-surface0/60 px-2.5 py-1 text-xs font-medium text-ctp-subtext0">
+							{memberLevelMeta[level].label}
+						</span>
+					) : null}
+				</div>
+				{description ? (
+					<p className="text-sm leading-relaxed text-ctp-subtext0 sm:text-base">
+						{description}
+					</p>
+				) : null}
 			</div>
 		</div>
 	);

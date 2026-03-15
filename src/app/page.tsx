@@ -1,7 +1,7 @@
+import type { LucideIcon } from "lucide-react";
 import { Stagger } from "@/components/TransitionProvider";
-import { Card } from "@/components/ui/Card";
 import { HeroCard } from "@/components/ui/HeroCard";
-import { type LucideIcon } from "lucide-react";
+import { ShelvingUnit } from "lucide-react";
 
 type heroCard = {
 	title: string;
@@ -9,7 +9,14 @@ type heroCard = {
 	height: number;
 	width: number;
 };
-const heroCards: heroCard[] = [];
+const heroCards: heroCard[] = [
+	{
+		title: "Meet our cabinet",
+		height: 1,
+		width: 1,
+		icon: ShelvingUnit,
+	},
+];
 
 export default function Home() {
 	return (

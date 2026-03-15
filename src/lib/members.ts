@@ -120,188 +120,202 @@ export type RoleMeta = {
 	icon: LucideIcon;
 };
 
-type CabinetMember = {
+export const memberLevelMeta = {
+	director: {
+		label: "Director",
+	},
+	"assistant-director": {
+		label: "Assistant Director",
+	},
+	member: {
+		label: "Member",
+	},
+} as const;
+
+export type MemberLevel = keyof typeof memberLevelMeta;
+
+export type CabinetMember = {
 	name: string;
 	role: Roles;
-	description: string;
+	level?: MemberLevel;
+	description?: string;
 	imagePath?: string;
 };
+
 export const members: CabinetMember[] = [
 	{
 		name: "Julius Caesar",
 		role: "caucus-president",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 	},
 	{
 		name: "Cleopatra",
 		role: "caucus-president",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 	},
 	{
 		name: "Napoleon Bonaparte",
 		role: "media-graphics-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Joan of Arc",
 		role: "externals-outreach-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Leonardo da Vinci",
 		role: "finance-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Isaac Newton",
 		role: "events-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Albert Einstein",
 		role: "internals-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Marie Curie",
 		role: "chief-of-staff",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Ada Lovelace",
 		role: "it-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "director",
 	},
 	{
 		name: "Charles Darwin",
 		role: "media-graphics-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 	},
 	{
 		name: "Genghis Khan",
 		role: "externals-outreach-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 	},
 	{
 		name: "Sun Tzu",
 		role: "finance-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 		imagePath:
 			"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZcmBHOX_JBejsj1nKY8nkwHaIe%3Fpid%3DApi&f=1&ipt=eacc5c869d557f1f837b996b06658aa2a08e3c1b9f396921563f20437890717d&ipo=images",
 	},
 	{
 		name: "Socrates",
 		role: "events-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 	},
 	{
 		name: "Plato",
 		role: "internals-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 	},
 	{
 		name: "Aristotle",
 		role: "chief-of-staff",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 	},
 	{
 		name: "Galileo Galilei",
 		role: "it-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "assistant-director",
 	},
 	{
 		name: "Nikola Tesla",
 		role: "media-graphics-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Ludwig van Beethoven",
 		role: "externals-outreach-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Wolfgang Amadeus Mozart",
 		role: "finance-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Frida Kahlo",
 		role: "it-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Vincent van Gogh",
 		role: "events-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "William Shakespeare",
 		role: "internals-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Amelia Earhart",
 		role: "chief-of-staff",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Harriet Tubman",
 		role: "it-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Abraham Lincoln",
 		role: "media-graphics-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "George Washington",
 		role: "externals-outreach-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Queen Victoria",
 		role: "finance-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Catherine the Great",
 		role: "events-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Mansa Musa",
 		role: "internals-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Saladin",
 		role: "chief-of-staff",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Marco Polo",
 		role: "it-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Ferdinand Magellan",
 		role: "media-graphics-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Zheng He",
 		role: "externals-outreach-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Akbar the Great",
 		role: "finance-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 	{
 		name: "Hammurabi",
 		role: "events-director",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		level: "member",
 	},
 ];

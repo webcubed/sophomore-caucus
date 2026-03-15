@@ -1,7 +1,7 @@
 "use client";
 
 import { Stagger } from "@/components/TransitionProvider";
-import { members, roleMeta, roleStyles } from "@/lib/members";
+import { memberLevelMeta, members, roleMeta, roleStyles } from "@/lib/members";
 import { useEffect, useState } from "react";
 import { Profile } from "./components/Profile";
 
@@ -11,6 +11,9 @@ export default function About() {
 	>(undefined);
 	const [tocOpen, setTocOpen] = useState(false);
 	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
+	const memberLevels = Object.keys(memberLevelMeta) as Array<
+		keyof typeof memberLevelMeta
+	>;
 	const ActiveRoleIcon = activeRole ? roleMeta[activeRole].icon : undefined;
 
 	useEffect(() => {
@@ -152,13 +155,22 @@ export default function About() {
 						const roleMembers = members.filter(
 							(member) => member.role === role
 						);
-						const roleMemberCount = roleMembers.length;
-						const roleGridClass =
-							roleMemberCount === 1
-								? "sm:grid-cols-1 xl:grid-cols-1"
-								: roleMemberCount === 2
-									? "sm:grid-cols-2 xl:grid-cols-2"
-									: "sm:grid-cols-2 xl:grid-cols-3";
+						const hasAnyLevel = roleMembers.some((member) => member.level);
+						const membersByLevel = hasAnyLevel
+							? memberLevels
+									.map((level) => ({
+										level,
+										members: roleMembers.filter(
+											(member) => member.level === level
+										),
+									}))
+									.filter((group) => group.members.length > 0)
+							: [
+									{
+										level: undefined,
+										members: roleMembers,
+									},
+								];
 
 						return (
 							<div key={role} className="space-y-4">
@@ -173,27 +185,52 @@ export default function About() {
 										</span>
 									</h2>
 								</div>
-								<div className={`my-4 grid grid-cols-1 gap-5 ${roleGridClass}`}>
-									{roleMembers.map((member) => (
+								{membersByLevel.map((group) => {
+									const memberCount = group.members.length;
+									const roleGridClass =
+										memberCount === 1
+											? "sm:grid-cols-1 xl:grid-cols-1"
+											: memberCount === 2
+												? "sm:grid-cols-2 xl:grid-cols-2"
+												: "sm:grid-cols-2 xl:grid-cols-3";
+
+									return (
 										<div
-											key={`${member.name}-${member.role}`}
-											className={
-												roleMemberCount === 1
-													? "mx-auto h-full w-full max-w-lg"
-													: "h-full"
-											}
+											key={group.level ?? `ungrouped-${role}`}
+											className="space-y-3"
 										>
-											<Stagger>
-												<Profile
-													name={member.name}
-													role={member.role}
-													imagePath={member.imagePath}
-													description={member.description}
-												/>
-											</Stagger>
+											{group.level ? (
+												<h3 className="text-sm font-semibold uppercase tracking-wide text-ctp-subtext0">
+													{memberLevelMeta[group.level].label}
+												</h3>
+											) : null}
+											<div
+												className={`my-4 grid grid-cols-1 gap-5 ${roleGridClass}`}
+											>
+												{group.members.map((member) => (
+													<div
+														key={`${member.name}-${member.role}-${member.level}`}
+														className={
+															memberCount === 1
+																? "mx-auto h-full w-full max-w-lg"
+																: "h-full"
+														}
+													>
+														<Stagger>
+															<Profile
+																name={member.name}
+																role={member.role}
+																level={member.level}
+																imagePath={member.imagePath}
+																description={member.description}
+															/>
+														</Stagger>
+													</div>
+												))}
+											</div>
 										</div>
-									))}
-								</div>
+									);
+								})}
 							</div>
 						);
 					})}
