@@ -1,6 +1,61 @@
+import type { LucideIcon } from "lucide-react";
+import {
+	BadgeDollarSign,
+	Briefcase,
+	CalendarDays,
+	CloudCog,
+	Megaphone,
+	Palette,
+	Shield,
+	Users,
+} from "lucide-react";
+
 export const roleMeta = {
 	"caucus-president": {
 		label: "Caucus President",
+		icon: Shield,
+	},
+	"chief-of-staff": {
+		label: "Chief of Staff",
+		icon: Briefcase,
+	},
+	"it-director": {
+		label: "IT Director",
+		icon: CloudCog,
+	},
+	"media-graphics-director": {
+		label: "Media & Graphics Director",
+		icon: Palette,
+	},
+	"externals-outreach-director": {
+		label: "Externals/Outreach Director",
+		icon: Megaphone,
+	},
+	"finance-director": {
+		label: "Finance Director",
+		icon: BadgeDollarSign,
+	},
+	"events-director": {
+		label: "Events Director",
+		icon: CalendarDays,
+	},
+	"internals-director": {
+		label: "Internals Director",
+		icon: Users,
+	},
+} as const;
+
+export const roleStyles: Record<
+	keyof typeof roleMeta,
+	{
+		bg: string;
+		text: string;
+		hoverBg: string;
+		hoverText: string;
+		border: string;
+	}
+> = {
+	"caucus-president": {
 		bg: "bg-ctp-sapphire/20",
 		text: "text-ctp-sapphire",
 		hoverBg: "hover:bg-ctp-sapphire/20",
@@ -8,7 +63,6 @@ export const roleMeta = {
 		border: "border-ctp-sapphire",
 	},
 	"chief-of-staff": {
-		label: "Chief of Staff",
 		bg: "bg-ctp-lavender/20",
 		text: "text-ctp-lavender",
 		hoverBg: "hover:bg-ctp-lavender/20",
@@ -16,7 +70,6 @@ export const roleMeta = {
 		border: "border-ctp-lavender",
 	},
 	"it-director": {
-		label: "IT Director",
 		bg: "bg-ctp-blue/20",
 		text: "text-ctp-blue",
 		hoverBg: "hover:bg-ctp-blue/20",
@@ -24,7 +77,6 @@ export const roleMeta = {
 		border: "border-ctp-blue",
 	},
 	"media-graphics-director": {
-		label: "Media & Graphics Director",
 		bg: "bg-ctp-mauve/20",
 		text: "text-ctp-mauve",
 		hoverBg: "hover:bg-ctp-mauve/20",
@@ -32,7 +84,6 @@ export const roleMeta = {
 		border: "border-ctp-mauve",
 	},
 	"externals-outreach-director": {
-		label: "Externals/Outreach Director",
 		bg: "bg-ctp-green/20",
 		text: "text-ctp-green",
 		hoverBg: "hover:bg-ctp-green/20",
@@ -40,7 +91,6 @@ export const roleMeta = {
 		border: "border-ctp-green",
 	},
 	"finance-director": {
-		label: "Finance Director",
 		bg: "bg-ctp-yellow/20",
 		text: "text-ctp-yellow",
 		hoverBg: "hover:bg-ctp-yellow/20",
@@ -48,7 +98,6 @@ export const roleMeta = {
 		border: "border-ctp-yellow",
 	},
 	"events-director": {
-		label: "Events Director",
 		bg: "bg-ctp-peach/20",
 		text: "text-ctp-peach",
 		hoverBg: "hover:bg-ctp-peach/20",
@@ -56,16 +105,20 @@ export const roleMeta = {
 		border: "border-ctp-peach",
 	},
 	"internals-director": {
-		label: "Internals Director",
 		bg: "bg-ctp-teal/20",
 		text: "text-ctp-teal",
 		hoverBg: "hover:bg-ctp-teal/20",
 		hoverText: "hover:text-ctp-teal",
 		border: "border-ctp-teal",
 	},
-} as const;
+};
 
 export type Roles = keyof typeof roleMeta;
+
+export type RoleMeta = {
+	label: string;
+	icon: LucideIcon;
+};
 
 type CabinetMember = {
 	name: string;
