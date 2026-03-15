@@ -152,25 +152,14 @@ export default function About() {
 				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-ctp-overlay0/70 bg-ctp-crust/40 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.16)] backdrop-blur-2xl sm:p-6 lg:p-8">
 					{roles.map((role) => {
 						const RoleIcon = roleMeta[role].icon;
-						const roleMembers = members.filter(
-							(member) => member.role === role
-						);
-						const hasAnyLevel = roleMembers.some((member) => member.level);
-						const membersByLevel = hasAnyLevel
-							? memberLevels
-									.map((level) => ({
-										level,
-										members: roleMembers.filter(
-											(member) => member.level === level
-										),
-									}))
-									.filter((group) => group.members.length > 0)
-							: [
-									{
-										level: undefined,
-										members: roleMembers,
-									},
-								];
+						const roleMembers = members[role];
+						const membersByLevel = memberLevels
+							.map((level) => ({
+								level,
+								members: roleMembers[level] ?? [],
+							}))
+							.filter((group) => group.members.length > 0);
+						const ungroupedMembers = roleMembers.ungrouped ?? [];
 
 						return (
 							<div key={role} className="space-y-4">
@@ -195,21 +184,16 @@ export default function About() {
 												: "sm:grid-cols-2 xl:grid-cols-3";
 
 									return (
-										<div
-											key={group.level ?? `ungrouped-${role}`}
-											className="space-y-3"
-										>
-											{group.level ? (
-												<h3 className="text-sm font-semibold uppercase tracking-wide text-ctp-subtext0">
-													{memberLevelMeta[group.level].label}
-												</h3>
-											) : null}
+										<div key={group.level} className="space-y-3">
+											<h3 className="text-sm font-semibold uppercase tracking-wide text-ctp-subtext0">
+												{memberLevelMeta[group.level].label}
+											</h3>
 											<div
 												className={`my-4 grid grid-cols-1 gap-5 ${roleGridClass}`}
 											>
 												{group.members.map((member) => (
 													<div
-														key={`${member.name}-${member.role}-${member.level}`}
+														key={`${member.name}-${role}-${group.level}`}
 														className={
 															memberCount === 1
 																? "mx-auto h-full w-full max-w-lg"
@@ -219,8 +203,8 @@ export default function About() {
 														<Stagger>
 															<Profile
 																name={member.name}
-																role={member.role}
-																level={member.level}
+																role={role}
+																level={group.level}
 																imagePath={member.imagePath}
 																description={member.description}
 															/>
@@ -231,6 +215,39 @@ export default function About() {
 										</div>
 									);
 								})}
+								{ungroupedMembers.length > 0 ? (
+									<div className="space-y-3">
+										<div
+											className={`my-4 grid grid-cols-1 gap-5 ${
+												ungroupedMembers.length === 1
+													? "sm:grid-cols-1 xl:grid-cols-1"
+													: ungroupedMembers.length === 2
+														? "sm:grid-cols-2 xl:grid-cols-2"
+														: "sm:grid-cols-2 xl:grid-cols-3"
+											}`}
+										>
+											{ungroupedMembers.map((member) => (
+												<div
+													key={`${member.name}-${role}-ungrouped`}
+													className={
+														ungroupedMembers.length === 1
+															? "mx-auto h-full w-full max-w-lg"
+															: "h-full"
+													}
+												>
+													<Stagger>
+														<Profile
+															name={member.name}
+															role={role}
+															imagePath={member.imagePath}
+															description={member.description}
+														/>
+													</Stagger>
+												</div>
+											))}
+										</div>
+									</div>
+								) : null}
 							</div>
 						);
 					})}

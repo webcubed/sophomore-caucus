@@ -134,188 +134,79 @@ export const memberLevelMeta = {
 
 export type MemberLevel = keyof typeof memberLevelMeta;
 
-export type CabinetMember = {
+export type MemberProfile = {
 	name: string;
-	role: Roles;
-	level?: MemberLevel;
 	description?: string;
 	imagePath?: string;
 };
 
-export const members: CabinetMember[] = [
-	{
-		name: "Julius Caesar",
-		role: "caucus-president",
+export type RoleMembers = Partial<Record<MemberLevel, MemberProfile[]>> & {
+	ungrouped?: MemberProfile[];
+};
+
+export const members: Record<Roles, RoleMembers> = {
+	"caucus-president": {
+		ungrouped: [{ name: "Julius Caesar" }, { name: "Cleopatra" }],
 	},
-	{
-		name: "Cleopatra",
-		role: "caucus-president",
+	"chief-of-staff": {
+		director: [{ name: "Marie Curie" }],
+		"assistant-director": [{ name: "Aristotle" }],
+		member: [{ name: "Amelia Earhart" }, { name: "Saladin" }],
 	},
-	{
-		name: "Napoleon Bonaparte",
-		role: "media-graphics-director",
-		level: "director",
+	"it-director": {
+		director: [{ name: "Ada Lovelace" }],
+		"assistant-director": [{ name: "Galileo Galilei" }],
+		member: [
+			{ name: "Frida Kahlo" },
+			{ name: "Harriet Tubman" },
+			{ name: "Marco Polo" },
+		],
 	},
-	{
-		name: "Joan of Arc",
-		role: "externals-outreach-director",
-		level: "director",
+	"media-graphics-director": {
+		director: [{ name: "Napoleon Bonaparte" }],
+		"assistant-director": [{ name: "Charles Darwin" }],
+		member: [
+			{ name: "Nikola Tesla" },
+			{ name: "Abraham Lincoln" },
+			{ name: "Ferdinand Magellan" },
+		],
 	},
-	{
-		name: "Leonardo da Vinci",
-		role: "finance-director",
-		level: "director",
+	"externals-outreach-director": {
+		director: [{ name: "Joan of Arc" }],
+		"assistant-director": [{ name: "Genghis Khan" }],
+		member: [
+			{ name: "Ludwig van Beethoven" },
+			{ name: "George Washington" },
+			{ name: "Zheng He" },
+		],
 	},
-	{
-		name: "Isaac Newton",
-		role: "events-director",
-		level: "director",
+	"finance-director": {
+		director: [{ name: "Leonardo da Vinci" }],
+		"assistant-director": [
+			{
+				name: "Sun Tzu",
+				imagePath:
+					"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZcmBHOX_JBejsj1nKY8nkwHaIe%3Fpid%3DApi&f=1&ipt=eacc5c869d557f1f837b996b06658aa2a08e3c1b9f396921563f20437890717d&ipo=images",
+			},
+		],
+		member: [
+			{ name: "Wolfgang Amadeus Mozart" },
+			{ name: "Queen Victoria" },
+			{ name: "Akbar the Great" },
+		],
 	},
-	{
-		name: "Albert Einstein",
-		role: "internals-director",
-		level: "director",
+	"events-director": {
+		director: [{ name: "Isaac Newton" }],
+		"assistant-director": [{ name: "Socrates" }],
+		member: [
+			{ name: "Vincent van Gogh" },
+			{ name: "Catherine the Great" },
+			{ name: "Hammurabi" },
+		],
 	},
-	{
-		name: "Marie Curie",
-		role: "chief-of-staff",
-		level: "director",
+	"internals-director": {
+		director: [{ name: "Albert Einstein" }],
+		"assistant-director": [{ name: "Plato" }],
+		member: [{ name: "William Shakespeare" }, { name: "Mansa Musa" }],
 	},
-	{
-		name: "Ada Lovelace",
-		role: "it-director",
-		level: "director",
-	},
-	{
-		name: "Charles Darwin",
-		role: "media-graphics-director",
-		level: "assistant-director",
-	},
-	{
-		name: "Genghis Khan",
-		role: "externals-outreach-director",
-		level: "assistant-director",
-	},
-	{
-		name: "Sun Tzu",
-		role: "finance-director",
-		level: "assistant-director",
-		imagePath:
-			"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZcmBHOX_JBejsj1nKY8nkwHaIe%3Fpid%3DApi&f=1&ipt=eacc5c869d557f1f837b996b06658aa2a08e3c1b9f396921563f20437890717d&ipo=images",
-	},
-	{
-		name: "Socrates",
-		role: "events-director",
-		level: "assistant-director",
-	},
-	{
-		name: "Plato",
-		role: "internals-director",
-		level: "assistant-director",
-	},
-	{
-		name: "Aristotle",
-		role: "chief-of-staff",
-		level: "assistant-director",
-	},
-	{
-		name: "Galileo Galilei",
-		role: "it-director",
-		level: "assistant-director",
-	},
-	{
-		name: "Nikola Tesla",
-		role: "media-graphics-director",
-		level: "member",
-	},
-	{
-		name: "Ludwig van Beethoven",
-		role: "externals-outreach-director",
-		level: "member",
-	},
-	{
-		name: "Wolfgang Amadeus Mozart",
-		role: "finance-director",
-		level: "member",
-	},
-	{
-		name: "Frida Kahlo",
-		role: "it-director",
-		level: "member",
-	},
-	{
-		name: "Vincent van Gogh",
-		role: "events-director",
-		level: "member",
-	},
-	{
-		name: "William Shakespeare",
-		role: "internals-director",
-		level: "member",
-	},
-	{
-		name: "Amelia Earhart",
-		role: "chief-of-staff",
-		level: "member",
-	},
-	{
-		name: "Harriet Tubman",
-		role: "it-director",
-		level: "member",
-	},
-	{
-		name: "Abraham Lincoln",
-		role: "media-graphics-director",
-		level: "member",
-	},
-	{
-		name: "George Washington",
-		role: "externals-outreach-director",
-		level: "member",
-	},
-	{
-		name: "Queen Victoria",
-		role: "finance-director",
-		level: "member",
-	},
-	{
-		name: "Catherine the Great",
-		role: "events-director",
-		level: "member",
-	},
-	{
-		name: "Mansa Musa",
-		role: "internals-director",
-		level: "member",
-	},
-	{
-		name: "Saladin",
-		role: "chief-of-staff",
-		level: "member",
-	},
-	{
-		name: "Marco Polo",
-		role: "it-director",
-		level: "member",
-	},
-	{
-		name: "Ferdinand Magellan",
-		role: "media-graphics-director",
-		level: "member",
-	},
-	{
-		name: "Zheng He",
-		role: "externals-outreach-director",
-		level: "member",
-	},
-	{
-		name: "Akbar the Great",
-		role: "finance-director",
-		level: "member",
-	},
-	{
-		name: "Hammurabi",
-		role: "events-director",
-		level: "member",
-	},
-];
+};
