@@ -61,10 +61,10 @@ const heroCards: gridItem[] = [
 		href: "/cabinet",
 	},
 	{
-		title: "Spotlight",
-		description: "Member highlights",
+		title: "News",
+		description: "What we're doing",
 		height: 1,
-		width: 1,
+		width: 2,
 		icon: Newspaper,
 		href: "/cabinet",
 	},
