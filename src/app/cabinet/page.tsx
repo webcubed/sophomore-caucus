@@ -54,7 +54,7 @@ export default function About() {
 			</div>
 			<div className="flex flex-col gap-8 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
 				{/* Navigator / TOC */}
-				<div className="sticky top-22 z-20 w-full self-start lg:top-24 lg:w-auto">
+				<div className="sticky top-22 z-20 mx-auto w-11/12 self-start lg:top-24 lg:mx-0 lg:w-auto">
 					{/* Mobile dropdown */}
 					<div className="overflow-hidden rounded-xl border border-ctp-overlay0/50 bg-ctp-crust/70 backdrop-blur-2xl lg:hidden">
 						<button
