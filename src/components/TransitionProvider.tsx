@@ -29,11 +29,13 @@ const StaggerContext = createContext<
 export function Stagger({
 	children,
 	className,
+	style,
 	duration = 0.4,
 	y = 12,
 }: {
 	children: React.ReactNode;
 	className?: string;
+	style?: React.CSSProperties;
 	duration?: number;
 	y?: number;
 }) {
@@ -52,6 +54,7 @@ export function Stagger({
 	return (
 		<motion.div
 			className={className} // Preserve styles
+			style={style}
 			initial={{ opacity: 0, y }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration, delay, ease: "easeOut" }}

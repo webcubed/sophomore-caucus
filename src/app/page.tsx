@@ -134,15 +134,22 @@ export default function Home() {
 					}
 
 					return (
-						<HeroCard
+						<Stagger
 							key={`card-${index}-${item.title}`}
-							title={item.title}
-							description={item.description}
-							height={item.height}
-							width={item.width}
-							icon={item.icon}
-							href={item.href}
-						/>
+							style={{
+								gridColumn: `span ${item.width} / span ${item.width}`,
+								gridRow: `span ${item.height} / span ${item.height}`,
+							}}
+						>
+							<HeroCard
+								title={item.title}
+								description={item.description}
+								height={item.height}
+								width={item.width}
+								icon={item.icon}
+								href={item.href}
+							/>
+						</Stagger>
 					);
 				})}
 			</div>
