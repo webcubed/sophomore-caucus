@@ -9,17 +9,7 @@ import { siInstagram } from "simple-icons/icons";
 const socials = [
 	{
 		label: "Instagram",
-		href: "https://www.instagram.com/TBD",
-		Icon: InstagramIcon,
-	},
-	{
-		label: "TBD",
-		href: "https://www.instagram.com/TBD",
-		Icon: InstagramIcon,
-	},
-	{
-		label: "TBD",
-		href: "https://www.instagram.com/TBD",
+		href: "https://www.instagram.com/stuyfreshmancaucus/",
 		Icon: InstagramIcon,
 	},
 ];
