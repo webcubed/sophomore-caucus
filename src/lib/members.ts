@@ -149,34 +149,75 @@ export const members: Record<Roles, RoleMembers> = {
 		ungrouped: [{ name: "Ella Lee" }, { name: "Richard Lin" }],
 	},
 	"chief-of-staff": {
-		director: [{ name: "Olivia Zhou" }, { name: "Thomas Vichaidith" }],
+		director: [
+			{ name: "Olivia Zhou" },
+			{
+				name: "Thomas Vichaidith",
+				image: "/pfps/directors/Thomas%20Vichaidith.jpeg",
+			},
+		],
 	},
 	"media-graphics-director": {
 		director: [
-			{ name: "Harper Chen" },
-			{ name: "Kathy Zhang" },
-			{ name: "Violet Randall" },
-			{ name: "Ethan Li" },
+			{ name: "Harper Chen", image: "/pfps/directors/Harper%20Chen.webp" },
+			{ name: "Kathy Zhang", image: "/pfps/directors/Kathy%20Zhang.jpeg" },
+			{
+				name: "Violet Randall",
+				image: "/pfps/directors/Violet%20Randall.jpeg",
+			},
+			{ name: "Ethan Li", image: "/pfps/directors/Ethan%20Li.jpg" },
 		],
-		"assistant-director": [{ name: "Riley Chan" }, { name: "Claire Jiang" }],
+		"assistant-director": [
+			{ name: "Riley Chan", image: "/pfps/directors/Riley%20Chan.jpeg" },
+			{ name: "Claire Jiang", image: "/pfps/directors/Claire%20Jiang.jpg" },
+		],
 	},
 	"finance-director": {
-		director: [{ name: "Sici Ma" }, { name: "Allen Chen" }],
-		"assistant-director": [{ name: "Celine Park" }],
+		director: [
+			{ name: "Sici Ma", image: "/pfps/directors/Sici%20Ma.jpeg" },
+			{ name: "Allen Chen", image: "/pfps/directors/Allen%20Chen.png" },
+		],
+		"assistant-director": [
+			{ name: "Celine Park", image: "/pfps/directors/Celine%20Park.jpeg" },
+		],
 	},
 	"events-director": {
-		director: [{ name: "Theresa Boabach" }, { name: "Sophie Yeh" }],
-		"assistant-director": [{ name: "Alexa Yuan" }],
+		director: [
+			{
+				name: "Theresa Boabach",
+				image: "/pfps/directors/Theresa%20Bosbach.jpeg",
+			},
+			{ name: "Sophie Yeh", image: "/pfps/directors/Sophie%20Yeh.jpeg" },
+		],
+		"assistant-director": [
+			{ name: "Alexa Yuan", image: "/pfps/directors/Alexa%20Yuan.jpeg" },
+		],
 	},
 	"internals-director": {
-		director: [{ name: "Pearl Lin" }, { name: "Stephen Ha" }],
-		"assistant-director": [{ name: "Zhiyue Chen" }],
+		director: [
+			{ name: "Pearl Lin", image: "/pfps/directors/Pearl%20Lin.jpeg" },
+			{ name: "Stephen Ha", image: "/pfps/directors/Stephen%20Ha.jpeg" },
+		],
+		"assistant-director": [
+			{ name: "Zhiyue Chen", image: "/pfps/directors/Zhi%20Yue%20Chen.jpeg" },
+		],
 	},
 	"externals-outreach-director": {
-		director: [{ name: "Calista Loo" }, { name: "Emily Lei Du" }],
-		"assistant-director": [{ name: "Linda Zheng" }],
+		director: [
+			{ name: "Calista Loo", image: "/pfps/directors/Calista%20Loo.jpg" },
+			{ name: "Emily Lei Du", image: "/pfps/directors/Emily%20Lei%20Du.JPG" },
+		],
+		"assistant-director": [
+			{ name: "Linda Zheng", image: "/pfps/directors/Linda%20Zheng.jpeg" },
+		],
 	},
 	"it-director": {
-		director: [{ name: "Makayla Kong-Kho" }, { name: "Nathan Lai" }],
+		director: [
+			{
+				name: "Makayla Kong-Kho",
+				image: "/pfps/directors/Makayla%20Kong-Kho.jpeg",
+			},
+			{ name: "Nathan Lai" },
+		],
 	},
 };
