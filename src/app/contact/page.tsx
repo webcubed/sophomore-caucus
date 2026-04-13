@@ -40,7 +40,7 @@ export default function Contact() {
 					<p className="mt-3 sm:mt-4">Get in touch with our cabinet!</p>
 				</Stagger>
 			</div>
-
+			<section></section>
 			<section className="mt-8 sm:mt-12 grid w-full max-w-5xl grid-cols-1 items-center gap-6 sm:gap-8 lg:grid-cols-2">
 				<Stagger>
 					<FloatingCard className="w-full">
