@@ -171,6 +171,11 @@ export const members: Record<Roles, RoleMembers> = {
 			{ name: "Riley Chan", image: "/pfps/directors/Riley%20Chan.jpeg" },
 			{ name: "Claire Jiang", image: "/pfps/directors/Claire%20Jiang.jpg" },
 		],
+		member: [
+			{ name: "Vicky Yu" },
+			{ name: "Michelle Li" },
+			{ name: "Evelina Ikeya-Tam" },
+		],
 	},
 	"finance-director": {
 		director: [
@@ -180,6 +185,7 @@ export const members: Record<Roles, RoleMembers> = {
 		"assistant-director": [
 			{ name: "Celine Park", image: "/pfps/directors/Celine%20Park.jpeg" },
 		],
+		member: [{ name: "Rahui Lee" }, { name: "Mingxuan Zhang" }],
 	},
 	"events-director": {
 		director: [
@@ -192,6 +198,7 @@ export const members: Record<Roles, RoleMembers> = {
 		"assistant-director": [
 			{ name: "Alexa Yuan", image: "/pfps/directors/Alexa%20Yuan.jpeg" },
 		],
+		member: [{ name: "Rio Deleon" }, { name: "Zoe Yuan-Lei" }],
 	},
 	"internals-director": {
 		director: [
@@ -200,6 +207,11 @@ export const members: Record<Roles, RoleMembers> = {
 		],
 		"assistant-director": [
 			{ name: "Zhiyue Chen", image: "/pfps/directors/Zhi%20Yue%20Chen.jpeg" },
+		],
+		member: [
+			{ name: "Sophie Chen" },
+			{ name: "Darah (oruno) Bubu" },
+			{ name: "Travis Yuan" },
 		],
 	},
 	"externals-outreach-director": {
@@ -210,6 +222,7 @@ export const members: Record<Roles, RoleMembers> = {
 		"assistant-director": [
 			{ name: "Linda Zheng", image: "/pfps/directors/Linda%20Zheng.jpeg" },
 		],
+		member: [{ name: "Isabella Figueiredo" }, { name: "Sofia Goihman" }],
 	},
 	"it-director": {
 		director: [
@@ -219,5 +232,6 @@ export const members: Record<Roles, RoleMembers> = {
 			},
 			{ name: "Nathan Lai" },
 		],
+		member: [{ name: "Jasmin Tam" }],
 	},
 };
