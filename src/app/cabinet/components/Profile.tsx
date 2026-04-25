@@ -1,4 +1,4 @@
-import type { MemberLevel, Roles } from "@/lib/members";
+import type { MemberImageConfig, MemberLevel, Roles } from "@/lib/members";
 import { memberLevelMeta, roleMeta, roleStyles } from "@/lib/members";
 import React from "react";
 
@@ -9,6 +9,7 @@ type ProfileProps = {
 	role: Roles;
 	level?: MemberLevel;
 	image?: string;
+	imageConfig?: MemberImageConfig;
 	description?: string;
 };
 
@@ -18,21 +19,37 @@ export const Profile: React.FC<ProfileProps> = ({
 	role,
 	level,
 	image,
+	imageConfig,
 	description,
 }) => {
-	const showImages = false;
 	const initials = name
 		.split(" ")
 		.filter(Boolean)
 		.slice(0, 2)
 		.map((part) => part[0]?.toUpperCase() ?? "")
 		.join("");
+	const showImage = Boolean(image) && imageConfig?.enabled !== false;
+	const resolvedObjectPosition = imageConfig?.objectPosition ?? "center 28%";
+	const imageStyle: React.CSSProperties = {
+		objectFit: imageConfig?.fit ?? "cover",
+		objectPosition: resolvedObjectPosition,
+	};
+
+	if (imageConfig?.scale && imageConfig.scale > 0) {
+		imageStyle.transform = `scale(${imageConfig.scale})`;
+		imageStyle.transformOrigin = resolvedObjectPosition;
+	}
 
 	return (
 		<div className="group flex h-full flex-col overflow-hidden rounded-xl border border-ctp-overlay0/80 bg-ctp-mantle/35 shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-all duration-300 backdrop-blur-2xl hover:-translate-y-1 hover:border-ctp-overlay2 hover:shadow-[0_14px_28px_rgba(0,0,0,0.22)]">
-			{showImages && image ? (
-				<div className="relative">
-					<img src={image} alt={name} className="h-52 w-full object-cover" />
+			{showImage && image ? (
+				<div className="relative overflow-hidden bg-ctp-surface0/40">
+					<img
+						src={image}
+						alt={name}
+						className="h-52 w-full"
+						style={imageStyle}
+					/>
 					<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ctp-base/45 via-transparent to-transparent" />
 				</div>
 			) : (

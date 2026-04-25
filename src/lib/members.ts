@@ -134,15 +134,38 @@ export const memberLevelMeta = {
 
 export type MemberLevel = keyof typeof memberLevelMeta;
 
+export type MemberImageFit = "cover" | "contain";
+
+export type MemberImageConfig = {
+	fit?: MemberImageFit; // Ex: "cover", "contain"
+	objectPosition?: string; // Ex: "center 22%", "50% 18%" "center"
+	scale?: number; // Ex: 1.06, 0.95
+	enabled?: boolean;
+};
+
 export type MemberProfile = {
 	name: string;
 	description?: string;
 	image?: string;
+	imageConfig?: MemberImageConfig;
 };
 
 export type RoleMembers = Partial<Record<MemberLevel, MemberProfile[]>> & {
 	ungrouped?: MemberProfile[];
 };
+
+const defaultMemberImageConfig: MemberImageConfig = {
+	fit: "cover",
+	objectPosition: "center 28%",
+};
+
+const withImage = (
+	image: string,
+	imageConfig?: MemberImageConfig
+): Pick<MemberProfile, "image" | "imageConfig"> => ({
+	image,
+	imageConfig: imageConfig ?? defaultMemberImageConfig,
+});
 
 export const members: Record<Roles, RoleMembers> = {
 	"caucus-president": {
@@ -153,23 +176,40 @@ export const members: Record<Roles, RoleMembers> = {
 			{ name: "Olivia Zhou" },
 			{
 				name: "Thomas Vichaidith",
-				image: "/pfps/directors/Thomas%20Vichaidith.jpeg",
+				...withImage("/pfps/directors/Thomas%20Vichaidith.jpeg"),
 			},
 		],
 	},
 	"media-graphics-director": {
 		director: [
-			{ name: "Harper Chen", image: "/pfps/directors/Harper%20Chen.webp" },
-			{ name: "Kathy Zhang", image: "/pfps/directors/Kathy%20Zhang.jpeg" },
+			{
+				name: "Harper Chen",
+				...withImage("/pfps/directors/Harper%20Chen.webp", {
+					objectPosition: "31.9% 34.3%",
+				}),
+			},
+			{
+				name: "Kathy Zhang",
+				...withImage("/pfps/directors/Kathy%20Zhang.jpeg", { scale: 1.04 }),
+			},
 			{
 				name: "Violet Randall",
-				image: "/pfps/directors/Violet%20Randall.jpeg",
+				...withImage("/pfps/directors/Violet%20Randall.jpeg"),
 			},
-			{ name: "Ethan Li", image: "/pfps/directors/Ethan%20Li.jpg" },
+			{
+				name: "Ethan Li",
+				...withImage("/pfps/directors/Ethan%20Li.jpg"),
+			},
 		],
 		"assistant-director": [
-			{ name: "Riley Chan", image: "/pfps/directors/Riley%20Chan.jpeg" },
-			{ name: "Claire Jiang", image: "/pfps/directors/Claire%20Jiang.jpg" },
+			{
+				name: "Riley Chan",
+				...withImage("/pfps/directors/Riley%20Chan.jpeg"),
+			},
+			{
+				name: "Claire Jiang",
+				...withImage("/pfps/directors/Claire%20Jiang.jpg"),
+			},
 		],
 		member: [
 			{ name: "Vicky Yu" },
@@ -179,11 +219,19 @@ export const members: Record<Roles, RoleMembers> = {
 	},
 	"finance-director": {
 		director: [
-			{ name: "Sici Ma", image: "/pfps/directors/Sici%20Ma.jpeg" },
-			{ name: "Allen Chen", image: "/pfps/directors/Allen%20Chen.png" },
+			{ name: "Sici Ma", ...withImage("/pfps/directors/Sici%20Ma.jpeg") },
+			{
+				name: "Allen Chen",
+				...withImage("/pfps/directors/Allen%20Chen.png", {
+					objectPosition: "32.3% 40%",
+				}),
+			},
 		],
 		"assistant-director": [
-			{ name: "Celine Park", image: "/pfps/directors/Celine%20Park.jpeg" },
+			{
+				name: "Celine Park",
+				...withImage("/pfps/directors/Celine%20Park.jpeg"),
+			},
 		],
 		member: [{ name: "Rahui Lee" }, { name: "Mingxuan Zhang" }],
 	},
@@ -191,22 +239,39 @@ export const members: Record<Roles, RoleMembers> = {
 		director: [
 			{
 				name: "Theresa Boabach",
-				image: "/pfps/directors/Theresa%20Bosbach.jpeg",
+				...withImage("/pfps/directors/Theresa%20Bosbach.jpeg"),
 			},
-			{ name: "Sophie Yeh", image: "/pfps/directors/Sophie%20Yeh.jpeg" },
+			{
+				name: "Sophie Yeh",
+				...withImage("/pfps/directors/Sophie%20Yeh.jpeg"),
+			},
 		],
 		"assistant-director": [
-			{ name: "Alexa Yuan", image: "/pfps/directors/Alexa%20Yuan.jpeg" },
+			{
+				name: "Alexa Yuan",
+				...withImage("/pfps/directors/Alexa%20Yuan.jpeg"),
+			},
 		],
 		member: [{ name: "Rio Deleon" }, { name: "Zoe Yuan-Lei" }],
 	},
 	"internals-director": {
 		director: [
-			{ name: "Pearl Lin", image: "/pfps/directors/Pearl%20Lin.jpeg" },
-			{ name: "Stephen Ha", image: "/pfps/directors/Stephen%20Ha.jpeg" },
+			{
+				name: "Pearl Lin",
+				...withImage("/pfps/directors/Pearl%20Lin.jpeg", {
+					objectPosition: "52.7% 0%",
+				}),
+			},
+			{
+				name: "Stephen Ha",
+				...withImage("/pfps/directors/Stephen%20Ha.jpg"),
+			},
 		],
 		"assistant-director": [
-			{ name: "Zhiyue Chen", image: "/pfps/directors/Zhi%20Yue%20Chen.jpeg" },
+			{
+				name: "Zhiyue Chen",
+				...withImage("/pfps/directors/Zhi%20Yue%20Chen.jpeg"),
+			},
 		],
 		member: [
 			{ name: "Sophie Chen" },
@@ -216,11 +281,26 @@ export const members: Record<Roles, RoleMembers> = {
 	},
 	"externals-outreach-director": {
 		director: [
-			{ name: "Calista Loo", image: "/pfps/directors/Calista%20Loo.jpg" },
-			{ name: "Emily Lei Du", image: "/pfps/directors/Emily%20Lei%20Du.JPG" },
+			{
+				name: "Calista Loo",
+				...withImage("/pfps/directors/Calista%20Loo.jpg", {
+					objectPosition: "29.9% 39.8%",
+				}),
+			},
+			{
+				name: "Emily Lei Du",
+				...withImage("/pfps/directors/Emily%20Lei%20Du.JPG", {
+					objectPosition: "34.7% 57.1%",
+				}),
+			},
 		],
 		"assistant-director": [
-			{ name: "Linda Zheng", image: "/pfps/directors/Linda%20Zheng.jpeg" },
+			{
+				name: "Linda Zheng",
+				...withImage("/pfps/directors/Linda%20Zheng.jpeg", {
+					objectPosition: "26.2% 0%",
+				}),
+			},
 		],
 		member: [{ name: "Isabella Figueiredo" }, { name: "Sofia Goihman" }],
 	},
@@ -228,7 +308,9 @@ export const members: Record<Roles, RoleMembers> = {
 		director: [
 			{
 				name: "Makayla Kong-Kho",
-				image: "/pfps/directors/Makayla%20Kong-Kho.jpeg",
+				...withImage("/pfps/directors/Makayla%20Kong-Kho.jpeg", {
+					objectPosition: "27% 14.2%",
+				}),
 			},
 			{ name: "Nathan Lai" },
 		],

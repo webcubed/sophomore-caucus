@@ -196,6 +196,7 @@ export default function About() {
 																role={role}
 																level={group.level}
 																image={member.image}
+																imageConfig={member.imageConfig}
 																description={member.description}
 															/>
 														</Stagger>
@@ -218,6 +219,7 @@ export default function About() {
 															name={member.name}
 															role={role}
 															image={member.image}
+															imageConfig={member.imageConfig}
 															description={member.description}
 														/>
 													</Stagger>
