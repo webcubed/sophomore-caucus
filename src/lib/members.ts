@@ -150,9 +150,11 @@ export type MemberProfile = {
 	imageConfig?: MemberImageConfig;
 };
 
-export type RoleMembers = Partial<Record<MemberLevel, MemberProfile[]>> & {
-	ungrouped?: MemberProfile[];
-};
+export type RoleMembers =
+	| (Partial<Record<MemberLevel, MemberProfile[]>> & {
+			ungrouped?: MemberProfile[];
+	  })
+	| undefined;
 
 const defaultMemberImageConfig: MemberImageConfig = {
 	fit: "cover",
@@ -168,152 +170,12 @@ const withImage = (
 });
 
 export const members: Record<Roles, RoleMembers> = {
-	"caucus-president": {
-		ungrouped: [{ name: "Ella Lee" }, { name: "Richard Lin" }],
-	},
-	"chief-of-staff": {
-		director: [
-			{ name: "Olivia Zhou" },
-			{
-				name: "Thomas Vichaidith",
-				...withImage("/pfps/directors/Thomas%20Vichaidith.jpeg"),
-			},
-		],
-	},
-	"media-graphics-director": {
-		director: [
-			{
-				name: "Harper Chen",
-				...withImage("/pfps/directors/Harper%20Chen.webp", {
-					objectPosition: "31.9% 34.3%",
-				}),
-			},
-			{
-				name: "Kathy Zhang",
-				...withImage("/pfps/directors/Kathy%20Zhang.jpeg", { scale: 1.04 }),
-			},
-			{
-				name: "Violet Randall",
-				...withImage("/pfps/directors/Violet%20Randall.jpeg"),
-			},
-			{
-				name: "Ethan Li",
-				...withImage("/pfps/directors/Ethan%20Li.jpg"),
-			},
-		],
-		"assistant-director": [
-			{
-				name: "Riley Chan",
-				...withImage("/pfps/directors/Riley%20Chan.jpeg"),
-			},
-			{
-				name: "Claire Jiang",
-				...withImage("/pfps/directors/Claire%20Jiang.jpg"),
-			},
-		],
-		member: [
-			{ name: "Vicky Yu" },
-			{ name: "Michelle Li" },
-			{ name: "Evelina Ikeya-Tam" },
-		],
-	},
-	"finance-director": {
-		director: [
-			{ name: "Sici Ma", ...withImage("/pfps/directors/Sici%20Ma.jpeg") },
-			{
-				name: "Allen Chen",
-				...withImage("/pfps/directors/Allen%20Chen.png", {
-					objectPosition: "32.3% 40%",
-				}),
-			},
-		],
-		"assistant-director": [
-			{
-				name: "Celine Park",
-				...withImage("/pfps/directors/Celine%20Park.jpeg"),
-			},
-		],
-		member: [{ name: "Rahui Lee" }, { name: "Mingxuan Zhang" }],
-	},
-	"events-director": {
-		director: [
-			{
-				name: "Theresa Boabach",
-				...withImage("/pfps/directors/Theresa%20Bosbach.jpeg"),
-			},
-			{
-				name: "Sophie Yeh",
-				...withImage("/pfps/directors/Sophie%20Yeh.jpeg"),
-			},
-		],
-		"assistant-director": [
-			{
-				name: "Alexa Yuan",
-				...withImage("/pfps/directors/Alexa%20Yuan.jpeg"),
-			},
-		],
-		member: [{ name: "Rio Deleon" }, { name: "Zoe Yuan-Lei" }],
-	},
-	"internals-director": {
-		director: [
-			{
-				name: "Pearl Lin",
-				...withImage("/pfps/directors/Pearl%20Lin.jpeg", {
-					objectPosition: "52.7% 0%",
-				}),
-			},
-			{
-				name: "Stephen Ha",
-				...withImage("/pfps/directors/Stephen%20Ha.jpg"),
-			},
-		],
-		"assistant-director": [
-			{
-				name: "Zhiyue Chen",
-				...withImage("/pfps/directors/Zhi%20Yue%20Chen.jpeg"),
-			},
-		],
-		member: [
-			{ name: "Sophie Chen" },
-			{ name: "Darah (oruno) Bubu" },
-			{ name: "Travis Yuan" },
-		],
-	},
-	"externals-outreach-director": {
-		director: [
-			{
-				name: "Calista Loo",
-				...withImage("/pfps/directors/Calista%20Loo.jpg", {
-					objectPosition: "29.9% 39.8%",
-				}),
-			},
-			{
-				name: "Emily Lei Du",
-				...withImage("/pfps/directors/Emily%20Lei%20Du.JPG", {
-					objectPosition: "34.7% 57.1%",
-				}),
-			},
-		],
-		"assistant-director": [
-			{
-				name: "Linda Zheng",
-				...withImage("/pfps/directors/Linda%20Zheng.jpeg", {
-					objectPosition: "26.2% 0%",
-				}),
-			},
-		],
-		member: [{ name: "Isabella Figueiredo" }, { name: "Sofia Goihman" }],
-	},
-	"it-director": {
-		director: [
-			{
-				name: "Makayla Kong-Kho",
-				...withImage("/pfps/directors/Makayla%20Kong-Kho.jpeg", {
-					objectPosition: "27% 14.2%",
-				}),
-			},
-			{ name: "Nathan Lai" },
-		],
-		member: [{ name: "Jasmin Tam" }],
-	},
+	"caucus-president": undefined,
+	"chief-of-staff": undefined,
+	"media-graphics-director": undefined,
+	"finance-director": undefined,
+	"events-director": undefined,
+	"internals-director": undefined,
+	"externals-outreach-director": undefined,
+	"it-director": undefined,
 };

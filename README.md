@@ -1,4 +1,4 @@
-# Stuyvesant Freshman caucus 25-26 website
+# Stuyvesant Sophomore Caucus 26-27 website
 
 ## Stack
 
