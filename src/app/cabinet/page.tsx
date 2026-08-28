@@ -153,6 +153,7 @@ export default function About() {
 						</nav>
 					</div>
 				</div>
+
 				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-ctp-overlay0/70 bg-ctp-crust/40 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.16)] backdrop-blur-2xl sm:p-6 lg:p-8">
 					{roles.map((role) => {
 						const RoleIcon = roleMeta[role].icon;
@@ -160,10 +161,10 @@ export default function About() {
 						const membersByLevel = memberLevels
 							.map((level) => ({
 								level,
-								members: sortByName(roleMembers[level] ?? []),
+								members: sortByName(roleMembers?.[level] ?? []),
 							}))
 							.filter((group) => group.members.length > 0);
-						const ungroupedMembers = sortByName(roleMembers.ungrouped ?? []);
+						const ungroupedMembers = sortByName(roleMembers?.ungrouped ?? []);
 
 						return (
 							<div key={role} className="space-y-4">
