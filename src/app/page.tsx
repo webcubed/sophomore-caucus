@@ -109,11 +109,11 @@ export default function Home() {
 		<main className="flex min-h-screen w-full flex-col items-center justify-start gap-36 px-6 sm:py-32 sm:items-start">
 			<div className="text-center mx-auto">
 				<Stagger>
-					<h1>Freshman Caucus</h1>
+					<h1>Sophomore Caucus</h1>
 				</Stagger>
 				<Stagger>
 					<p className="mt-3 sm:mt-4">
-						Stuyvesant High School's Freshman Caucus 2025-2026
+						Stuyvesant High School's Sophomore Caucus 2025-2026
 					</p>
 				</Stagger>
 			</div>

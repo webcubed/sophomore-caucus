@@ -132,7 +132,7 @@ export default function Header() {
 							className="inline-flex items-center gap-3 text-ctp-text hover:text-ctp-lavender transition-colors duration-200"
 						>
 							<h1 className="font-semibold text-base sm:inline colorful">
-								Freshman Caucus
+								Sophomore Caucus
 							</h1>
 						</a>
 					</div>

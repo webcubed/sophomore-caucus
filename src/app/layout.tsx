@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-	title: "Stuyvesant Freshman Caucus",
+	title: "Stuyvesant Sophomore Caucus",
 };
 
 export default function RootLayout({
