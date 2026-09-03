@@ -41,20 +41,20 @@ export const Profile: React.FC<ProfileProps> = ({
 	}
 
 	return (
-		<div className="group flex h-full flex-col overflow-hidden rounded-xl border border-ctp-overlay0/80 bg-ctp-mantle/35 shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-all duration-300 backdrop-blur-2xl hover:-translate-y-1 hover:border-ctp-overlay2 hover:shadow-[0_14px_28px_rgba(0,0,0,0.22)]">
+		<div className="flex h-full flex-col overflow-hidden rounded-xl border border-overlay0/80 bg-mantle/35 transition-colors hover:border-overlay2">
 			{showImage && image ? (
-				<div className="relative overflow-hidden bg-ctp-surface0/40">
+				<div className="relative overflow-hidden bg-surface0/40">
 					<img
 						src={image}
 						alt={name}
 						className="h-52 w-full"
 						style={imageStyle}
 					/>
-					<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ctp-base/45 via-transparent to-transparent" />
+					<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-base/45 via-transparent to-transparent" />
 				</div>
 			) : (
-				<div className="flex h-52 w-full items-center justify-center bg-ctp-surface0/40">
-					<div className="flex h-16 w-16 items-center justify-center rounded-full bg-ctp-surface1/70 text-lg font-semibold text-ctp-subtext1">
+				<div className="flex h-52 w-full items-center justify-center bg-surface0/40">
+					<div className="flex h-16 w-16 items-center justify-center rounded-full bg-surface1/70 text-lg font-semibold text-subtext1">
 						{initials}
 					</div>
 				</div>
@@ -68,13 +68,13 @@ export const Profile: React.FC<ProfileProps> = ({
 						{roleMeta[role].label}
 					</span>
 					{level ? (
-						<span className="inline-flex w-fit rounded-full border border-ctp-overlay1 bg-ctp-surface0/60 px-2.5 py-1 text-xs font-medium text-ctp-subtext0">
+						<span className="inline-flex w-fit rounded-full border border-overlay1 bg-surface0/60 px-2.5 py-1 text-xs font-medium text-subtext0">
 							{memberLevelMeta[level].label}
 						</span>
 					) : null}
 				</div>
 				{description ? (
-					<p className="text-sm leading-relaxed text-ctp-subtext0 sm:text-base">
+					<p className="text-sm leading-relaxed text-subtext0 sm:text-base">
 						{description}
 					</p>
 				) : null}

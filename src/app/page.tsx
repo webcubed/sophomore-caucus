@@ -1,157 +1,102 @@
 import type { LucideIcon } from "lucide-react";
 import { Stagger } from "@/components/TransitionProvider";
-import { HeroCard } from "@/components/ui/HeroCard";
 import {
-	BookOpen,
 	CalendarClock,
 	ClipboardList,
-	HandHeart,
-	Megaphone,
+	Mail,
 	MessageSquare,
-	MessagesSquare,
+	Megaphone,
 	Newspaper,
 	Orbit,
-	ShelvingUnit,
-	Sparkles,
 	Toolbox,
 } from "lucide-react";
 
-type heroCard = {
-	spacer?: false;
+type NavCard = {
 	title: string;
-	description?: string;
-	icon?: LucideIcon;
-	height: number;
-	width: number;
+	description: string;
+	icon: LucideIcon;
 	href: string;
 };
-type spacerItem = {
-	spacer: true;
-	height: number;
-	width: number;
-	className?: string;
-};
 
-type gridItem = heroCard | spacerItem;
-
-const heroCards: gridItem[] = [
+const cards: NavCard[] = [
 	{
 		title: "Announcements",
-		description: "Latest updates",
-		height: 1,
-		width: 2,
+		description: "Latest updates from the caucus",
 		icon: Megaphone,
 		href: "/cabinet",
 	},
 	{
 		title: "Events",
-		description: "This month",
-		height: 1,
-		width: 2,
+		description: "This month's events",
 		icon: CalendarClock,
 		href: "/cabinet",
 	},
-
 	{
-		title: "Meet our cabinet",
-		description: "Who we are",
-		height: 2,
-		width: 3,
-		icon: ShelvingUnit,
+		title: "Cabinet",
+		description: "Meet our team",
+		icon: Orbit,
 		href: "/cabinet",
 	},
 	{
 		title: "News",
 		description: "What we've been up to",
-		height: 1,
-		width: 2,
 		icon: Newspaper,
 		href: "/cabinet",
 	},
 	{
 		title: "Feedback",
 		description: "Tell us anything",
-		height: 2,
-		width: 1,
 		icon: MessageSquare,
-		href: "/cabinet",
+		href: "/contact",
 	},
 	{
 		title: "Projects",
 		description: "What we're building",
-		height: 1,
-		width: 1,
 		icon: ClipboardList,
 		href: "/cabinet",
 	},
 	{
 		title: "Resources",
 		description: "Useful links",
-		height: 1,
-		width: 2,
 		icon: Toolbox,
 		href: "/resources",
 	},
 	{
 		title: "Contact",
-		description: "Our socials",
-		height: 1,
-		width: 1,
-		icon: MessagesSquare,
+		description: "Our socials and email",
+		icon: Mail,
 		href: "/contact",
 	},
-	// Example spacer (disabled): reserve an empty 1x1 slot by uncommenting.
-	// { spacer: true, height: 1, width: 1 },
 ];
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen w-full flex-col items-center justify-start gap-36 px-6 sm:py-32 sm:items-start">
-			<div className="text-center mx-auto">
+		<main className="flex min-h-screen w-full flex-col items-center gap-16 px-6 py-24 sm:py-32">
+			<div className="text-center">
 				<Stagger>
-					<h1>Sophomore Caucus</h1>
+					<h1 className="text-4xl font-bold sm:text-5xl">Sophomore Caucus</h1>
 				</Stagger>
 				<Stagger>
-					<p className="mt-3 sm:mt-4">
-						Stuyvesant High School's Sophomore Caucus 2025-2026
-					</p>
+					<p className="mt-3">2026-2027</p>
 				</Stagger>
 			</div>
-			<div className="mx-auto grid w-full max-w-7xl grid-flow-dense auto-rows-[10.25rem] grid-cols-2 gap-4 rounded-lg border border-ctp-overlay1/60 bg-ctp-mantle/60 px-4 py-6 backdrop-blur-2xl sm:w-[94%] sm:grid-cols-4 sm:gap-5 sm:px-8 sm:py-8 lg:w-[90%] lg:grid-cols-6 lg:gap-6 lg:px-10 lg:py-10 xl:w-[86%]">
-				{heroCards.map((item, index) => {
-					if ("spacer" in item && item.spacer) {
-						return (
-							<div
-								key={`spacer-${index}`}
-								aria-hidden="true"
-								className={`pointer-events-none select-none opacity-0 ${item.className ?? ""}`}
-								style={{
-									gridColumn: `span ${item.width} / span ${item.width}`,
-									gridRow: `span ${item.height} / span ${item.height}`,
-								}}
-							/>
-						);
-					}
-
-					return (
-						<Stagger
-							key={`card-${index}-${item.title}`}
-							style={{
-								gridColumn: `span ${item.width} / span ${item.width}`,
-								gridRow: `span ${item.height} / span ${item.height}`,
-							}}
+			<div className="grid w-full max-w-4xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+				{cards.map((card) => (
+					<Stagger key={card.title}>
+						<a
+							href={card.href}
+							className="flex items-start gap-3 rounded-lg border border-overlay1/60 bg-surface0/50 p-4 transition-colors hover:bg-surface1/60"
 						>
-							<HeroCard
-								title={item.title}
-								description={item.description}
-								height={item.height}
-								width={item.width}
-								icon={item.icon}
-								href={item.href}
-							/>
-						</Stagger>
-					);
-				})}
+							<card.icon className="mt-0.5 h-5 w-5 shrink-0 text-subtext0" />
+							<div className="min-w-0">
+								<h2 className="text-sm font-semibold">{card.title}</h2>
+								<p className="mt-0.5 text-xs text-subtext0">
+									{card.description}
+								</p>
+							</div>
+						</a>
+					</Stagger>
+				))}
 			</div>
 		</main>
 	);

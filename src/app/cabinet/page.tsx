@@ -56,7 +56,7 @@ export default function About() {
 				{/* Navigator / TOC */}
 				<div className="sticky top-22 z-20 mx-auto w-11/12 self-start lg:top-24 lg:mx-0 lg:w-auto">
 					{/* Mobile dropdown */}
-					<div className="overflow-hidden rounded-xl border border-ctp-overlay0/50 bg-ctp-crust/70 backdrop-blur-2xl lg:hidden">
+					<div className="overflow-hidden rounded-xl border border-overlay0/50 bg-crust/70 backdrop-blur-xl lg:hidden">
 						<button
 							type="button"
 							onClick={() => {
@@ -74,12 +74,10 @@ export default function About() {
 									{roleMeta[activeRole].label}
 								</span>
 							) : (
-								<span className="font-medium text-ctp-text">
-									Jump to section
-								</span>
+								<span className="font-medium text-text">Jump to section</span>
 							)}
 							<svg
-								className={`h-4 w-4 shrink-0 text-ctp-subtext1 transition-transform duration-200 ${
+								className={`h-4 w-4 shrink-0 text-subtext1 transition-transform duration-200 ${
 									tocOpen ? "rotate-180" : ""
 								}`}
 								viewBox="0 0 24 24"
@@ -100,7 +98,7 @@ export default function About() {
 							}`}
 						>
 							<div className="overflow-hidden">
-								<div className="flex flex-col gap-1 border-t border-ctp-overlay0/30 px-2 pb-2 pt-1">
+								<div className="flex flex-col gap-1 border-t border-overlay0/30 px-2 pb-2 pt-1">
 									{roles.map((role) => {
 										const RoleIcon = roleMeta[role].icon;
 
@@ -114,7 +112,7 @@ export default function About() {
 												className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition ${roleStyles[role].hoverBg} ${roleStyles[role].hoverText} ${
 													activeRole === role
 														? `${roleStyles[role].bg} ${roleStyles[role].text} font-medium`
-														: "text-ctp-subtext1"
+														: "text-subtext1"
 												}`}
 											>
 												<RoleIcon className="h-4 w-4 shrink-0" />
@@ -128,7 +126,7 @@ export default function About() {
 					</div>
 					{/* Desktop implementation */}
 					<div className="hidden lg:flex lg:flex-col">
-						<p className="mb-3 px-2 text-xs font-semibold uppercase tracking-widest text-ctp-subtext0">
+						<p className="mb-3 px-2 text-xs font-semibold uppercase tracking-widest text-subtext0">
 							Contents
 						</p>
 						<nav className="flex flex-col">
@@ -142,7 +140,7 @@ export default function About() {
 										className={`flex items-center gap-2 border-l-2 py-1.5 pl-3 pr-2 text-sm transition-all duration-150 ${
 											activeRole === role
 												? `${roleStyles[role].border} ${roleStyles[role].text} font-medium`
-												: "border-transparent text-ctp-subtext1 hover:border-ctp-overlay1 hover:text-ctp-text"
+												: "border-transparent text-subtext1 hover:border-overlay1 hover:text-text"
 										}`}
 									>
 										<RoleIcon className="h-4 w-4 shrink-0" />
@@ -154,7 +152,7 @@ export default function About() {
 					</div>
 				</div>
 
-				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-ctp-overlay0/70 bg-ctp-crust/40 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.16)] backdrop-blur-2xl sm:p-6 lg:p-8">
+				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
 					{roles.map((role) => {
 						const RoleIcon = roleMeta[role].icon;
 						const roleMembers = members[role];
@@ -168,7 +166,7 @@ export default function About() {
 
 						return (
 							<div key={role} className="space-y-4">
-								<div className="border-b border-ctp-overlay0/50 pb-3">
+								<div className="border-b border-overlay0/50 pb-3">
 									<h2
 										id={role}
 										className={`scroll-mt-36 sm:scroll-mt-32 lg:scroll-mt-28 ${roleStyles[role].text}`}
@@ -182,7 +180,7 @@ export default function About() {
 								{membersByLevel.map((group) => {
 									return (
 										<div key={group.level} className="space-y-3">
-											<h3 className="text-sm font-semibold uppercase tracking-wide text-ctp-subtext0">
+											<h3 className="text-sm font-semibold uppercase tracking-wide text-subtext0">
 												{memberLevelMeta[group.level].label}
 											</h3>
 											<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">

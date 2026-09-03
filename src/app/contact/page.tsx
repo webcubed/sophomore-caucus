@@ -52,10 +52,10 @@ export default function Contact() {
 									href={href}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="flex items-center justify-between gap-2 sm:gap-3 rounded-md border border-ctp-overlay1/40 bg-ctp-surface0/60 px-3 sm:px-4 py-2 sm:py-3 text-ctp-text transition-all duration-200 hover:-translate-y-0.5 hover:border-ctp-overlay1/70 hover:bg-ctp-surface0/80"
+									className="flex items-center justify-between gap-2 sm:gap-3 rounded-md border border-overlay1/40 bg-surface0/60 px-3 sm:px-4 py-2 sm:py-3 text-text transition-colors hover:bg-surface0/80"
 								>
 									<span className="flex items-center gap-2 sm:gap-3">
-										<span className="flex h-8 sm:h-10 w-8 sm:w-10 aspect-square items-center justify-center rounded-full bg-ctp-surface1 text-ctp-text/90 shrink-0">
+										<span className="flex h-8 sm:h-10 w-8 sm:w-10 aspect-square items-center justify-center rounded-full bg-surface1 text-text/90 shrink-0">
 											<Icon className="h-4 sm:h-5 w-4 sm:w-5" aria-hidden />
 										</span>
 										<span className="font-semibold text-sm sm:text-base truncate">
@@ -63,7 +63,7 @@ export default function Contact() {
 										</span>
 									</span>
 									<ArrowUpRight
-										className="h-4 sm:h-5 w-4 sm:w-5 text-ctp-subtext1 ml-2 sm:ml-5 shrink-0"
+										className="h-4 sm:h-5 w-4 sm:w-5 text-subtext1 ml-2 sm:ml-5 shrink-0"
 										aria-hidden
 									/>
 								</a>
@@ -81,7 +81,7 @@ export default function Contact() {
 							{contacts.map(({ label, value, href, Icon }) => (
 								<div
 									key={label}
-									className="w-full flex items-center gap-2 sm:gap-3 rounded-md border border-ctp-overlay1/40 bg-ctp-surface0/60 px-3 sm:px-4 py-2 sm:py-3 text-ctp-text transition-all duration-200 hover:-translate-y-0.5 hover:border-ctp-overlay1/70 hover:bg-ctp-surface0/80"
+									className="w-full flex items-center gap-2 sm:gap-3 rounded-md border border-overlay1/40 bg-surface0/60 px-3 sm:px-4 py-2 sm:py-3 text-text transition-colors hover:bg-surface0/80"
 									role="group"
 								>
 									<a
@@ -90,11 +90,11 @@ export default function Contact() {
 										rel="noopener noreferrer"
 										className="flex items-center gap-3 flex-1 min-w-0"
 									>
-										<span className="flex h-8 sm:h-10 w-8 sm:w-10 aspect-square items-center justify-center rounded-full bg-ctp-surface1 text-ctp-text/90 shrink-0">
+										<span className="flex h-8 sm:h-10 w-8 sm:w-10 aspect-square items-center justify-center rounded-full bg-surface1 text-text/90 shrink-0">
 											<Icon className="h-4 sm:h-5 w-4 sm:w-5" aria-hidden />
 										</span>
 										<span className="flex flex-col text-left w-full min-w-0">
-											<span className="text-xs sm:text-sm font-semibold text-ctp-subtext1">
+											<span className="text-xs sm:text-sm font-semibold text-subtext1">
 												{label}
 											</span>
 											<span className="font-semibold truncate text-sm sm:text-base">
@@ -110,7 +110,7 @@ export default function Contact() {
 											await copy(value);
 										}}
 										title="Copy to clipboard"
-										className="cursor-pointer inline-flex h-8 ml-2 sm:ml-5 sm:h-10 w-8 sm:w-10 items-center justify-center rounded-lg border border-ctp-overlay1/60 bg-ctp-surface1/60 text-ctp-subtext1 shadow-[0px_6px_12px_rgba(0,0,0,0.18)] transition duration-150 hover:-translate-y-px hover:border-ctp-lavender/60 hover:bg-ctp-surface1/90 hover:text-ctp-text hover:shadow-[0px_10px_18px_rgba(0,0,0,0.22)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ctp-lavender/60 shrink-0"
+										className="cursor-pointer inline-flex h-8 ml-2 sm:ml-5 sm:h-10 w-8 sm:w-10 items-center justify-center rounded-lg border border-overlay1/60 bg-surface1/60 text-subtext1 transition duration-150 hover:text-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent/60 shrink-0"
 									>
 										<Copy className="h-4 sm:h-5 w-4 sm:w-5" aria-hidden />
 										<span className="sr-only">Copy {label}</span>

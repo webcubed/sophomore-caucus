@@ -30,15 +30,12 @@ export default function Confirm({
 			aria-modal="true"
 			aria-labelledby="confirm-title"
 		>
-			<div className="w-full max-w-sm rounded-lg border border-ctp-overlay1/40 bg-linear-to-br from-ctp-surface0/75 via-ctp-base/65 to-ctp-surface0/55 p-6 shadow-xl">
-				<h2
-					id="confirm-title"
-					className="mb-2 text-lg font-semibold text-ctp-text"
-				>
+			<div className="w-full max-w-sm rounded-lg border border-overlay1/40 bg-surface0/95 p-6 shadow-xl backdrop-blur-xl">
+				<h2 id="confirm-title" className="mb-2 text-lg font-semibold text-text">
 					{title}
 				</h2>
 				{description && (
-					<p className="mb-4 text-sm text-ctp-subtext1">{description}</p>
+					<p className="mb-4 text-sm text-subtext1">{description}</p>
 				)}
 
 				<div className="flex gap-3">

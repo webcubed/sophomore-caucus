@@ -26,12 +26,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html
-			lang="en"
-			className="dark"
-			data-catppuccin="mocha"
-			suppressHydrationWarning
-		>
+		<html lang="en" suppressHydrationWarning>
 			<body className={`${lexend.variable} antialiased`}>
 				<Header />
 				<TransitionProvider>{children}</TransitionProvider>

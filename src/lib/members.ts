@@ -56,60 +56,60 @@ export const roleStyles: Record<
 	}
 > = {
 	"caucus-president": {
-		bg: "bg-ctp-sapphire/20",
-		text: "text-ctp-sapphire",
-		hoverBg: "hover:bg-ctp-sapphire/20",
-		hoverText: "hover:text-ctp-sapphire",
-		border: "border-ctp-sapphire",
+		bg: "bg-sapphire/20",
+		text: "text-sapphire",
+		hoverBg: "hover:bg-sapphire/20",
+		hoverText: "hover:text-sapphire",
+		border: "border-sapphire",
 	},
 	"chief-of-staff": {
-		bg: "bg-ctp-lavender/20",
-		text: "text-ctp-lavender",
-		hoverBg: "hover:bg-ctp-lavender/20",
-		hoverText: "hover:text-ctp-lavender",
-		border: "border-ctp-lavender",
+		bg: "bg-lavender/20",
+		text: "text-lavender",
+		hoverBg: "hover:bg-lavender/20",
+		hoverText: "hover:text-lavender",
+		border: "border-lavender",
 	},
 	"media-graphics-director": {
-		bg: "bg-ctp-mauve/20",
-		text: "text-ctp-mauve",
-		hoverBg: "hover:bg-ctp-mauve/20",
-		hoverText: "hover:text-ctp-mauve",
-		border: "border-ctp-mauve",
+		bg: "bg-mauve/20",
+		text: "text-mauve",
+		hoverBg: "hover:bg-mauve/20",
+		hoverText: "hover:text-mauve",
+		border: "border-mauve",
 	},
 	"finance-director": {
-		bg: "bg-ctp-yellow/20",
-		text: "text-ctp-yellow",
-		hoverBg: "hover:bg-ctp-yellow/20",
-		hoverText: "hover:text-ctp-yellow",
-		border: "border-ctp-yellow",
+		bg: "bg-yellow/20",
+		text: "text-yellow",
+		hoverBg: "hover:bg-yellow/20",
+		hoverText: "hover:text-yellow",
+		border: "border-yellow",
 	},
 	"events-director": {
-		bg: "bg-ctp-peach/20",
-		text: "text-ctp-peach",
-		hoverBg: "hover:bg-ctp-peach/20",
-		hoverText: "hover:text-ctp-peach",
-		border: "border-ctp-peach",
+		bg: "bg-peach/20",
+		text: "text-peach",
+		hoverBg: "hover:bg-peach/20",
+		hoverText: "hover:text-peach",
+		border: "border-peach",
 	},
 	"internals-director": {
-		bg: "bg-ctp-teal/20",
-		text: "text-ctp-teal",
-		hoverBg: "hover:bg-ctp-teal/20",
-		hoverText: "hover:text-ctp-teal",
-		border: "border-ctp-teal",
+		bg: "bg-teal/20",
+		text: "text-teal",
+		hoverBg: "hover:bg-teal/20",
+		hoverText: "hover:text-teal",
+		border: "border-teal",
 	},
 	"externals-outreach-director": {
-		bg: "bg-ctp-green/20",
-		text: "text-ctp-green",
-		hoverBg: "hover:bg-ctp-green/20",
-		hoverText: "hover:text-ctp-green",
-		border: "border-ctp-green",
+		bg: "bg-green/20",
+		text: "text-green",
+		hoverBg: "hover:bg-green/20",
+		hoverText: "hover:text-green",
+		border: "border-green",
 	},
 	"it-director": {
-		bg: "bg-ctp-blue/20",
-		text: "text-ctp-blue",
-		hoverBg: "hover:bg-ctp-blue/20",
-		hoverText: "hover:text-ctp-blue",
-		border: "border-ctp-blue",
+		bg: "bg-blue/20",
+		text: "text-blue",
+		hoverBg: "hover:bg-blue/20",
+		hoverText: "hover:text-blue",
+		border: "border-blue",
 	},
 };
 
@@ -137,9 +137,9 @@ export type MemberLevel = keyof typeof memberLevelMeta;
 export type MemberImageFit = "cover" | "contain";
 
 export type MemberImageConfig = {
-	fit?: MemberImageFit; // Ex: "cover", "contain"
-	objectPosition?: string; // Ex: "center 22%", "50% 18%" "center"
-	scale?: number; // Ex: 1.06, 0.95
+	fit?: MemberImageFit;
+	objectPosition?: string;
+	scale?: number;
 	enabled?: boolean;
 };
 
