@@ -9,6 +9,7 @@
 - Motion
 - Simple Icons
 - Lucide Icons
+- sanity.io as headless CMS
 
 ## Development
 
@@ -18,14 +19,3 @@
 2. Run build command `pnpm build`
 
 - To run dev server, run `pnpm dev`
-
-### TODO
-
-- [ ] Emails, feedback form, socials go in contact page
-- [ ] Make announcements/news page
-- [ ] Rewrite header
-- [ ] Rewrite card
-- [ ] Unite gradient background in css class, use radia gradients
-- [ ] Invesigate implementation of theme switching
-  - Automatic or + user choice?
-- [ ] Reduced-motion support (TransitionProvider)

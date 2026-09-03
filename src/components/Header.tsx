@@ -13,6 +13,9 @@ export default function Header() {
 	const [hidden, setHidden] = useState(false);
 	const pathname = usePathname();
 	const headerRef = useRef<HTMLHeadingElement>(null);
+	if (pathname?.startsWith("/studio")) {
+		return null;
+	}
 
 	const headerScrollConfig = {
 		enabled:
@@ -115,9 +118,7 @@ export default function Header() {
 							href="/"
 							className="inline-flex items-center gap-3 text-text transition-colors duration-200"
 						>
-							<h1 className="text-lg font-bold sm:inline">
-								Sophomore Caucus
-							</h1>
+							<h1 className="text-lg font-bold sm:inline">Sophomore Caucus</h1>
 						</a>
 					</div>
 					{/* Navigation */}
@@ -180,7 +181,7 @@ export default function Header() {
 									<a
 										key={page.href}
 										href={page.href}
-										className={`flex gap-1 items-center rounded-md px-3 py-2 text-sm font-semibold transition cursor-pointer ${isActive ? "text-accent bg-surface1/70" : "text-text hover:text-accent"}`}
+										className={`flex gap-1 items-center rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-accent/60 cursor-pointer ${isActive ? "text-accent bg-surface1/70 backdrop-blur-md border border-overlay1/40 shadow-[0px_8px_16px_rgba(0,0,0,0.2)] ring-1 ring-accent/20" : "text-text hover:bg-surface1/60 hover:text-accent hover:ring-1 hover:ring-accent/30 hover:shadow-[0px_8px_16px_rgba(138,173,244,0.1)]"}`}
 									>
 										<PageIcon className="w-4 h-4" />
 										{page.label}

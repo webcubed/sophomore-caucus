@@ -1,14 +1,14 @@
 import type { LucideIcon } from "lucide-react";
+import Announcements from "@/components/Announcements";
 import { Stagger } from "@/components/TransitionProvider";
 import {
 	CalendarClock,
 	ClipboardList,
 	Mail,
-	MessageSquare,
 	Megaphone,
+	MessageSquare,
 	Newspaper,
 	Orbit,
-	Toolbox,
 } from "lucide-react";
 
 type NavCard = {
@@ -29,7 +29,7 @@ const cards: NavCard[] = [
 		title: "Events",
 		description: "This month's events",
 		icon: CalendarClock,
-		href: "/cabinet",
+		href: "/events",
 	},
 	{
 		title: "Cabinet",
@@ -47,19 +47,13 @@ const cards: NavCard[] = [
 		title: "Feedback",
 		description: "Tell us anything",
 		icon: MessageSquare,
-		href: "/contact",
+		href: "https://docs.google.com/forms/d/e/1FAIpQLScM69jAj1Ll80oeZ7H8cR0FmxF8p0Ew7oyYmFlXV1rQm0KhmA/viewform",
 	},
 	{
-		title: "Projects",
-		description: "What we're building",
+		title: "Megadoc",
+		description: "What we're working on",
 		icon: ClipboardList,
-		href: "/cabinet",
-	},
-	{
-		title: "Resources",
-		description: "Useful links",
-		icon: Toolbox,
-		href: "/resources",
+		href: "https://docs.google.com/document/d/1rKev2mfD8JBfKP8Gy041SyP9LuY5IfzPFf7WTRyMnNI/edit?tab=t.0",
 	},
 	{
 		title: "Contact",
@@ -97,7 +91,8 @@ export default function Home() {
 						</a>
 					</Stagger>
 				))}
-			</div>
+			</div>{" "}
+			<Announcements />
 		</main>
 	);
 }
