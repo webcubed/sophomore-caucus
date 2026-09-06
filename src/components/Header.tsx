@@ -2,10 +2,50 @@
 
 import "@/styles/globals.css";
 
+import type { NavHighlight } from "@/lib/constants";
 import { pages } from "@/lib/constants";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+
+type HighlightStyles = {
+	active: string;
+	mobileActive: string;
+	hover: string;
+};
+
+const highlightStyles: Record<NavHighlight, HighlightStyles> = {
+	accent: {
+		active: "text-accent bg-accent/15",
+		mobileActive:
+			"text-accent bg-accent/15 backdrop-blur-md border border-accent/20 ring-1 ring-accent/20",
+		hover: "hover:bg-accent/10 hover:ring-1 hover:ring-accent/20",
+	},
+	green: {
+		active: "text-green bg-green/15",
+		mobileActive:
+			"text-green bg-green/15 backdrop-blur-md border border-green/20 ring-1 ring-green/20",
+		hover: "hover:bg-green/10 hover:ring-1 hover:ring-green/20",
+	},
+	peach: {
+		active: "text-peach bg-peach/15",
+		mobileActive:
+			"text-peach bg-peach/15 backdrop-blur-md border border-peach/20 ring-1 ring-peach/20",
+		hover: "hover:bg-peach/10 hover:ring-1 hover:ring-peach/20",
+	},
+	sapphire: {
+		active: "text-sapphire bg-sapphire/15",
+		mobileActive:
+			"text-sapphire bg-sapphire/15 backdrop-blur-md border border-sapphire/20 ring-1 ring-sapphire/20",
+		hover: "hover:bg-sapphire/10 hover:ring-1 hover:ring-sapphire/20",
+	},
+	yellow: {
+		active: "text-yellow bg-yellow/15",
+		mobileActive:
+			"text-yellow bg-yellow/15 backdrop-blur-md border border-yellow/20 ring-1 ring-yellow/20",
+		hover: "hover:bg-yellow/10 hover:ring-1 hover:ring-yellow/20",
+	},
+};
 
 export default function Header() {
 	const [navOpen, setNavOpen] = useState(false);
@@ -130,11 +170,12 @@ export default function Header() {
 							{pages.map((page) => {
 								const isActive = pathname === page.href;
 								const PageIcon = page.icon;
+								const styles = highlightStyles[page.highlightColor];
 								return (
 									<a
 										key={page.href}
 										href={page.href}
-										className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold transition cursor-pointer ${isActive ? "text-accent bg-surface1/70" : "text-text hover:text-accent"}`}
+										className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold transition cursor-pointer ${isActive ? styles.active : `text-text ${styles.hover}`}`}
 									>
 										<PageIcon className="w-4 h-4" />
 										{page.label}
@@ -177,11 +218,12 @@ export default function Header() {
 							{pages.map((page) => {
 								const isActive = pathname === page.href;
 								const PageIcon = page.icon;
+								const styles = highlightStyles[page.highlightColor];
 								return (
 									<a
 										key={page.href}
 										href={page.href}
-										className={`flex gap-1 items-center rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-accent/60 cursor-pointer ${isActive ? "text-accent bg-surface1/70 backdrop-blur-md border border-overlay1/40 shadow-[0px_8px_16px_rgba(0,0,0,0.2)] ring-1 ring-accent/20" : "text-text hover:bg-surface1/60 hover:text-accent hover:ring-1 hover:ring-accent/30 hover:shadow-[0px_8px_16px_rgba(138,173,244,0.1)]"}`}
+										className={`flex gap-1 items-center rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current cursor-pointer ${isActive ? styles.mobileActive : `text-text ${styles.hover}`}`}
 									>
 										<PageIcon className="w-4 h-4" />
 										{page.label}

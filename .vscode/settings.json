@@ -1,0 +1,4 @@
+{
+	"prettier.configPath": "./prettier.config.mjs",
+	"xo.path": "./xo.config.mjs"
+}

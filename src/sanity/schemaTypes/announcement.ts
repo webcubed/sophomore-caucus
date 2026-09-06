@@ -25,7 +25,7 @@ export const announcementType = defineType({
 		}),
 		defineField({
 			name: "flyer",
-			title: "Flyer / Image (Optional)",
+			title: "Image (Optional)",
 			type: "image",
 			options: { hotspot: true },
 		}),

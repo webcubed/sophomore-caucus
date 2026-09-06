@@ -43,7 +43,7 @@ export default async function Announcements() {
 			</h2>
 
 			<div className="grid gap-6">
-				{announcements.map((post) => (
+				{announcements.map((post, index) => (
 					<article
 						key={post._id}
 						className="flex flex-col md:flex-row gap-6 rounded-xl border border-overlay1 bg-surface0/60 p-6 backdrop-blur"
@@ -55,6 +55,8 @@ export default async function Announcements() {
 									src={urlFor(post.flyer).width(600).url()}
 									alt={post.title}
 									fill
+									sizes="(min-width: 768px) 14rem, 100vw"
+									loading={index === 0 ? "eager" : "lazy"}
 									className="object-cover"
 								/>
 							</div>
