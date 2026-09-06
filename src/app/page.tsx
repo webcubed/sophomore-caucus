@@ -4,7 +4,6 @@ import { Stagger } from "@/components/TransitionProvider";
 import {
 	CalendarClock,
 	ClipboardList,
-	Mail,
 	Megaphone,
 	MessageSquare,
 	Newspaper,
@@ -54,12 +53,6 @@ const cards: NavCard[] = [
 		description: "What we're working on",
 		icon: ClipboardList,
 		href: "https://docs.google.com/document/d/1rKev2mfD8JBfKP8Gy041SyP9LuY5IfzPFf7WTRyMnNI/edit?tab=t.0",
-	},
-	{
-		title: "Contact",
-		description: "Our socials and email",
-		icon: Mail,
-		href: "/contact",
 	},
 ];
 

@@ -1,11 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import {
-	CalendarClock,
-	Megaphone,
-	MessagesSquare,
-	ShelvingUnit,
-	Toolbox,
-} from "lucide-react";
+import { CalendarClock, Megaphone, ShelvingUnit, Toolbox } from "lucide-react";
 
 export type NavHighlight = "accent" | "green" | "peach" | "sapphire" | "yellow";
 
@@ -20,12 +14,6 @@ export const pages: Array<{
 		label: "Announcements",
 		icon: Megaphone,
 		highlightColor: "peach",
-	},
-	{
-		href: "/contact",
-		label: "Contact",
-		icon: MessagesSquare,
-		highlightColor: "green",
 	},
 	{
 		href: "/cabinet",

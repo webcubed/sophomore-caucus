@@ -115,6 +115,8 @@ export const roleStyles: Record<
 
 export type Roles = keyof typeof roleMeta;
 
+export const roleOrder = Object.keys(roleMeta) as Roles[];
+
 export type RoleMeta = {
 	label: string;
 	icon: LucideIcon;
@@ -150,32 +152,308 @@ export type MemberProfile = {
 	imageConfig?: MemberImageConfig;
 };
 
+export type MemberContact = {
+	stuyEmail: string;
+	nycEmail: string;
+	personalEmail: string;
+	phoneNumber: string;
+	instagramHandle: string;
+	discordUsername: string;
+	preferredCommunication: string;
+};
+
+export type MemberDirectoryEntry = MemberProfile & {
+	role: Roles;
+	contact: MemberContact;
+};
+
 export type RoleMembers =
 	| (Partial<Record<MemberLevel, MemberProfile[]>> & {
 			ungrouped?: MemberProfile[];
 	  })
 	| undefined;
 
-const defaultMemberImageConfig: MemberImageConfig = {
-	fit: "cover",
-	objectPosition: "center 28%",
-};
+export const memberDirectory: MemberDirectoryEntry[] = [
+	{
+		role: "caucus-president",
+		name: "Ella Lee",
+		contact: {
+			stuyEmail: "elee90@stuy.edu",
+			nycEmail: "ellal36@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "caucus-president",
+		name: "Thomas Vichaidith",
+		contact: {
+			stuyEmail: "tvichaidith90@stuy.edu",
+			nycEmail: "thomasv63@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "chief-of-staff",
+		name: "Pearl Lin",
+		contact: {
+			stuyEmail: "plin90@stuy.edu",
+			nycEmail: "pearll18@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "chief-of-staff",
+		name: "Sydney Ma",
+		contact: {
+			stuyEmail: "sma91@stuy.edu",
+			nycEmail: "sydneym85@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "events-director",
+		name: "Vismary Castillo",
+		contact: {
+			stuyEmail: "vcastillo90@stuy.edu",
+			nycEmail: "vismaryc@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "events-director",
+		name: "Alexa Yuan",
+		contact: {
+			stuyEmail: "ayuan90@stuy.edu",
+			nycEmail: "alexay6@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "internals-director",
+		name: "Travis Yuan",
+		contact: {
+			stuyEmail: "tyuan90@stuy.edu",
+			nycEmail: "travisy@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "internals-director",
+		name: "Zhiyue Chen",
+		contact: {
+			stuyEmail: "zchen90@stuy.edu",
+			nycEmail: "zhiyuec@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "internals-director",
+		name: "Gina Chen",
+		contact: {
+			stuyEmail: "gchen90@stuy.edu",
+			nycEmail: "ginac49@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "externals-outreach-director",
+		name: "Calista Loo",
+		contact: {
+			stuyEmail: "cloo90@stuy.edu",
+			nycEmail: "calistal4@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "externals-outreach-director",
+		name: "Vivian Li",
+		contact: {
+			stuyEmail: "vli91@stuy.edu",
+			nycEmail: "vivianl202@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "finance-director",
+		name: "Mingxuan Zhang",
+		contact: {
+			stuyEmail: "mzhang92@stuy.edu",
+			nycEmail: "mingxuanz5@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "finance-director",
+		name: "Celine Park",
+		contact: {
+			stuyEmail: "cpark90@stuy.edu",
+			nycEmail: "celinep30@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "it-director",
+		name: "Makayla Kong-Kho",
+		contact: {
+			stuyEmail: "mkong-kho90@stuy.edu",
+			nycEmail: "makaylak17@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "it-director",
+		name: "Nathan Lai",
+		contact: {
+			stuyEmail: "nlai90@stuy.edu",
+			nycEmail: "nathanl99@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "it-director",
+		name: "Will Yang",
+		contact: {
+			stuyEmail: "wyang90@stuy.edu",
+			nycEmail: "willy@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "media-graphics-director",
+		name: "Evan Hu",
+		contact: {
+			stuyEmail: "ehu90@stuy.edu",
+			nycEmail: "evanh64@nycstudent.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "media-graphics-director",
+		name: "Kathy Zhang",
+		contact: {
+			stuyEmail: "kzhang90@stuy.edu",
+			nycEmail: "kathyz17@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "media-graphics-director",
+		name: "Michelle Li",
+		contact: {
+			stuyEmail: "mli91@stuy.edu",
+			nycEmail: "michellel375@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+	{
+		role: "media-graphics-director",
+		name: "Claire Jiang",
+		contact: {
+			stuyEmail: "cjiang92@stuy.edu",
+			nycEmail: "clairej11@nycstudents.net",
+			personalEmail: "REDACTED",
+			phoneNumber: "REDACTED",
+			instagramHandle: "REDACTED",
+			discordUsername: "REDACTED",
+			preferredCommunication: "REDACTED",
+		},
+	},
+];
 
-const withImage = (
-	image: string,
-	imageConfig?: MemberImageConfig
-): Pick<MemberProfile, "image" | "imageConfig"> => ({
-	image,
-	imageConfig: imageConfig ?? defaultMemberImageConfig,
-});
+function buildMembersByRole(
+	directory: MemberDirectoryEntry[]
+): Record<Roles, RoleMembers> {
+	const grouped = Object.fromEntries(
+		roleOrder.map((role) => [role, { ungrouped: [] as MemberProfile[] }])
+	) as Record<Roles, NonNullable<RoleMembers>>;
 
-export const members: Record<Roles, RoleMembers> = {
-	"caucus-president": undefined,
-	"chief-of-staff": undefined,
-	"media-graphics-director": undefined,
-	"finance-director": undefined,
-	"events-director": undefined,
-	"internals-director": undefined,
-	"externals-outreach-director": undefined,
-	"it-director": undefined,
-};
+	for (const member of directory) {
+		grouped[member.role].ungrouped?.push({
+			name: member.name,
+			description: member.contact.preferredCommunication,
+			image: member.image,
+			imageConfig: member.imageConfig,
+		});
+	}
+
+	return grouped;
+}
+
+export const members: Record<Roles, RoleMembers> =
+	buildMembersByRole(memberDirectory);

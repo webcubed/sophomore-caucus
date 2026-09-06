@@ -1,12 +1,28 @@
 "use client";
 
+import type { MemberDirectoryEntry } from "@/lib/members";
 import { Stagger } from "@/components/TransitionProvider";
-import { memberLevelMeta, members, roleMeta, roleStyles } from "@/lib/members";
-import { useEffect, useState } from "react";
+import {
+	memberDirectory,
+	roleMeta,
+	roleOrder,
+	roleStyles,
+} from "@/lib/members";
+import { useEffect, useMemo, useState } from "react";
+import { CabinetContactModal } from "./components/CabinetContactModal";
 import { Profile } from "./components/Profile";
 
 function sortByName<T extends { name: string }>(list: T[]): T[] {
 	return [...list].sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function groupMembersByRole(directory: MemberDirectoryEntry[]) {
+	return roleOrder
+		.map((role) => ({
+			role,
+			members: sortByName(directory.filter((member) => member.role === role)),
+		}))
+		.filter((group) => group.members.length > 0);
 }
 
 export default function About() {
@@ -14,11 +30,11 @@ export default function About() {
 		keyof typeof roleMeta | undefined
 	>(undefined);
 	const [tocOpen, setTocOpen] = useState(false);
+	const [selectedMember, setSelectedMember] =
+		useState<MemberDirectoryEntry | null>(null);
 	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
-	const memberLevels = Object.keys(memberLevelMeta) as Array<
-		keyof typeof memberLevelMeta
-	>;
 	const ActiveRoleIcon = activeRole ? roleMeta[activeRole].icon : undefined;
+	const groupedMembers = useMemo(() => groupMembersByRole(memberDirectory), []);
 
 	useEffect(() => {
 		const isMobile = globalThis.matchMedia("(max-width: 1023px)").matches;
@@ -50,6 +66,11 @@ export default function About() {
 			<div className="text-center">
 				<Stagger>
 					<h1>Cabinet</h1>
+				</Stagger>
+				<Stagger>
+					<p className="mt-3 text-subtext1">
+						Tap a profile to view full contact details.
+					</p>
 				</Stagger>
 			</div>
 			<div className="flex flex-col gap-8 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
@@ -153,16 +174,9 @@ export default function About() {
 				</div>
 
 				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
-					{roles.map((role) => {
+					{groupedMembers.map((group) => {
+						const role = group.role;
 						const RoleIcon = roleMeta[role].icon;
-						const roleMembers = members[role];
-						const membersByLevel = memberLevels
-							.map((level) => ({
-								level,
-								members: sortByName(roleMembers?.[level] ?? []),
-							}))
-							.filter((group) => group.members.length > 0);
-						const ungroupedMembers = sortByName(roleMembers?.ungrouped ?? []);
 
 						return (
 							<div key={role} className="space-y-4">
@@ -177,61 +191,42 @@ export default function About() {
 										</span>
 									</h2>
 								</div>
-								{membersByLevel.map((group) => {
-									return (
-										<div key={group.level} className="space-y-3">
-											<h3 className="text-sm font-semibold uppercase tracking-wide text-subtext0">
-												{memberLevelMeta[group.level].label}
-											</h3>
-											<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-												{group.members.map((member) => (
-													<div
-														key={`${member.name}-${role}-${group.level}`}
-														className="h-full"
-													>
-														<Stagger>
-															<Profile
-																name={member.name}
-																role={role}
-																level={group.level}
-																image={member.image}
-																imageConfig={member.imageConfig}
-																description={member.description}
-															/>
-														</Stagger>
-													</div>
-												))}
-											</div>
-										</div>
-									);
-								})}
-								{ungroupedMembers.length > 0 ? (
-									<div className="space-y-3">
-										<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-											{ungroupedMembers.map((member) => (
-												<div
-													key={`${member.name}-${role}-ungrouped`}
-													className="h-full"
+								<div className="my-4 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+									{group.members.map((member) => (
+										<div key={member.name} className="h-full">
+											<Stagger>
+												<button
+													type="button"
+													onClick={() => {
+														setSelectedMember(member);
+													}}
+													className="block h-full w-full cursor-pointer text-left"
+													aria-haspopup="dialog"
+													aria-label={`Open contact details for ${member.name}`}
 												>
-													<Stagger>
-														<Profile
-															name={member.name}
-															role={role}
-															image={member.image}
-															imageConfig={member.imageConfig}
-															description={member.description}
-														/>
-													</Stagger>
-												</div>
-											))}
+													<Profile
+														name={member.name}
+														role={role}
+														image={member.image}
+														imageConfig={member.imageConfig}
+													/>
+													<span className="sr-only">View contact info</span>
+												</button>
+											</Stagger>
 										</div>
-									</div>
-								) : null}
+									))}
+								</div>
 							</div>
 						);
 					})}
 				</div>
 			</div>
+			<CabinetContactModal
+				member={selectedMember}
+				onClose={() => {
+					setSelectedMember(null);
+				}}
+			/>
 		</main>
 	);
 }
