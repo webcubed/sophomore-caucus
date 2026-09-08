@@ -2,15 +2,11 @@
 
 import type { MemberDirectoryEntry } from "@/lib/members";
 import { Stagger } from "@/components/TransitionProvider";
-import {
-	memberDirectory,
-	roleMeta,
-	roleOrder,
-	roleStyles,
-} from "@/lib/members";
+import { memberDirectory, roleMeta, roleOrder, roleStyles } from "@/lib/members";
 import { useEffect, useMemo, useState } from "react";
 import { CabinetContactModal } from "./components/CabinetContactModal";
 import { Profile } from "./components/Profile";
+
 
 function sortByName<T extends { name: string }>(list: T[]): T[] {
 	return [...list].sort((a, b) => a.name.localeCompare(b.name));
@@ -61,19 +57,8 @@ export default function About() {
 			observer.disconnect();
 		};
 	}, []);
-	return (
-		<main className="flex flex-col gap-36 min-h-screen w-full px-4 pt-28 pb-8 sm:px-6 sm:pt-32 sm:pb-12 lg:px-8">
-			<div className="text-center">
-				<Stagger>
-					<h1>Cabinet</h1>
-				</Stagger>
-				<Stagger>
-					<p className="mt-3 text-subtext1">
-						Tap a profile to view full contact details.
-					</p>
-				</Stagger>
-			</div>
-			<div className="flex flex-col gap-8 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+	return (<>
+		<div className="flex flex-col gap-8 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
 				{/* Navigator / TOC */}
 				<div className="sticky top-22 z-20 mx-auto w-11/12 self-start lg:top-24 lg:mx-0 lg:w-auto">
 					{/* Mobile dropdown */}
@@ -227,6 +212,6 @@ export default function About() {
 					setSelectedMember(null);
 				}}
 			/>
-		</main>
+		</>
 	);
 }
