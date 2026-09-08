@@ -85,7 +85,7 @@ export default function Home() {
 						</a>
 					</Stagger>
 				))}
-			</div>{" "}
+			</div>
 			<Announcements />
 		</main>
 	);
