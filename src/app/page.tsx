@@ -72,6 +72,7 @@ export default function Home() {
 					<Stagger key={card.title}>
 						<a
 							href={card.href}
+							target={card.href.startsWith("http") ? "_blank" : undefined}
 							className="flex h-full items-start gap-3 rounded-lg border border-overlay1/60 bg-surface0/50 p-4 transition-colors hover:bg-surface1/60"
 						>
 							<card.icon className="mt-0.5 h-5 w-5 shrink-0 text-subtext0" />
