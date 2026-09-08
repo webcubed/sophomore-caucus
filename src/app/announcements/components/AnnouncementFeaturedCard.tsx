@@ -16,11 +16,6 @@ export function AnnouncementFeaturedCard({
 			<div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
 				<div className="order-2 lg:order-1">
 					<Stagger>
-						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-subtext0">
-							Latest post
-						</p>
-					</Stagger>
-					<Stagger>
 						<h2 className="mt-3 text-2xl font-semibold text-text sm:text-3xl">
 							{announcement.title}
 						</h2>
