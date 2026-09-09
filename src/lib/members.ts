@@ -376,7 +376,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 			stuyEmail: "wyang90@stuy.edu",
 			nycEmail: "willy@nycstudents.net",
 			personalEmail: "yangwill898@gmail.com",
-			phoneNumber: "9294782866",
+			phoneNumber: "9294882966",
 			instagramHandle: "quietnrandom",
 			discordUsername: "greed.898",
 			preferredCommunication: "Insta, phone, or email",
