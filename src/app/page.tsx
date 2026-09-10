@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import Announcements from "@/components/Announcements";
+import CalendarBanner from "@/components/CalendarBanner";
 import { Stagger } from "@/components/TransitionProvider";
 import {
 	CalendarClock,
@@ -66,6 +67,9 @@ export default function Home() {
 				<Stagger>
 					<p className="mt-3">2026-2027</p>
 				</Stagger>
+			</div>
+			<div className="w-full max-w-4xl">
+				<CalendarBanner />
 			</div>
 			<div className="grid w-full max-w-4xl auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
 				{cards.map((card) => (

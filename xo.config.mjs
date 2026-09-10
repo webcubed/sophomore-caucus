@@ -7,6 +7,7 @@ const xoConfig = {
 		".next/**",
 		"**/next-env.d.ts",
 		"eslint.config.mjs",
+		"src/data/calendar.json",
 	],
 	rules: {
 		"import-x/order": "off",
