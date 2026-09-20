@@ -226,6 +226,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "chief-of-staff",
 		name: "Sydney Ma",
+		image: "/pfps/directors/Sydney Ma.jpg",
 		contact: {
 			stuyEmail: "sma91@stuy.edu",
 			nycEmail: "sydneym85@nycstudents.net",
@@ -275,6 +276,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "internals-director",
 		name: "Travis Yuan",
+		image: "/pfps/directors/Travis Yuan.jpg",
 		contact: {
 			stuyEmail: "tyuan90@stuy.edu",
 			nycEmail: "travisy@nycstudents.net",
@@ -324,6 +326,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "externals-outreach-director",
 		name: "Calista Loo",
+		image: "/pfps/directors/Calista Loo.jpeg",
 		contact: {
 			stuyEmail: "cloo90@stuy.edu",
 			nycEmail: "calistal4@nycstudents.net",
@@ -373,6 +376,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "finance-director",
 		name: "Celine Park",
+		image: "/pfps/directors/Celine Park.jpeg",
 		contact: {
 			stuyEmail: "cpark90@stuy.edu",
 			nycEmail: "celinep30@nycstudents.net",
@@ -453,6 +457,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "media-graphics-director",
 		name: "Kathy Zhang",
+		image: "/pfps/directors/Kathy Zhang.png",
 		contact: {
 			stuyEmail: "kzhang90@stuy.edu",
 			nycEmail: "kathyz17@nycstudents.net",
