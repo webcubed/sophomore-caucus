@@ -4,6 +4,7 @@ import type { MemberDirectoryEntry } from "@/lib/members";
 import { Stagger } from "@/components/TransitionProvider";
 import { memberDirectory, roleMeta, roleOrder, roleStyles } from "@/lib/members";
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { CabinetContactModal } from "./components/CabinetContactModal";
 import { Profile } from "./components/Profile";
 
@@ -30,6 +31,33 @@ export default function About() {
 		useState<MemberDirectoryEntry | null>(null);
 	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
 	const ActiveRoleIcon = activeRole ? roleMeta[activeRole].icon : undefined;
+	const [devConfigs, setDevConfigs] = useState<Record<string, { fit?: string; objectPosition: string; scale: number }>>({});
+
+	const handleCopyAll = () => {
+		const membersWithImages = memberDirectory.filter(
+			(m) => m.image && m.imageConfig?.enabled !== false
+		);
+		const blocks = membersWithImages.map((m) => {
+			const cfg = devConfigs[m.name] ?? m.imageConfig ?? { fit: "cover", objectPosition: "center 28%", scale: 1 };
+			return `// ${m.name}\nimage: "${m.image}",\nimageConfig: {\n  fit: "${cfg.fit ?? "cover"}",\n  objectPosition: "${cfg.objectPosition ?? "center 28%"}",\n  scale: ${cfg.scale ?? 1},\n}`;
+		});
+		const text = blocks.join("\n\n");
+		navigator.clipboard?.writeText(text);
+		setCopiedAll(true);
+		setTimeout(() => setCopiedAll(false), 2000);
+	};
+
+	const [copiedAll, setCopiedAll] = useState(false);
+
+	const searchParams = useSearchParams();
+	const [devMode, setDevMode] = useState(false);
+
+	useEffect(() => {
+		const isDevEnv = process.env.NODE_ENV === "development";
+		const devQuery = searchParams?.get("dev") === "true";
+		setDevMode(isDevEnv && devQuery);
+	}, [searchParams]);
+
 	const groupedMembers = useMemo(() => groupMembersByRole(memberDirectory), []);
 
 	useEffect(() => {
@@ -158,8 +186,19 @@ export default function About() {
 					</div>
 				</div>
 
-				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
-					{groupedMembers.map((group) => {
+			<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
+				{devMode && (
+					<div className="mb-4 flex items-center gap-3">
+						<button
+							onClick={handleCopyAll}
+							className="rounded bg-green px-4 py-2 text-sm font-medium text-white shadow hover:bg-green/90"
+						>
+							{copiedAll ? "Copied all!" : "Copy all configs"}
+						</button>
+						<span className="text-xs text-subtext0">Drag / scroll each image to edit · Click profile disabled in dev mode</span>
+					</div>
+				)}
+				{groupedMembers.map((group) => {
 						const role = group.role;
 						const RoleIcon = roleMeta[role].icon;
 
@@ -180,21 +219,25 @@ export default function About() {
 									{group.members.map((member) => (
 										<div key={member.name} className="h-full">
 											<Stagger>
-												<button
-													type="button"
-													onClick={() => {
-														setSelectedMember(member);
-													}}
+									<button
+										type="button"
+										onClick={() => {
+											if (devMode) return;
+											setSelectedMember(member);
+										}}
 													className="block h-full w-full cursor-pointer text-left"
 													aria-haspopup="dialog"
 													aria-label={`Open contact details for ${member.name}`}
 												>
-													<Profile
-														name={member.name}
-														role={role}
-														image={member.image}
-														imageConfig={member.imageConfig}
-													/>
+									<Profile
+										name={member.name}
+										role={role}
+										image={member.image}
+										imageConfig={member.imageConfig}
+										devMode={devMode}
+										liveConfig={devConfigs[member.name] ? { fit: devConfigs[member.name].fit ?? member.imageConfig?.fit ?? "cover", objectPosition: devConfigs[member.name].objectPosition, scale: devConfigs[member.name].scale } : undefined}
+										onConfigChange={(cfg) => setDevConfigs((prev) => ({ ...prev, [member.name]: cfg }))}
+									/>
 													<span className="sr-only">View contact info</span>
 												</button>
 											</Stagger>
