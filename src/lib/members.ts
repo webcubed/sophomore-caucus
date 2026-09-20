@@ -211,7 +211,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		image: "/pfps/directors/Pearl Lin.jpeg",
 		imageConfig: {
 			fit: "cover",
-			objectPosition: "55% 42%",
+			objectPosition: "55% 16%",
 		},
 		contact: {
 			stuyEmail: "plin90@stuy.edu",
@@ -340,7 +340,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		image: "/pfps/directors/Vivian Li.jpeg",
 		imageConfig: {
 			fit: "cover",
-			objectPosition: "55% 42%",
+			objectPosition: "55% 0%",
 		},
 		contact: {
 			stuyEmail: "vli91@stuy.edu",
@@ -358,7 +358,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		image: "/pfps/directors/Ming Xuan Zhang.jpeg",
 		imageConfig: {
 			fit: "cover",
-			objectPosition: "55% 42%",
+			objectPosition: "55% 59%",
 		},
 		contact: {
 			stuyEmail: "mzhang92@stuy.edu",
@@ -420,7 +420,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		image: "/pfps/directors/Will Yang.webp",
 		imageConfig: {
 			fit: "cover",
-			objectPosition: "55% 42%",
+			objectPosition: "55% 29%",
 		},
 		contact: {
 			stuyEmail: "wyang90@stuy.edu",
@@ -438,7 +438,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		image: "/pfps/directors/Evan Hu.jpeg",
 		imageConfig: {
 			fit: "cover",
-			objectPosition: "55% 42%",
+			objectPosition: "55% 9%",
 		},
 		contact: {
 			stuyEmail: "ehu90@stuy.edu",
@@ -487,7 +487,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		image: "/pfps/directors/Claire Jiang.jpeg",
 		imageConfig: {
 			fit: "cover",
-			objectPosition: "55% 42%",
+			objectPosition: "55% 21%",
 		},
 		contact: {
 			stuyEmail: "cjiang92@stuy.edu",

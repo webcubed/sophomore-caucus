@@ -3,11 +3,10 @@
 import type { MemberDirectoryEntry } from "@/lib/members";
 import { Stagger } from "@/components/TransitionProvider";
 import { memberDirectory, roleMeta, roleOrder, roleStyles } from "@/lib/members";
-import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { CabinetContactModal } from "./components/CabinetContactModal";
 import { Profile } from "./components/Profile";
-
+import { Copy, Bug } from "lucide-react";
 
 function sortByName<T extends { name: string }>(list: T[]): T[] {
 	return [...list].sort((a, b) => a.name.localeCompare(b.name));
@@ -22,43 +21,38 @@ function groupMembersByRole(directory: MemberDirectoryEntry[]) {
 		.filter((group) => group.members.length > 0);
 }
 
-export default function About() {
+export default function CabinetPage() {
 	const [activeRole, setActiveRole] = useState<
 		keyof typeof roleMeta | undefined
 	>(undefined);
 	const [tocOpen, setTocOpen] = useState(false);
 	const [selectedMember, setSelectedMember] =
 		useState<MemberDirectoryEntry | null>(null);
+	const [devMode, setDevMode] = useState(() => process.env.NODE_ENV === "development");
+	const [copiedAll, setCopiedAll] = useState(false);
 	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
 	const ActiveRoleIcon = activeRole ? roleMeta[activeRole].icon : undefined;
-	const [devConfigs, setDevConfigs] = useState<Record<string, { fit?: string; objectPosition: string; scale: number }>>({});
+	const [devConfigs, setDevConfigs] = useState<
+		Record<string, { fit?: string; objectPosition: string }>
+	>({});
 
-	const handleCopyAll = () => {
+	const handleCopyAll = useCallback(() => {
 		const membersWithImages = memberDirectory.filter(
 			(m) => m.image && m.imageConfig?.enabled !== false
 		);
 		const blocks = membersWithImages.map((m) => {
-			const cfg = devConfigs[m.name] ?? m.imageConfig ?? { fit: "cover", objectPosition: "center 28%", scale: 1 };
-			return `// ${m.name}\nimage: "${m.image}",\nimageConfig: {\n  fit: "${cfg.fit ?? "cover"}",\n  objectPosition: "${cfg.objectPosition ?? "center 28%"}",\n  scale: ${cfg.scale ?? 1},\n}`;
+			const cfg =
+				devConfigs[m.name] ?? m.imageConfig ?? {
+					fit: "cover",
+					objectPosition: "center 28%",
+				};
+			return `// ${m.name}\nimage: "${m.image}",\nimageConfig: {\n  fit: "${cfg.fit ?? "cover"}",\n  objectPosition: "${cfg.objectPosition ?? "center 28%"}",\n}`;
 		});
 		const text = blocks.join("\n\n");
 		navigator.clipboard?.writeText(text);
 		setCopiedAll(true);
 		setTimeout(() => setCopiedAll(false), 2000);
-	};
-
-	const [copiedAll, setCopiedAll] = useState(false);
-
-	const searchParams = useSearchParams();
-	const [devMode, setDevMode] = useState(false);
-
-	useEffect(() => {
-		const isDevEnv = process.env.NODE_ENV === "development";
-		const devQuery = searchParams?.get("dev") === "true";
-		setDevMode(isDevEnv && devQuery);
-	}, [searchParams]);
-
-	const groupedMembers = useMemo(() => groupMembersByRole(memberDirectory), []);
+	}, [devConfigs]);
 
 	useEffect(() => {
 		const isMobile = globalThis.matchMedia("(max-width: 1023px)").matches;
@@ -71,31 +65,28 @@ export default function About() {
 						setActiveRole(entry.target.id as keyof typeof roleMeta);
 				}
 			},
-			{
-				rootMargin,
-				threshold: 0,
-			}
+			{ rootMargin, threshold: 0 }
 		);
 		for (const role of roles) {
 			const element = document.querySelector(`#${role}`);
 			if (element) observer.observe(element);
 		}
 
-		return () => {
-			observer.disconnect();
-		};
-	}, []);
-	return (<>
-		<div className="flex flex-col gap-8 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+		return () => observer.disconnect();
+	}, [roles]);
+
+	const groupedMembers = useMemo(() => groupMembersByRole(memberDirectory), []);
+
+	return (
+		<>
+			<div className="flex flex-col gap-8 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
 				{/* Navigator / TOC */}
 				<div className="sticky top-22 z-20 mx-auto w-11/12 self-start lg:top-24 lg:mx-0 lg:w-auto">
 					{/* Mobile dropdown */}
 					<div className="overflow-hidden rounded-xl border border-overlay0/50 bg-crust/70 backdrop-blur-xl lg:hidden">
 						<button
 							type="button"
-							onClick={() => {
-								setTocOpen((o) => !o);
-							}}
+							onClick={() => setTocOpen((o) => !o)}
 							className="flex w-full items-center justify-between px-4 py-3 text-sm"
 						>
 							{activeRole ? (
@@ -108,12 +99,12 @@ export default function About() {
 									{roleMeta[activeRole].label}
 								</span>
 							) : (
-								<span className="font-medium text-text">Jump to section</span>
+								<span className="font-medium text-text">
+									Jump to section
+								</span>
 							)}
 							<svg
-								className={`h-4 w-4 shrink-0 text-subtext1 transition-transform duration-200 ${
-									tocOpen ? "rotate-180" : ""
-								}`}
+								className={`h-4 w-4 shrink-0 text-subtext1 transition-transform duration-200 ${tocOpen ? "rotate-180" : ""}`}
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -127,27 +118,18 @@ export default function About() {
 							</svg>
 						</button>
 						<div
-							className={`grid transition-all duration-200 ${
-								tocOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-							}`}
+							className={`grid transition-all duration-200 ${tocOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
 						>
 							<div className="overflow-hidden">
 								<div className="flex flex-col gap-1 border-t border-overlay0/30 px-2 pb-2 pt-1">
 									{roles.map((role) => {
 										const RoleIcon = roleMeta[role].icon;
-
 										return (
 											<a
 												key={role}
 												href={`#${role}`}
-												onClick={() => {
-													setTocOpen(false);
-												}}
-												className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition ${roleStyles[role].hoverBg} ${roleStyles[role].hoverText} ${
-													activeRole === role
-														? `${roleStyles[role].bg} ${roleStyles[role].text} font-medium`
-														: "text-subtext1"
-												}`}
+												onClick={() => setTocOpen(false)}
+												className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition ${roleStyles[role].hoverBg} ${roleStyles[role].hoverText} ${activeRole === role ? `${roleStyles[role].bg} ${roleStyles[role].text} font-medium` : "text-subtext1"}`}
 											>
 												<RoleIcon className="h-4 w-4 shrink-0" />
 												{roleMeta[role].label}
@@ -166,16 +148,11 @@ export default function About() {
 						<nav className="flex flex-col">
 							{roles.map((role) => {
 								const RoleIcon = roleMeta[role].icon;
-
 								return (
 									<a
 										key={role}
 										href={`#${role}`}
-										className={`flex items-center gap-2 border-l-2 py-1.5 pl-3 pr-2 text-sm transition-all duration-150 ${
-											activeRole === role
-												? `${roleStyles[role].border} ${roleStyles[role].text} font-medium`
-												: "border-transparent text-subtext1 hover:border-overlay1 hover:text-text"
-										}`}
+										className={`flex items-center gap-2 border-l-2 py-1.5 pl-3 pr-2 text-sm transition-all duration-150 ${activeRole === role ? `${roleStyles[role].border} ${roleStyles[role].text} font-medium` : "border-transparent text-subtext1 hover:border-overlay1 hover:text-text"}`}
 									>
 										<RoleIcon className="h-4 w-4 shrink-0" />
 										{roleMeta[role].label}
@@ -186,19 +163,34 @@ export default function About() {
 					</div>
 				</div>
 
-			<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
-				{devMode && (
+				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
+					{/* Dev mode toggle */}
 					<div className="mb-4 flex items-center gap-3">
 						<button
-							onClick={handleCopyAll}
-							className="rounded bg-green px-4 py-2 text-sm font-medium text-white shadow hover:bg-green/90"
+							type="button"
+							onClick={() => setDevMode((v) => !v)}
+							className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${devMode ? "bg-green/20 text-green" : "bg-surface1 text-subtext1 hover:text-text"}`}
 						>
-							{copiedAll ? "Copied all!" : "Copy all configs"}
+							<Bug className="h-4 w-4" />
+							Dev Mode {devMode ? "ON" : "OFF"}
 						</button>
-						<span className="text-xs text-subtext0">Drag / scroll each image to edit · Click profile disabled in dev mode</span>
+						{devMode && (
+							<>
+								<button
+									type="button"
+									onClick={handleCopyAll}
+									className="rounded bg-green px-4 py-2 text-sm font-medium text-white shadow hover:bg-green/90"
+								>
+									{copiedAll ? "Copied all!" : "Copy all configs"}
+								</button>
+								<span className="text-xs text-subtext0">
+									Drag each image to edit · Click to view contact info
+								</span>
+							</>
+						)}
 					</div>
-				)}
-				{groupedMembers.map((group) => {
+
+					{groupedMembers.map((group) => {
 						const role = group.role;
 						const RoleIcon = roleMeta[role].icon;
 
@@ -219,26 +211,41 @@ export default function About() {
 									{group.members.map((member) => (
 										<div key={member.name} className="h-full">
 											<Stagger>
-									<button
-										type="button"
-										onClick={() => {
-											if (devMode) return;
-											setSelectedMember(member);
-										}}
+												<button
+													type="button"
+													onClick={() => {
+														if (!devMode) {
+															setSelectedMember(member);
+														}
+													}}
 													className="block h-full w-full cursor-pointer text-left"
 													aria-haspopup="dialog"
 													aria-label={`Open contact details for ${member.name}`}
 												>
-									<Profile
-										name={member.name}
-										role={role}
-										image={member.image}
-										imageConfig={member.imageConfig}
-										devMode={devMode}
-										liveConfig={devConfigs[member.name] ? { fit: devConfigs[member.name].fit ?? member.imageConfig?.fit ?? "cover", objectPosition: devConfigs[member.name].objectPosition, scale: devConfigs[member.name].scale } : undefined}
-										onConfigChange={(cfg) => setDevConfigs((prev) => ({ ...prev, [member.name]: cfg }))}
-									/>
-													<span className="sr-only">View contact info</span>
+													<Profile
+														name={member.name}
+														role={role}
+														image={member.image}
+														imageConfig={member.imageConfig}
+														devMode={devMode}
+														liveConfig={
+															devConfigs[member.name]
+																? {
+																		fit: devConfigs[member.name].fit ?? member.imageConfig?.fit ?? "cover",
+																		objectPosition: devConfigs[member.name].objectPosition,
+																  }
+																: undefined
+														}
+														onConfigChange={(cfg) =>
+															setDevConfigs((prev) => ({
+																...prev,
+																[member.name]: cfg,
+															}))
+														}
+													/>
+													<span className="sr-only">
+														View contact info
+													</span>
 												</button>
 											</Stagger>
 										</div>
@@ -251,9 +258,7 @@ export default function About() {
 			</div>
 			<CabinetContactModal
 				member={selectedMember}
-				onClose={() => {
-					setSelectedMember(null);
-				}}
+				onClose={() => setSelectedMember(null)}
 			/>
 		</>
 	);
