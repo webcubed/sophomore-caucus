@@ -22,13 +22,14 @@ function groupMembersByRole(directory: MemberDirectoryEntry[]) {
 }
 
 export default function CabinetPage() {
+	const isDevEnv = process.env.NODE_ENV === "development";
 	const [activeRole, setActiveRole] = useState<
 		keyof typeof roleMeta | undefined
 	>(undefined);
 	const [tocOpen, setTocOpen] = useState(false);
 	const [selectedMember, setSelectedMember] =
 		useState<MemberDirectoryEntry | null>(null);
-	const [devMode, setDevMode] = useState(() => process.env.NODE_ENV === "development");
+	const [devMode, setDevMode] = useState(isDevEnv);
 	const [copiedAll, setCopiedAll] = useState(false);
 	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
 	const ActiveRoleIcon = activeRole ? roleMeta[activeRole].icon : undefined;
@@ -165,30 +166,32 @@ export default function CabinetPage() {
 
 				<div className="mx-auto flex w-11/12 flex-col gap-10 rounded-xl border border-overlay0/70 bg-crust/40 p-4 backdrop-blur-xl sm:p-6 lg:p-8">
 					{/* Dev mode toggle */}
-					<div className="mb-4 flex items-center gap-3">
-						<button
-							type="button"
-							onClick={() => setDevMode((v) => !v)}
-							className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${devMode ? "bg-green/20 text-green" : "bg-surface1 text-subtext1 hover:text-text"}`}
-						>
-							<Bug className="h-4 w-4" />
-							Dev Mode {devMode ? "ON" : "OFF"}
-						</button>
-						{devMode && (
-							<>
-								<button
-									type="button"
-									onClick={handleCopyAll}
-									className="rounded bg-green px-4 py-2 text-sm font-medium text-white shadow hover:bg-green/90"
-								>
-									{copiedAll ? "Copied all!" : "Copy all configs"}
-								</button>
-								<span className="text-xs text-subtext0">
-									Drag each image to edit · Click to view contact info
-								</span>
-							</>
-						)}
-					</div>
+					{isDevEnv && (
+						<div className="mb-4 flex items-center gap-3">
+							<button
+								type="button"
+								onClick={() => setDevMode((v) => !v)}
+								className={`flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${devMode ? "bg-green/20 text-green" : "bg-surface1 text-subtext1 hover:text-text"}`}
+							>
+								<Bug className="h-4 w-4" />
+								Dev Mode {devMode ? "ON" : "OFF"}
+							</button>
+							{devMode && (
+								<>
+									<button
+										type="button"
+										onClick={handleCopyAll}
+										className="rounded cursor-pointer bg-green px-4 py-2 text-sm font-medium text-black shadow hover:bg-green/90"
+									>
+										{copiedAll ? "Copied all!" : "Copy all configs"}
+									</button>
+									<span className="text-xs text-subtext0">
+										Drag each image to edit · Click to view contact info
+									</span>
+								</>
+							)}
+						</div>
+					)}
 
 					{groupedMembers.map((group) => {
 						const role = group.role;
