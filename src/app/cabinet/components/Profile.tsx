@@ -55,7 +55,6 @@ export const Profile: React.FC<ProfileProps> = ({
 		e.preventDefault();
 		e.stopPropagation();
 		const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
-		const startX = e.clientX - rect.left;
 		const startY = e.clientY - rect.top;
 
 		const onMove = (ev: MouseEvent) => {
