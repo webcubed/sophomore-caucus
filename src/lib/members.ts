@@ -190,6 +190,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "caucus-president",
 		name: "Thomas Vichaidith",
+		image: "/pfps/directors/Thomas Vichaidith.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "tvichaidith90@stuy.edu",
 			nycEmail: "thomasv63@nycstudents.net",
@@ -203,6 +208,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "chief-of-staff",
 		name: "Pearl Lin",
+		image: "/pfps/directors/Pearl Lin.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "plin90@stuy.edu",
 			nycEmail: "pearll18@nycstudents.net",
@@ -229,6 +239,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "events-director",
 		name: "Vismary Castillo",
+		image: "/pfps/directors/Vismary Castillo.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "vcastillo90@stuy.edu",
 			nycEmail: "vismaryc@nycstudents.net",
@@ -242,6 +257,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "events-director",
 		name: "Alexa Yuan",
+		image: "/pfps/directors/Alexa Yuan.png",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "52% 21%",
+		},
 		contact: {
 			stuyEmail: "ayuan90@stuy.edu",
 			nycEmail: "alexay6@nycstudents.net",
@@ -268,6 +288,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "internals-director",
 		name: "Zhiyue Chen",
+		image: "/pfps/directors/Zhi Yue Chen.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "zchen90@stuy.edu",
 			nycEmail: "zhiyuec@nycstudents.net",
@@ -281,6 +306,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "internals-director",
 		name: "Gina Chen",
+		image: "/pfps/directors/Gina Chen.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "gchen90@stuy.edu",
 			nycEmail: "ginac49@nycstudents.net",
@@ -307,6 +337,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "externals-outreach-director",
 		name: "Vivian Li",
+		image: "/pfps/directors/Vivian Li.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "vli91@stuy.edu",
 			nycEmail: "vivianl202@nycstudents.net",
@@ -320,6 +355,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "finance-director",
 		name: "Mingxuan Zhang",
+		image: "/pfps/directors/Ming Xuan Zhang.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "mzhang92@stuy.edu",
 			nycEmail: "mingxuanz5@nycstudents.net",
@@ -346,6 +386,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "it-director",
 		name: "Makayla Kong-Kho",
+		image: "/pfps/directors/Makayla K.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "mkong-kho90@stuy.edu",
 			nycEmail: "makaylak17@nycstudents.net",
@@ -372,6 +417,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "it-director",
 		name: "Will Yang",
+		image: "/pfps/directors/Will Yang.webp",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "wyang90@stuy.edu",
 			nycEmail: "willy@nycstudents.net",
@@ -385,6 +435,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "media-graphics-director",
 		name: "Evan Hu",
+		image: "/pfps/directors/Evan Hu.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "ehu90@stuy.edu",
 			nycEmail: "evanh64@nycstudent.net",
@@ -411,6 +466,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "media-graphics-director",
 		name: "Michelle Li",
+		image: "/pfps/directors/Michelle Li.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "mli91@stuy.edu",
 			nycEmail: "michellel375@nycstudents.net",
@@ -424,6 +484,11 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "media-graphics-director",
 		name: "Claire Jiang",
+		image: "/pfps/directors/Claire Jiang.jpeg",
+		imageConfig: {
+			fit: "cover",
+			objectPosition: "55% 42%",
+		},
 		contact: {
 			stuyEmail: "cjiang92@stuy.edu",
 			nycEmail: "clairej11@nycstudents.net",
