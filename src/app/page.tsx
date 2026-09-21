@@ -8,7 +8,7 @@ import {
 	Megaphone,
 	MessageSquare,
 	Newspaper,
-	Orbit,
+	ShelvingUnit,
 } from "lucide-react";
 
 type NavCard = {
@@ -34,7 +34,7 @@ const cards: NavCard[] = [
 	{
 		title: "Cabinet",
 		description: "Meet our team",
-		icon: Orbit,
+		icon: ShelvingUnit,
 		href: "/cabinet",
 	},
 	{
