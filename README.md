@@ -3,6 +3,7 @@
 ## Stack
 
 - React
+- Typescript
 - TailwindCSS
 - Next.js App router
 - Postcss
@@ -16,6 +17,7 @@
 ### Building
 
 1. Install dependencies: `pnpm install`
-2. Run build command `pnpm build`
+2. Create a sanity.io project and fill in .env.local
+3. Run build command `pnpm build`
 
 - To run dev server, run `pnpm dev`

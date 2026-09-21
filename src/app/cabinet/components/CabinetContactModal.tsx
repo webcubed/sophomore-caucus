@@ -192,7 +192,7 @@ export function CabinetContactModal({
 			</div>
 			{imageOpen && member.image && (
 				<div
-					className="fixed inset-0 z-[60] flex items-center justify-center bg-base/95 p-4 backdrop-blur-md"
+					className="fixed inset-0 z-60 flex items-center justify-center bg-base/95 p-4 backdrop-blur-md"
 					onClick={(event) => {
 						event.stopPropagation();
 						setImageOpen(false);
