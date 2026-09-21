@@ -37,7 +37,7 @@ export default async function Announcements() {
 	}
 
 	return (
-		<div className="mx-auto max-w-4xl space-y-6 px-4 py-8">
+		<div className="mx-auto space-y-6 py-8">
 			<h2 className="text-2xl font-bold tracking-tight text-text">
 				Latest Announcements
 			</h2>
