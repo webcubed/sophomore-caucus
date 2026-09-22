@@ -17,13 +17,14 @@ export default function UpComingEvent({ colorNum, eventName, date, room, descrip
         'text-lavender', 'text-teal', 
         'text-red'];
     return (
-        <div className={colors[colorNum]}>
+        <div className={colors[colorNum] + " mb-8"}>
             <h2>{eventName}</h2>
-            <div className="w-1/2 border-b border-gray-300 my-2"></div>    
+            <div className="border-b border-gray-300 my-2"></div>    
             <p className={colors[colorNum]}>{date}</p>
             {room && <p className={colors[colorNum]}>Room: {room}</p>}
-            <p className={colors[colorNum]}>{description}</p>
-            {image && <img src={image} alt='No Image Found.'/>}
+            <div className="my-2"></div>
+            <p className={colors[colorNum] + " text-sm"}>{description}</p>
+            {image && <img src={image} alt="" />}
         </div>
     )
 }
