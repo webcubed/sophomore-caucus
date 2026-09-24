@@ -25,7 +25,7 @@
 ### Contributing
 
 #### Naming conventions
-Please use commit messages and branch names that are concise; they should be short and say exactly what has changed.
+Please use commit messages and branch names that are concise; they should be short and people should be able to easily imply what has changed.
 ##### Examples of bad commit names:
 - asdf
 - pls work
