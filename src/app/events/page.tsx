@@ -13,6 +13,7 @@ export default async function Events() {
 	const coloredEvents = events.map((event : UpcomingEventProps, index: number) => ({
   		...event,
   		colorNum: index % 9,
+		first: index === 0,
 	}));
 	if (events.length === 0) {
 		return (
@@ -22,10 +23,14 @@ export default async function Events() {
 		)
 	}
 	return (
-		<div className="flex gap-8">
+		<div className="flex gap-8 divide-x-1 divide-solid divide-gray-500">
+			<div className="w-1/2 justify-start">
+				<Calendar events={coloredEvents}/>
+			</div>
 			<div className="w-1/2 mx-0">{coloredEvents.map((event : {_id: string} & UpcomingEventProps, index: number) => (
 				<UpComingEvent
 					key={event._id}
+					first={event.first}
 					colorNum={event.colorNum}
 					eventName={event.eventName}
 					date={new Date(event.date).toLocaleDateString("en-US", {
@@ -41,9 +46,6 @@ export default async function Events() {
 					image={event.image}
 				/>
 			))}</div>
-			<div className="w-1/2">
-				<Calendar events={coloredEvents}/>
-			</div>
 		</div>
 	);
 }
