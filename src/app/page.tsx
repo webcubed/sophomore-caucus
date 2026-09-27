@@ -7,7 +7,6 @@ import {
 	ClipboardList,
 	Megaphone,
 	MessageSquare,
-	Newspaper,
 	ShelvingUnit,
 } from "lucide-react";
 
@@ -35,12 +34,6 @@ const cards: NavCard[] = [
 		title: "Cabinet",
 		description: "Meet our team",
 		icon: ShelvingUnit,
-		href: "/cabinet",
-	},
-	{
-		title: "News",
-		description: "What we've been up to",
-		icon: Newspaper,
 		href: "/cabinet",
 	},
 	{
