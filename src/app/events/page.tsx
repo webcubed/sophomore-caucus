@@ -23,11 +23,11 @@ export default async function Events() {
 		)
 	}
 	return (
-		<div className="flex gap-8 divide-x-1 divide-solid divide-gray-500">
-			<div className="w-1/2 justify-start">
+		<div className="flex flex-col md:flex-row gap-8 divide-y-1 md:divide-x-1 md:divide-y-0 divide-solid divide-gray-500">
+			<div className="w-full md:w-1/2 pb-8 justify-start">
 				<Calendar events={coloredEvents}/>
 			</div>
-			<div className="w-1/2 mx-0">{coloredEvents.map((event : {_id: string} & UpcomingEventProps, index: number) => (
+			<div className="w-full md:w-1/2 mx-0">{coloredEvents.map((event : {_id: string} & UpcomingEventProps, index: number) => (
 				<UpComingEvent
 					key={event._id}
 					first={event.first}
