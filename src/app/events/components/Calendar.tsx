@@ -1,5 +1,9 @@
 "use client";
 import { useState } from "react";
+import { 
+	ChevronLeft,
+	ChevronRight
+ } from "lucide-react";
 
 interface CalendarProps {
 	events: {
@@ -60,11 +64,11 @@ export default function Calendar({ events }: CalendarProps) {
 		"July", "August", "September", "October", "November", "December"
 	]
 	return (
-  	<div>
+  	<div className="bg-surface0 rounded-[20px] m-4 mt-0 border">
     	<div className="flex justify-between items-center mb-4">
-      		<button onClick={goToPrevMonth} className="px-3 py-2">{"<"}</button>
+      		<button onClick={goToPrevMonth} className="px-3 py-2"><ChevronLeft /></button>
       		<span>{monthNames[month]} {year}</span>
-      		<button onClick={goToNextMonth} className="px-3 py-2">{">"}</button>
+      		<button onClick={goToNextMonth} className="px-3 py-2"><ChevronRight /></button>
     	</div>
 
     	<div className="grid grid-cols-7 text-center font-semibold">
