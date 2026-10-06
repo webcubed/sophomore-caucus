@@ -113,7 +113,7 @@ export default function CalendarDayDetail({
 								: "text-subtext0"
 						}`}
 					>
-						{selectedDay?.block ?? "—"}
+						{selectedDay?.block ?? "--"}
 					</span>
 					<div className="min-w-0 flex-1">
 						<p className="text-sm font-semibold text-text">{selectedLabel}</p>

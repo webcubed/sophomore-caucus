@@ -137,7 +137,7 @@ export default function Calendar({
 					<div className="mt-1 grid grid-cols-7 gap-2">
 						{grid.map((day, index) => {
 							if (day === null) {
-								return <div key={index} className="aspect-[4/3]" />;
+								return <div key={index} className="aspect-4/3" />;
 							}
 							const date = new Date(year, month, day);
 							return (
