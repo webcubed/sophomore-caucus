@@ -155,11 +155,6 @@ export type MemberProfile = {
 export type MemberContact = {
 	stuyEmail: string;
 	nycEmail: string;
-	personalEmail: string;
-	phoneNumber: string;
-	instagramHandle: string;
-	discordUsername: string;
-	preferredCommunication: string;
 };
 
 export type MemberDirectoryEntry = MemberProfile & {
@@ -177,14 +172,10 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "caucus-president",
 		name: "Ella Lee",
+		image: "/pfps/directors/Ella Lee.jpg",
 		contact: {
 			stuyEmail: "elee90@stuy.edu",
 			nycEmail: "ellal36@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -198,11 +189,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "tvichaidith90@stuy.edu",
 			nycEmail: "thomasv63@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -216,11 +202,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "plin90@stuy.edu",
 			nycEmail: "pearll18@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -230,11 +211,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "sma91@stuy.edu",
 			nycEmail: "sydneym85@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -248,11 +224,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "vcastillo90@stuy.edu",
 			nycEmail: "vismaryc@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -266,11 +237,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "ayuan90@stuy.edu",
 			nycEmail: "alexay6@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -280,11 +246,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "tyuan90@stuy.edu",
 			nycEmail: "travisy@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -298,11 +259,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "zchen90@stuy.edu",
 			nycEmail: "zhiyuec@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -316,11 +272,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "gchen90@stuy.edu",
 			nycEmail: "ginac49@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -330,11 +281,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "cloo90@stuy.edu",
 			nycEmail: "calistal4@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -348,11 +294,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "vli91@stuy.edu",
 			nycEmail: "vivianl202@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -366,11 +307,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "mzhang92@stuy.edu",
 			nycEmail: "mingxuanz5@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -380,11 +316,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "cpark90@stuy.edu",
 			nycEmail: "celinep30@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -398,11 +329,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "mkong-kho90@stuy.edu",
 			nycEmail: "makaylak17@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -411,11 +337,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "nlai90@stuy.edu",
 			nycEmail: "nathanl99@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -429,11 +350,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "wyang90@stuy.edu",
 			nycEmail: "willy@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -447,11 +363,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "ehu90@stuy.edu",
 			nycEmail: "evanh64@nycstudent.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -461,11 +372,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "kzhang90@stuy.edu",
 			nycEmail: "kathyz17@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -479,11 +385,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "mli91@stuy.edu",
 			nycEmail: "michellel375@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 	{
@@ -497,11 +398,6 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 		contact: {
 			stuyEmail: "cjiang92@stuy.edu",
 			nycEmail: "clairej11@nycstudents.net",
-			personalEmail: "REDACTED",
-			phoneNumber: "REDACTED",
-			instagramHandle: "REDACTED",
-			discordUsername: "REDACTED",
-			preferredCommunication: "REDACTED",
 		},
 	},
 ];
@@ -516,7 +412,6 @@ function buildMembersByRole(
 	for (const member of directory) {
 		grouped[member.role].ungrouped?.push({
 			name: member.name,
-			description: member.contact.preferredCommunication,
 			image: member.image,
 			imageConfig: member.imageConfig,
 		});
