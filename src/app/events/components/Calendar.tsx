@@ -12,11 +12,26 @@ type CalendarDay = {
 	sourceWording: string;
 	block: string | null;
 	category: string;
+	scheduleType: string | null;
+};
+
+type BellSchedules = Record<
+	string,
+	{
+		periods: string[][];
+		additionalEvents?: { summary: string; start: string; end: string }[];
+	}
+>;
+
+const data = calendarData as {
+	days: CalendarDay[];
+	bellSchedules: BellSchedules;
 };
 
 const calendarDays = new Map<string, CalendarDay>(
-	(calendarData as { days: CalendarDay[] }).days.map((d) => [d.date, d])
+	data.days.map((d) => [d.date, d])
 );
+const { bellSchedules } = data;
 
 const monthNames = [
 	"January",
@@ -62,6 +77,20 @@ function blockColor(block: string): string {
 	if (block.startsWith("B")) return "text-blue";
 	return "text-subtext0";
 }
+
+const categoryLabels: Record<string, string> = {
+	school_day: "School day",
+	holiday: "Holiday",
+	recess: "Recess",
+	regents: "Regents exams",
+	no_students: "No students",
+	special_schedule: "Special schedule",
+	parent_teacher: "Parent-teacher conferences",
+	rating_day: "Rating day",
+	last_day: "Last day",
+	exam_day: "Exam day",
+	professional_development: "Professional development",
+};
 
 function dateKey(year: number, month: number, day: number): string {
 	return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
@@ -116,6 +145,46 @@ export default function Calendar({
 		animate: { opacity: 1, x: 0, filter: "blur(0px)" },
 		transition: { duration: 0.15, ease: "easeOut" as const },
 	};
+
+	const selectedKey = dateKey(
+		selectedDate.getFullYear(),
+		selectedDate.getMonth(),
+		selectedDate.getDate()
+	);
+	const selectedDay = calendarDays.get(selectedKey) ?? null;
+	const selectedLabel = selectedDate.toLocaleDateString("en-US", {
+		weekday: "long",
+		month: "long",
+		day: "numeric",
+		year: "numeric",
+	});
+
+	// Bell schedule for the selected day — extra events merged in and
+	// time-sorted, same as the home page CalendarBanner.
+	type ScheduleRow = {
+		label: string;
+		start: string;
+		end: string;
+		summary?: string;
+	};
+	const bell = selectedDay?.scheduleType
+		? bellSchedules[selectedDay.scheduleType]
+		: undefined;
+	const scheduleRows: ScheduleRow[] | null = bell
+		? [
+				...bell.periods.map(([start, end], i) => ({
+					label: String(i + 1),
+					start,
+					end,
+				})),
+				...(bell.additionalEvents ?? []).map((e) => ({
+					label: "HR",
+					start: e.start,
+					end: e.end,
+					summary: e.summary,
+				})),
+			].sort((a, b) => a.start.localeCompare(b.start))
+		: null;
 
 	return (
 		<MotionConfig reducedMotion="user">
@@ -198,6 +267,7 @@ export default function Calendar({
 									key={index}
 									type="button"
 									aria-label={`${monthNames[month]} ${day}, ${year}`}
+									aria-current={isSelected ? "date" : undefined}
 									title={dot !== null ? entry?.sourceWording : undefined}
 									onClick={() => onSelectDate(date)}
 									style={
@@ -231,6 +301,92 @@ export default function Calendar({
 						})}
 					</div>
 				</motion.div>
+
+				{/* Selected-day details (click a day above; no modal needed) */}
+				<div aria-live="polite">
+					<motion.div
+						key={selectedKey}
+						initial={slide.initial}
+						animate={slide.animate}
+						transition={slide.transition}
+						className="mt-4 rounded-lg border border-overlay0/50 bg-surface1/40 p-3"
+					>
+						<div className="flex items-center gap-2.5">
+							<span
+								className={`shrink-0 text-lg leading-none font-bold ${
+									selectedDay?.block
+										? blockColor(selectedDay.block)
+										: "text-subtext0"
+								}`}
+							>
+								{selectedDay?.block ?? "—"}
+							</span>
+							<div className="min-w-0">
+								<p className="text-sm font-semibold text-text">
+									{selectedLabel}
+								</p>
+								<p className="text-[11px] text-subtext0">
+									{selectedDay
+										? (categoryLabels[selectedDay.category] ??
+											selectedDay.category)
+										: "Outside calendar range"}
+									{selectedDay?.scheduleType &&
+										` · ${selectedDay.scheduleType} schedule`}
+								</p>
+							</div>
+						</div>
+						{selectedDay ? (
+							<p className="mt-2 text-xs text-subtext1">
+								{selectedDay.sourceWording}
+							</p>
+						) : (
+							<p className="mt-2 text-xs text-subtext0">
+								No schedule data for this day.
+							</p>
+						)}
+						{scheduleRows && selectedDay?.scheduleType && (
+							<div className="mt-3 overflow-hidden rounded-md border border-overlay0/40">
+								<div className="flex items-baseline justify-between border-b border-overlay0/40 bg-surface1/50 px-2.5 py-1">
+									<span className="text-[10px] font-semibold tracking-wider text-subtext1 uppercase">
+										Bell schedule
+									</span>
+									<span className="text-[10px] text-subtext0">
+										{selectedDay.scheduleType}
+									</span>
+								</div>
+								<div className="flex">
+									{[
+										scheduleRows.slice(0, Math.ceil(scheduleRows.length / 2)),
+										scheduleRows.slice(Math.ceil(scheduleRows.length / 2)),
+									].map((column, ci) => (
+										<div key={ci} className="flex min-w-0 flex-1 flex-col">
+											{column.map((row) => (
+												<div
+													key={`${row.label}-${row.start}`}
+													className="flex items-center gap-2 border-b border-overlay0/20 px-2.5 py-1 text-xs tabular-nums last:border-b-0"
+												>
+													<span className="flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full bg-surface1 px-1 text-[10px] font-semibold text-subtext0">
+														{row.label}
+													</span>
+													<span className="text-subtext0">
+														{row.start}
+														<span className="mx-0.5 text-overlay1">–</span>
+														{row.end}
+													</span>
+													{row.summary && (
+														<span className="text-[10px] text-mauve">
+															{row.summary}
+														</span>
+													)}
+												</div>
+											))}
+										</div>
+									))}
+								</div>
+							</div>
+						)}
+					</motion.div>
+				</div>
 
 				<div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-overlay0/50 pt-3 text-[11px] text-subtext0">
 					<span className="flex items-center gap-1">
