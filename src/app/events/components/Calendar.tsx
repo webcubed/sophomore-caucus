@@ -206,7 +206,7 @@ export default function Calendar({
 											: undefined
 									}
 									className={`flex aspect-[4/3] w-full cursor-pointer flex-col items-center justify-center gap-1 rounded-lg text-sm transition-colors duration-150 ${state}${
-										isToday ? " ring-1 ring-inset ring-accent/60" : ""
+										isToday ? " ring-2 ring-inset ring-accent" : ""
 									}`}
 								>
 									<span>{day}</span>
