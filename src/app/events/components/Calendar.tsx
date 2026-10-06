@@ -1,89 +1,126 @@
 "use client";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { 
-	ChevronLeft,
-	ChevronRight
- } from "lucide-react";
 
 interface CalendarProps {
 	events: {
-		colorNum: number; eventName: string; 
-		date: string; room?: number | null; 
-		description: string; image?: string | null
-	}[]
+		colorNum: number;
+		eventName: string;
+		date: string;
+		room?: number | null;
+		description: string;
+		image?: string | null;
+	}[];
 }
 const colors = [
-        'bg-blue', 'bg-mauve', 
-        'bg-sapphire', 'bg-peach', 
-        'bg-green', 'bg-yellow', 
-        'bg-lavender', 'bg-teal', 
-        'bg-red'];
+	"bg-blue",
+	"bg-mauve",
+	"bg-sapphire",
+	"bg-peach",
+	"bg-green",
+	"bg-yellow",
+	"bg-lavender",
+	"bg-teal",
+	"bg-red",
+];
 
 export default function Calendar({ events }: CalendarProps) {
-	const [currentDate, setCurrentDate] = useState(new Date()) // current date displayed in the calendar, new Date() initializes it to the current date
-	const year = currentDate.getFullYear()
-	const month = currentDate.getMonth()
+	const [currentDate, setCurrentDate] = useState(new Date()); // current date displayed in the calendar, new Date() initializes it to the current date
+	const year = currentDate.getFullYear();
+	const month = currentDate.getMonth();
 
 	function goToPrevMonth() {
-  		setCurrentDate(new Date(year, month - 1, 1))
+		setCurrentDate(new Date(year, month - 1, 1));
 	}
 
 	function goToNextMonth() {
-  		setCurrentDate(new Date(year, month + 1, 1))
+		setCurrentDate(new Date(year, month + 1, 1));
 	}
 
 	function getMonthGrid(year: number, month: number) {
-  		const firstWeekday = new Date(year, month, 1).getDay()
-  		const daysInMonth = new Date(year, month + 1, 0).getDate()
-  
- 		const grid = []
+		const firstWeekday = new Date(year, month, 1).getDay();
+		const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+		const grid = [];
 
 		for (let i = 0; i < firstWeekday; i++) {
-			grid.push(null)
-  		}
+			grid.push(null);
+		}
 		for (let day = 1; day <= daysInMonth; day++) {
-			grid.push(day)
-  		}
+			grid.push(day);
+		}
 
-  		return grid
-	}	
+		return grid;
+	}
 
-	const grid = getMonthGrid(year, month)
+	const grid = getMonthGrid(year, month);
 
 	const dayColorMap = new Map(
-  		events
-    	.filter((e) => {
-      	const d = new Date(e.date);
-      	return d.getFullYear() === year && d.getMonth() === month;
-    	})
-    	.map((e) => [new Date(e.date).getDate(), e.colorNum])
+		events
+			.filter((e) => {
+				const d = new Date(e.date);
+				return d.getFullYear() === year && d.getMonth() === month;
+			})
+			.map((e) => [new Date(e.date).getDate(), e.colorNum])
 	);
 
 	const monthNames = [
-		"January", "February", "March", "April", "May", "June",
-		"July", "August", "September", "October", "November", "December"
-	]
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December",
+	];
 	return (
-  	<div className="bg-surface0 rounded-[20px] m-4 mt-0 border">
-    	<div className="flex justify-between items-center mb-4">
-      		<button onClick={goToPrevMonth} className="px-3 py-2"><ChevronLeft /></button>
-      		<span>{monthNames[month]} {year}</span>
-      		<button onClick={goToNextMonth} className="px-3 py-2"><ChevronRight /></button>
-    	</div>
+		<div className="rounded-2xl border border-overlay0/70 bg-surface0/60 p-4 backdrop-blur-sm">
+			<div className="mb-4 flex items-center justify-between">
+				<button
+					onClick={goToPrevMonth}
+					aria-label="Previous month"
+					className="cursor-pointer rounded-md border border-overlay0/50 bg-surface1/60 px-2 py-1 text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text"
+				>
+					<ChevronLeft />
+				</button>
+				<span className="font-semibold text-text">
+					{monthNames[month]} {year}
+				</span>
+				<button
+					onClick={goToNextMonth}
+					aria-label="Next month"
+					className="cursor-pointer rounded-md border border-overlay0/50 bg-surface1/60 px-2 py-1 text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text"
+				>
+					<ChevronRight />
+				</button>
+			</div>
 
-    	<div className="grid grid-cols-7 text-center font-semibold">
-      		{["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map((day) => (
-      			<div key={day}>{day}</div>
-      		))}
-    	</div>
+			<div className="grid grid-cols-7 gap-1 text-center font-semibold">
+				{["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+					<div key={day}>{day}</div>
+				))}
+			</div>
 
-    	<div className="grid grid-cols-7 text-center gap-1">
-    	  	{grid.map((day, index) => (
-				<div key={index} className={`p-2 ${day && dayColorMap.has(day) ? "rounded-full text-black " + colors[dayColorMap.get(day)! % 9] : ""}`}>
-		  			{day}
-				</div>
-		  	))}
+			<div className="grid grid-cols-7 gap-1 text-center">
+				{grid.map((day, index) => (
+					<div
+						key={index}
+						className={`p-2 ${
+							day && dayColorMap.has(day)
+								? "rounded-full text-black " + colors[dayColorMap.get(day)! % 9]
+								: ""
+						}`}
+					>
+						{day}
+					</div>
+				))}
+			</div>
 		</div>
-  	</div>
 	);
 }
