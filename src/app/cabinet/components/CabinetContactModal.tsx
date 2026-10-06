@@ -5,7 +5,6 @@ import { roleMeta, roleStyles } from "@/lib/members";
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { ContactLine } from "./ContactLine";
-import { formatPhoneNumber, normalizeInstagramHandle } from "./contactUtils";
 
 type ContactField = {
 	fieldKey: string;
@@ -60,12 +59,6 @@ export function CabinetContactModal({
 
 	if (!member) return null;
 
-	const instagramHandle = normalizeInstagramHandle(member.contact.instagramHandle);
-	const instagramHref =
-		instagramHandle && instagramHandle.toLowerCase() !== "no"
-			? `https://www.instagram.com/${instagramHandle}`
-			: undefined;
-
 	const handleCopy = async (fieldKey: string, value: string) => {
 		if (!navigator.clipboard?.writeText) return;
 		await navigator.clipboard.writeText(value);
@@ -92,33 +85,6 @@ export function CabinetContactModal({
 			value: member.contact.nycEmail,
 			href: `mailto:${member.contact.nycEmail}`,
 			copyValue: member.contact.nycEmail,
-		},
-		{
-			fieldKey: "personalEmail",
-			label: "Personal email",
-			value: member.contact.personalEmail,
-			href: `mailto:${member.contact.personalEmail}`,
-			copyValue: member.contact.personalEmail,
-		},
-		{
-			fieldKey: "phoneNumber",
-			label: "Phone",
-			value: formatPhoneNumber(member.contact.phoneNumber),
-			href: `tel:${member.contact.phoneNumber}`,
-			copyValue: formatPhoneNumber(member.contact.phoneNumber),
-		},
-		{
-			fieldKey: "instagramHandle",
-			label: "Instagram",
-			value: member.contact.instagramHandle,
-			href: instagramHref,
-			copyValue: `@${instagramHandle}`,
-		},
-		{
-			fieldKey: "discordUsername",
-			label: "Discord",
-			value: member.contact.discordUsername,
-			copyValue: member.contact.discordUsername,
 		},
 	];
 
@@ -160,9 +126,6 @@ export function CabinetContactModal({
 							<h2 id="cabinet-contact-title" className="mt-2 text-2xl font-bold text-text sm:text-3xl">
 								{member.name}
 							</h2>
-							<p className="mt-2 text-sm leading-relaxed text-subtext0">
-								Preferred communication: {member.contact.preferredCommunication}
-							</p>
 						</div>
 						<button
 							type="button"
