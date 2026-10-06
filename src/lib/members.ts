@@ -172,6 +172,7 @@ export const memberDirectory: MemberDirectoryEntry[] = [
 	{
 		role: "caucus-president",
 		name: "Ella Lee",
+		image: "/pfps/directors/Ella Lee.jpg",
 		contact: {
 			stuyEmail: "elee90@stuy.edu",
 			nycEmail: "ellal36@nycstudents.net",
