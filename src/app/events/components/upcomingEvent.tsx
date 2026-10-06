@@ -1,10 +1,12 @@
+import type { MacchiatoColor } from "@/lib/macchiato";
 import type { SanityImageSource } from "@sanity/image-url";
 import { ExpandableImage } from "@/components/ExpandableImage";
+import { MACCHIATO } from "@/lib/macchiato";
 import { urlFor } from "@/sanity/lib/image";
 
 export type UpcomingEventProps = {
 	first?: boolean;
-	colorNum: number;
+	color: MacchiatoColor;
 	eventName: string;
 	date: string;
 	room?: number | null;
@@ -13,24 +15,9 @@ export type UpcomingEventProps = {
 	onSelect?: () => void;
 };
 
-function getColor(colorNum: number, aspect: string) {
-	let colors = [
-		"blue",
-		"mauve",
-		"sapphire",
-		"peach",
-		"green",
-		"yellow",
-		"lavender",
-		"teal",
-		"red",
-	];
-	return `${aspect}-${colors[colorNum]}`;
-}
-
 export default function UpComingEvent({
 	first,
-	colorNum,
+	color,
 	eventName,
 	date,
 	room,
@@ -38,8 +25,7 @@ export default function UpComingEvent({
 	image,
 	onSelect,
 }: UpcomingEventProps) {
-	const borderColor = getColor(colorNum, "border");
-	const textColor = getColor(colorNum, "text");
+	const hex = MACCHIATO[color];
 	const thumbSrc = image ? urlFor(image).width(800).url() : null;
 	const fullSrc = image ? urlFor(image).width(1600).url() : null;
 	const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -61,20 +47,21 @@ export default function UpComingEvent({
 					onSelect();
 				}
 			}}
-			className={`${borderColor} ${textColor} rounded-2xl border-2 ${
+			className={`rounded-2xl border-2 ${
 				first ? "border-4" : ""
 			} bg-surface0 p-7 ${
 				onSelect
 					? "cursor-pointer transition-transform duration-150 hover:-translate-y-0.5"
 					: ""
 			}`}
+			style={{ borderColor: hex, color: hex }}
 		>
 			<h3 className="text-xl font-semibold">{eventName}</h3>
 			<div className="my-2 border-b border-overlay0/60"></div>
-			<p className={textColor}>{formattedDate}</p>
-			{room && <p className={textColor}>Room: {room}</p>}
+			<p>{formattedDate}</p>
+			{room && <p>Room: {room}</p>}
 			<div className="my-2"></div>
-			<p className={textColor + " text-sm"}>{description}</p>
+			<p className="text-sm">{description}</p>
 			{thumbSrc && fullSrc && (
 				<ExpandableImage
 					src={fullSrc}

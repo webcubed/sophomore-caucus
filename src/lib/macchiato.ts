@@ -19,3 +19,11 @@ export const MACCHIATO = {
 } as const;
 
 export type MacchiatoColor = keyof typeof MACCHIATO;
+
+// Sanity dropdown options: "Blue  #8aadf4" → value "blue".
+export const colorList = (Object.keys(MACCHIATO) as MacchiatoColor[]).map(
+	(name) => ({
+		title: `${name[0].toUpperCase()}${name.slice(1)}  ${MACCHIATO[name]}`,
+		value: name,
+	})
+);

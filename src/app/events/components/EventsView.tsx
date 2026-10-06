@@ -1,5 +1,6 @@
 "use client";
 
+import type { MacchiatoColor } from "@/lib/macchiato";
 import type { SanityImageSource } from "@sanity/image-url";
 import { Stagger } from "@/components/TransitionProvider";
 import { useRef, useState } from "react";
@@ -13,7 +14,7 @@ export type EventItem = {
 	room?: number | null;
 	description: string;
 	image?: SanityImageSource | null;
-	colorNum: number;
+	color: MacchiatoColor;
 };
 
 function monthIndex(d: Date): number {
@@ -67,7 +68,7 @@ export default function EventsView({ events }: { events: EventItem[] }) {
 				<Stagger>
 					<UpComingEvent
 						first
-						colorNum={selected.colorNum}
+						color={selected.color}
 						eventName={selected.eventName}
 						date={selected.date}
 						room={selected.room}
@@ -82,7 +83,7 @@ export default function EventsView({ events }: { events: EventItem[] }) {
 					{others.map((event) => (
 						<Stagger key={event._id}>
 							<UpComingEvent
-								colorNum={event.colorNum}
+								color={event.color}
 								eventName={event.eventName}
 								date={event.date}
 								room={event.room}

@@ -1,6 +1,8 @@
 "use client";
 
+import type { MacchiatoColor } from "@/lib/macchiato";
 import calendarData from "@/data/calendar.json";
+import { MACCHIATO } from "@/lib/macchiato";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, MotionConfig } from "motion/react";
 import { useState } from "react";
@@ -15,18 +17,6 @@ type CalendarDay = {
 const calendarDays = new Map<string, CalendarDay>(
 	(calendarData as { days: CalendarDay[] }).days.map((d) => [d.date, d])
 );
-
-const colors = [
-	"bg-blue",
-	"bg-mauve",
-	"bg-sapphire",
-	"bg-peach",
-	"bg-green",
-	"bg-yellow",
-	"bg-lavender",
-	"bg-teal",
-	"bg-red",
-];
 
 const monthNames = [
 	"January",
@@ -86,7 +76,7 @@ function sameDay(a: Date, b: Date): boolean {
 }
 
 interface CalendarProps {
-	events: { colorNum: number; date: string }[];
+	events: { color: MacchiatoColor; date: string }[];
 	cursor: Date;
 	dir: 1 | -1;
 	onCursorChange: (cursor: Date) => void;
@@ -118,7 +108,7 @@ export default function Calendar({
 				const d = new Date(e.date);
 				return d.getFullYear() === year && d.getMonth() === month;
 			})
-			.map((e) => [new Date(e.date).getDate(), e.colorNum])
+			.map((e) => [new Date(e.date).getDate(), e.color])
 	);
 
 	const slide = {
@@ -191,15 +181,15 @@ export default function Calendar({
 							}
 							const date = new Date(year, month, day);
 							const entry = calendarDays.get(dateKey(year, month, day));
-							const colorNum = eventDays.get(day);
+							const eventColor = eventDays.get(day);
 							const isToday = sameDay(date, today);
 							const isSelected = sameDay(date, selectedDate);
 							const dot = entry ? categoryDot(entry.category) : null;
 							const block = entry?.block ?? null;
 							const hasIndicator = dot !== null || block !== null;
 							const state =
-								colorNum !== undefined
-									? `${colors[colorNum % 9]} text-black font-medium hover:opacity-85`
+								eventColor !== undefined
+									? "text-black font-medium hover:opacity-85"
 									: isSelected
 										? "bg-surface1 text-text hover:bg-surface1/70"
 										: "text-text hover:bg-surface1/60";
@@ -210,6 +200,11 @@ export default function Calendar({
 									aria-label={`${monthNames[month]} ${day}, ${year}`}
 									title={dot !== null ? entry?.sourceWording : undefined}
 									onClick={() => onSelectDate(date)}
+									style={
+										eventColor !== undefined
+											? { backgroundColor: MACCHIATO[eventColor] }
+											: undefined
+									}
 									className={`flex aspect-[4/3] w-full cursor-pointer flex-col items-center justify-center gap-1 rounded-lg text-sm transition-colors duration-150 ${state}${
 										isToday ? " ring-1 ring-inset ring-accent/60" : ""
 									}`}
@@ -223,7 +218,7 @@ export default function Calendar({
 											{block && (
 												<span
 													className={`text-[9px] font-semibold leading-none ${
-														colorNum !== undefined ? "" : blockColor(block)
+														eventColor !== undefined ? "" : blockColor(block)
 													}`}
 												>
 													{block}
