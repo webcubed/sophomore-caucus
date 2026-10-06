@@ -1,36 +1,18 @@
 "use client";
 
-import calendarData from "@/data/calendar.json";
+import {
+	bellRows,
+	bellSchedule,
+	blockColor,
+	calendarDays,
+	maxDate,
+	minDate,
+} from "@/lib/school-calendar";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, MotionConfig } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-type CalendarDay = {
-	date: string;
-	sourceWording: string;
-	block: string | undefined;
-	blockFamily: string | undefined;
-	category: string;
-	scheduleType: string | undefined;
-	hasInstructionalPeriods: boolean;
-	sourcePage: number;
-};
-
-const data = calendarData as {
-	days: CalendarDay[];
-	bellSchedules: Record<
-		string,
-		{
-			periods: string[][];
-			additionalEvents?: { summary: string; start: string; end: string }[];
-		}
-	>;
-};
-const { days } = data;
-
 const TZ = "America/New_York";
-const minDate = days[0].date;
-const maxDate = days[days.length - 1].date;
 
 // en-CA formats as YYYY-MM-DD; anchored to NY so everyone sees the school's date
 function todayString(): string {
@@ -50,10 +32,6 @@ function addDays(dateString: string, delta: number): string {
 	const d = new Date(dateString + "T12:00:00Z");
 	d.setUTCDate(d.getUTCDate() + delta);
 	return d.toISOString().slice(0, 10);
-}
-
-function findDay(dateString: string) {
-	return days.find((d) => d.date === dateString);
 }
 
 function formatDate(dateString: string) {
@@ -88,7 +66,7 @@ export default function CalendarBanner() {
 
 	const today = todayString();
 	const isToday = selected === today;
-	const entry = findDay(selected);
+	const entry = calendarDays.get(selected);
 	const selectedFormatted = formatDate(selected);
 
 	const weekday = new Date(selected + "T00:00:00").toLocaleDateString("en-US", {
@@ -99,46 +77,8 @@ export default function CalendarBanner() {
 	const scheduleType = entry?.scheduleType ?? null;
 	const category = entry?.category ?? null;
 
-	function blockColor(block: string | undefined) {
-		if (!block) return "text-subtext0";
-		if (block.startsWith("A")) return "text-red";
-		if (block.startsWith("B")) return "text-blue";
-		return "text-subtext0";
-	}
-
-	const schedulePeriods = scheduleType
-		? (data.bellSchedules[scheduleType]?.periods ?? null)
-		: null;
-
-	// Merge extra events (e.g. the HR block on Administrative Distribution days)
-	// into the period list, ordered by start time.
-	type ScheduleRow = {
-		label: string;
-		start: string;
-		end: string;
-		special: boolean;
-		summary?: string;
-	};
-	const scheduleRows: ScheduleRow[] | null =
-		schedulePeriods && scheduleType
-			? [
-					...schedulePeriods.map(([start, end], i) => ({
-						label: String(i + 1),
-						start,
-						end,
-						special: false,
-					})),
-					...(data.bellSchedules[scheduleType].additionalEvents ?? []).map(
-						(e) => ({
-							label: "HR",
-							start: e.start,
-							end: e.end,
-							special: true,
-							summary: e.summary,
-						})
-					),
-				].sort((a, b) => a.start.localeCompare(b.start))
-			: null;
+	const schedulePeriods = bellSchedule(scheduleType)?.periods ?? null;
+	const scheduleRows = bellRows(scheduleType);
 
 	const isHoliday = category === "holiday";
 	const isBreak = category === "school_break" || category === "break";
