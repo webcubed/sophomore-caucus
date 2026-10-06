@@ -178,16 +178,16 @@ export default function Calendar({
 					animate={slide.animate}
 					transition={slide.transition}
 				>
-					<div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-subtext1">
+					<div className="grid grid-cols-7 gap-2 text-center text-xs font-semibold text-subtext1">
 						{weekdayNames.map((day) => (
 							<div key={day}>{day}</div>
 						))}
 					</div>
 
-					<div className="mt-1 grid grid-cols-7 gap-1">
+					<div className="mt-1 grid grid-cols-7 gap-2">
 						{grid.map((day, index) => {
 							if (day === null) {
-								return <div key={index} className="aspect-square" />;
+								return <div key={index} className="aspect-[4/3]" />;
 							}
 							const date = new Date(year, month, day);
 							const entry = calendarDays.get(dateKey(year, month, day));
@@ -210,7 +210,7 @@ export default function Calendar({
 									aria-label={`${monthNames[month]} ${day}, ${year}`}
 									title={dot !== null ? entry?.sourceWording : undefined}
 									onClick={() => onSelectDate(date)}
-									className={`flex aspect-square w-full cursor-pointer flex-col items-center justify-center gap-1 rounded-lg text-sm transition-colors duration-150 ${state}${
+									className={`flex aspect-[4/3] w-full cursor-pointer flex-col items-center justify-center gap-1 rounded-lg text-sm transition-colors duration-150 ${state}${
 										isToday ? " ring-2 ring-inset ring-accent" : ""
 									}`}
 								>
@@ -236,6 +236,30 @@ export default function Calendar({
 						})}
 					</div>
 				</motion.div>
+
+				<div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-overlay0/50 pt-3 text-[11px] text-subtext0">
+					<span className="flex items-center gap-1">
+						<span className="font-semibold text-red">A</span>
+						<span className="font-semibold text-blue">B</span>
+						<span>block days</span>
+					</span>
+					<span className="flex items-center gap-1.5">
+						<span className="h-1.5 w-1.5 rounded-full bg-red"></span>
+						No school
+					</span>
+					<span className="flex items-center gap-1.5">
+						<span className="h-1.5 w-1.5 rounded-full bg-yellow"></span>
+						Exams / regents
+					</span>
+					<span className="flex items-center gap-1.5">
+						<span className="h-1.5 w-1.5 rounded-full bg-sapphire"></span>
+						Special schedule
+					</span>
+					<span className="flex items-center gap-1.5">
+						<span className="h-1.5 w-1.5 rounded-full bg-green"></span>
+						Last day
+					</span>
+				</div>
 			</div>
 		</MotionConfig>
 	);
