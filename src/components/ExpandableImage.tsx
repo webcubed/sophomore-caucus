@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { X } from "lucide-react";
+import { X, ZoomIn } from "lucide-react";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -52,9 +52,17 @@ export function ExpandableImage({
 					setOpen(true);
 				}}
 				aria-label={label ?? `View full image of ${alt}`}
-				className={className}
+				className={`group/img relative ${className ?? ""}`}
 			>
 				{children}
+				{/* Hover affordance: the image opens full-size (separate from the
+				    surrounding card) */}
+				<span
+					aria-hidden
+					className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white/10 opacity-0 transition-opacity duration-150 group-focus-visible/img:opacity-100 group-hover/img:opacity-100"
+				>
+					<ZoomIn className="h-5 w-5 text-white/90 drop-shadow" />
+				</span>
 			</button>
 			{open &&
 				createPortal(
