@@ -3,7 +3,7 @@
 import type { MacchiatoColor } from "@/lib/macchiato";
 import calendarData from "@/data/calendar.json";
 import { MACCHIATO } from "@/lib/macchiato";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, MotionConfig } from "motion/react";
 import { useState } from "react";
 
@@ -108,6 +108,7 @@ interface CalendarProps {
 	events: { color: MacchiatoColor; date: string }[];
 	cursor: Date;
 	dir: 1 | -1;
+	dayDir: 1 | -1;
 	onCursorChange: (cursor: Date) => void;
 	selectedDate: Date;
 	onSelectDate: (date: Date) => void;
@@ -117,6 +118,7 @@ export default function Calendar({
 	events,
 	cursor,
 	dir,
+	dayDir,
 	onCursorChange,
 	selectedDate,
 	onSelectDate,
@@ -124,6 +126,7 @@ export default function Calendar({
 	const year = cursor.getFullYear();
 	const month = cursor.getMonth();
 	const today = new Date();
+	const [detailsOpen, setDetailsOpen] = useState(false);
 
 	const grid: (number | null)[] = [];
 	const firstWeekday = new Date(year, month, 1).getDay();
@@ -306,7 +309,11 @@ export default function Calendar({
 				<div aria-live="polite">
 					<motion.div
 						key={selectedKey}
-						initial={slide.initial}
+						initial={{
+							opacity: 0,
+							x: dayDir === 1 ? 16 : -16,
+							filter: "blur(4px)",
+						}}
 						animate={slide.animate}
 						transition={slide.transition}
 						className="mt-4 rounded-lg border border-overlay0/50 bg-surface1/40 p-3"
@@ -321,7 +328,7 @@ export default function Calendar({
 							>
 								{selectedDay?.block ?? "—"}
 							</span>
-							<div className="min-w-0">
+							<div className="min-w-0 flex-1">
 								<p className="text-sm font-semibold text-text">
 									{selectedLabel}
 								</p>
@@ -334,57 +341,80 @@ export default function Calendar({
 										` · ${selectedDay.scheduleType} schedule`}
 								</p>
 							</div>
+							<button
+								type="button"
+								className="-my-1 -mr-1 cursor-pointer rounded-sm p-1.5 text-subtext1 transition-colors duration-150 hover:text-text active:scale-95 sm:hidden"
+								aria-expanded={detailsOpen}
+								aria-controls="day-details"
+								aria-label={
+									detailsOpen ? "Hide day details" : "Show day details"
+								}
+								onClick={() => setDetailsOpen((open) => !open)}
+							>
+								<ChevronDown
+									className={`h-4 w-4 transition-transform duration-150 ${
+										detailsOpen ? "rotate-180" : ""
+									}`}
+								/>
+							</button>
 						</div>
-						{selectedDay ? (
-							<p className="mt-2 text-xs text-subtext1">
-								{selectedDay.sourceWording}
-							</p>
-						) : (
-							<p className="mt-2 text-xs text-subtext0">
-								No schedule data for this day.
-							</p>
-						)}
-						{scheduleRows && selectedDay?.scheduleType && (
-							<div className="mt-3 overflow-hidden rounded-md border border-overlay0/40">
-								<div className="flex items-baseline justify-between border-b border-overlay0/40 bg-surface1/50 px-2.5 py-1">
-									<span className="text-[10px] font-semibold tracking-wider text-subtext1 uppercase">
-										Bell schedule
-									</span>
-									<span className="text-[10px] text-subtext0">
-										{selectedDay.scheduleType}
-									</span>
-								</div>
-								<div className="flex">
-									{[
-										scheduleRows.slice(0, Math.ceil(scheduleRows.length / 2)),
-										scheduleRows.slice(Math.ceil(scheduleRows.length / 2)),
-									].map((column, ci) => (
-										<div key={ci} className="flex min-w-0 flex-1 flex-col">
-											{column.map((row) => (
-												<div
-													key={`${row.label}-${row.start}`}
-													className="flex items-center gap-2 border-b border-overlay0/20 px-2.5 py-1 text-xs tabular-nums last:border-b-0"
-												>
-													<span className="flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full bg-surface1 px-1 text-[10px] font-semibold text-subtext0">
-														{row.label}
-													</span>
-													<span className="text-subtext0">
-														{row.start}
-														<span className="mx-0.5 text-overlay1">–</span>
-														{row.end}
-													</span>
-													{row.summary && (
-														<span className="text-[10px] text-mauve">
-															{row.summary}
+						{/* Mobile starts collapsed to keep the calendar compact;
+						    desktop always shows (sm:block) */}
+						<div
+							id="day-details"
+							className={detailsOpen ? undefined : "hidden sm:block"}
+						>
+							{selectedDay ? (
+								<p className="mt-2 text-xs text-subtext1">
+									{selectedDay.sourceWording}
+								</p>
+							) : (
+								<p className="mt-2 text-xs text-subtext0">
+									No schedule data for this day.
+								</p>
+							)}
+							{scheduleRows && selectedDay?.scheduleType && (
+								<div className="mt-3 overflow-hidden rounded-md border border-overlay0/40">
+									<div className="flex items-baseline justify-between border-b border-overlay0/40 bg-surface1/50 px-2.5 py-1">
+										<span className="text-[10px] font-semibold tracking-wider text-subtext1 uppercase">
+											Bell schedule
+										</span>
+										<span className="text-[10px] text-subtext0">
+											{selectedDay.scheduleType}
+										</span>
+									</div>
+									<div className="flex">
+										{[
+											scheduleRows.slice(0, Math.ceil(scheduleRows.length / 2)),
+											scheduleRows.slice(Math.ceil(scheduleRows.length / 2)),
+										].map((column, ci) => (
+											<div key={ci} className="flex min-w-0 flex-1 flex-col">
+												{column.map((row) => (
+													<div
+														key={`${row.label}-${row.start}`}
+														className="flex items-center gap-2 border-b border-overlay0/20 px-2.5 py-1 text-xs tabular-nums last:border-b-0"
+													>
+														<span className="flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full bg-surface1 px-1 text-[10px] font-semibold text-subtext0">
+															{row.label}
 														</span>
-													)}
-												</div>
-											))}
-										</div>
-									))}
+														<span className="text-subtext0">
+															{row.start}
+															<span className="mx-0.5 text-overlay1">–</span>
+															{row.end}
+														</span>
+														{row.summary && (
+															<span className="text-[10px] text-mauve">
+																{row.summary}
+															</span>
+														)}
+													</div>
+												))}
+											</div>
+										))}
+									</div>
 								</div>
-							</div>
-						)}
+							)}
+						</div>
 					</motion.div>
 				</div>
 

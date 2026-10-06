@@ -21,10 +21,15 @@ function monthIndex(d: Date): number {
 	return d.getFullYear() * 12 + d.getMonth();
 }
 
+function dayStart(d: Date): number {
+	return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+}
+
 export default function EventsView({ events }: { events: EventItem[] }) {
 	const [selectedId, setSelectedId] = useState(events[0]._id);
 	const [cursor, setCursor] = useState(() => new Date());
 	const [dir, setDir] = useState<1 | -1>(1);
+	const [dayDir, setDayDir] = useState<1 | -1>(1);
 	const [selectedDate, setSelectedDate] = useState(
 		() => new Date(events[0].date)
 	);
@@ -40,6 +45,7 @@ export default function EventsView({ events }: { events: EventItem[] }) {
 
 	function selectEvent(event: EventItem, scroll: boolean) {
 		const d = new Date(event.date);
+		setDayDir(dayStart(d) >= dayStart(selectedDate) ? 1 : -1);
 		setSelectedId(event._id);
 		setSelectedDate(d);
 		changeCursor(new Date(d.getFullYear(), d.getMonth(), 1));
@@ -49,6 +55,7 @@ export default function EventsView({ events }: { events: EventItem[] }) {
 	}
 
 	function selectDate(date: Date) {
+		setDayDir(dayStart(date) >= dayStart(selectedDate) ? 1 : -1);
 		setSelectedDate(date);
 		const event = events.find((e) => sameDay(new Date(e.date), date));
 		if (event) setSelectedId(event._id);
@@ -61,6 +68,7 @@ export default function EventsView({ events }: { events: EventItem[] }) {
 					events={events}
 					cursor={cursor}
 					dir={dir}
+					dayDir={dayDir}
 					onCursorChange={changeCursor}
 					selectedDate={selectedDate}
 					onSelectDate={selectDate}
