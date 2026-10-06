@@ -1,9 +1,10 @@
 "use client";
 
 import type { MemberDirectoryEntry } from "@/lib/members";
+import { ExpandableImage } from "@/components/ExpandableImage";
 import { roleMeta, roleStyles } from "@/lib/members";
-import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { ContactLine } from "./ContactLine";
 
 type ContactField = {
@@ -22,7 +23,6 @@ export function CabinetContactModal({
 	onClose: () => void;
 }) {
 	const [copiedField, setCopiedField] = useState<string | null>(null);
-	const [imageOpen, setImageOpen] = useState(false);
 	const copiedTimeoutRef = useRef<number | null>(null);
 
 	useEffect(() => {
@@ -30,8 +30,7 @@ export function CabinetContactModal({
 
 		const handleKeyDown = (event: KeyboardEvent) => {
 			if (event.key === "Escape") {
-				if (imageOpen) setImageOpen(false);
-				else onClose();
+				onClose();
 			}
 		};
 
@@ -43,7 +42,7 @@ export function CabinetContactModal({
 			document.body.style.overflow = previousOverflow;
 			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [member, onClose, imageOpen]);
+	}, [member, onClose]);
 
 	useEffect(() => {
 		return () => {
@@ -52,10 +51,6 @@ export function CabinetContactModal({
 			}
 		};
 	}, []);
-
-	useEffect(() => {
-		setImageOpen(false);
-	}, [member]);
 
 	if (!member) return null;
 
@@ -103,27 +98,35 @@ export function CabinetContactModal({
 					onClick={(event) => event.stopPropagation()}
 				>
 					{member.image && member.imageConfig?.enabled !== false && (
-						<button
-							type="button"
-							onClick={() => setImageOpen(true)}
+						<ExpandableImage
+							src={member.image}
+							alt={member.name}
+							label={`View full image of ${member.name}`}
 							className="group relative block h-48 w-full cursor-pointer overflow-hidden sm:h-56"
-							aria-label={`View full image of ${member.name}`}
 						>
 							<img
 								src={member.image}
 								alt={member.name}
 								className="h-full w-full object-cover"
-								style={{ objectPosition: member.imageConfig?.objectPosition ?? "center 28%" }}
+								style={{
+									objectPosition:
+										member.imageConfig?.objectPosition ?? "center 28%",
+								}}
 							/>
 							<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-base/55 via-transparent to-transparent" />
-						</button>
+						</ExpandableImage>
 					)}
 					<div className="flex items-start justify-between gap-4 px-4 py-4 sm:px-6">
 						<div className="min-w-0">
-							<p className={`text-sm font-medium ${roleStyles[member.role].text}`}>
+							<p
+								className={`text-sm font-medium ${roleStyles[member.role].text}`}
+							>
 								{roleMeta[member.role].label}
 							</p>
-							<h2 id="cabinet-contact-title" className="mt-2 text-2xl font-bold text-text sm:text-3xl">
+							<h2
+								id="cabinet-contact-title"
+								className="mt-2 text-2xl font-bold text-text sm:text-3xl"
+							>
 								{member.name}
 							</h2>
 						</div>
@@ -153,33 +156,6 @@ export function CabinetContactModal({
 					</div>
 				</div>
 			</div>
-			{imageOpen && member.image && (
-				<div
-					className="fixed inset-0 z-60 flex items-center justify-center bg-base/95 p-4 backdrop-blur-md"
-					onClick={(event) => {
-						event.stopPropagation();
-						setImageOpen(false);
-					}}
-					role="dialog"
-					aria-modal="true"
-					aria-label={`Full image of ${member.name}`}
-				>
-					<button
-						type="button"
-						onClick={() => setImageOpen(false)}
-						className="fixed right-4 top-4 inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-overlay1/60 bg-surface0/70 text-subtext1 transition-colors hover:border-overlay2 hover:text-text"
-						aria-label="Back to contact details"
-					>
-						<X className="h-4 w-4" aria-hidden />
-					</button>
-					<img
-						src={member.image}
-						alt={member.name}
-						onClick={(event) => event.stopPropagation()}
-						className="max-h-[90vh] max-w-full rounded-xl border border-overlay1/60 object-contain shadow-2xl"
-					/>
-				</div>
-			)}
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 import type { SanityImageSource } from "@sanity/image-url";
+import { ExpandableImage } from "@/components/ExpandableImage";
 import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
 
 export type UpcomingEventProps = {
 	first?: boolean;
@@ -40,6 +40,8 @@ export default function UpComingEvent({
 }: UpcomingEventProps) {
 	const borderColor = getColor(colorNum, "border");
 	const textColor = getColor(colorNum, "text");
+	const thumbSrc = image ? urlFor(image).width(800).url() : null;
+	const fullSrc = image ? urlFor(image).width(1600).url() : null;
 	const formattedDate = new Date(date).toLocaleDateString("en-US", {
 		year: "numeric",
 		month: "long",
@@ -73,15 +75,21 @@ export default function UpComingEvent({
 			{room && <p className={textColor}>Room: {room}</p>}
 			<div className="my-2"></div>
 			<p className={textColor + " text-sm"}>{description}</p>
-			{image ? (
-				<Image
-					src={urlFor(image).width(800).url()}
+			{thumbSrc && fullSrc && (
+				<ExpandableImage
+					src={fullSrc}
 					alt={eventName}
-					width={800}
-					height={600}
-					className="mt-4 w-full rounded-xl object-cover"
-				/>
-			) : null}
+					label={`View full image of ${eventName}`}
+					className="mt-4 block w-full cursor-pointer overflow-hidden rounded-xl"
+				>
+					<img
+						src={thumbSrc}
+						alt={eventName}
+						loading="lazy"
+						className="w-full"
+					/>
+				</ExpandableImage>
+			)}
 		</div>
 	);
 }
