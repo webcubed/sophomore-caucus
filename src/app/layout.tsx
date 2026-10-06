@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 
 import Header from "@/components/Header";
 import TransitionProvider from "@/components/TransitionProvider";
+import { getAccentColor } from "@/sanity/lib/accent";
 
 const lexend = Lexend({
 	variable: "--font-lexend",
@@ -20,11 +21,12 @@ export const metadata: Metadata = {
 	title: "Stuyvesant Sophomore Caucus",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const accent = await getAccentColor();
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
@@ -39,7 +41,10 @@ export default function RootLayout({
 					rel="stylesheet"
 				/>
 			</head>
-			<body className={`${lexend.variable} antialiased`}>
+			<body
+				className={`${lexend.variable} antialiased`}
+				style={{ "--color-accent": accent } as React.CSSProperties}
+			>
 				<Header />
 				<TransitionProvider>{children}</TransitionProvider>
 			</body>

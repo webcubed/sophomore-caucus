@@ -139,7 +139,7 @@ export default function Calendar({
 							);
 							onSelectDate(today);
 						}}
-						className="cursor-pointer rounded-sm border border-overlay0/50 bg-surface1/60 px-2.5 py-1.5 text-xs font-medium text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text active:scale-95"
+						className="cursor-pointer rounded-sm border border-overlay0/30 bg-surface1/60 px-2.5 py-1.5 text-xs font-medium text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text active:scale-95"
 					>
 						Today
 					</button>
@@ -157,7 +157,7 @@ export default function Calendar({
 							type="button"
 							aria-label="Previous month"
 							onClick={() => onCursorChange(new Date(year, month - 1, 1))}
-							className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-sm border border-overlay0/50 bg-surface1/60 text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text active:scale-95"
+							className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-sm border border-overlay0/30 bg-surface1/60 text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text active:scale-95"
 						>
 							<ChevronLeft className="h-4 w-4" />
 						</button>
@@ -165,7 +165,7 @@ export default function Calendar({
 							type="button"
 							aria-label="Next month"
 							onClick={() => onCursorChange(new Date(year, month + 1, 1))}
-							className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-sm border border-overlay0/50 bg-surface1/60 text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text active:scale-95"
+							className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-sm border border-overlay0/30 bg-surface1/60 text-subtext1 transition-colors duration-150 hover:border-overlay1 hover:bg-surface1 hover:text-text active:scale-95"
 						>
 							<ChevronRight className="h-4 w-4" />
 						</button>
@@ -211,7 +211,7 @@ export default function Calendar({
 									title={dot !== null ? entry?.sourceWording : undefined}
 									onClick={() => onSelectDate(date)}
 									className={`flex aspect-[4/3] w-full cursor-pointer flex-col items-center justify-center gap-1 rounded-lg text-sm transition-colors duration-150 ${state}${
-										isToday ? " ring-2 ring-inset ring-accent" : ""
+										isToday ? " ring-1 ring-inset ring-accent/60" : ""
 									}`}
 								>
 									<span>{day}</span>
