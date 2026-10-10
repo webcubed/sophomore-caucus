@@ -21,6 +21,7 @@ const categoryLabels: Record<string, string> = {
 	last_day: "Last day",
 	exam_day: "Exam day",
 	professional_development: "Professional development",
+	remote_learning: "Remote learning",
 };
 
 function BellScheduleTable({

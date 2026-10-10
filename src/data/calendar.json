@@ -3,11 +3,12 @@
 		"school": "Stuyvesant High School",
 		"schoolYear": "2026-2027",
 		"timezone": "America/New_York",
-		"sourceCalendar": "Stuyvesant High School 2026-2027 School Year Calendar, Version 7",
-		"sourceCalendarFile": "2026-2027 School Year Calendar v 9-4-2026 v 7.pdf",
+		"sourceCalendar": "Stuyvesant High School 2026-2027 School Year Calendar, Version 10",
+		"sourceCalendarFile": "2026-2027 School Year Calendar v 10-5-2026 v 10.pdf",
 		"bellScheduleSource": "Stuyvesant High School Bell Schedule School Year 2026 - 2027, As of 08/27/26",
 		"bellScheduleFile": "Bell Schedule 2026 - 2027.pdf",
-		"calendarVersion": "September 4, 2026, Version 7"
+		"calendarVersion": "October 5, 2026, Version 10",
+		"sourceVersionDate": "2026-10-05"
 	},
 	"bellSchedules": {
 		"Regular": {
@@ -221,7 +222,7 @@
 		},
 		{
 			"date": "2026-09-22",
-			"sourceWording": "Science Testing and CS Testing B1 (AIS Start Date)",
+			"sourceWording": "Science Testing and CS Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -231,7 +232,7 @@
 		},
 		{
 			"date": "2026-09-23",
-			"sourceWording": "WL, ELA and Health Testing A1",
+			"sourceWording": "WL, ELA and Health Testing A1 (AIS Start Date)",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -461,9 +462,9 @@
 		},
 		{
 			"date": "2026-10-23",
-			"sourceWording": "PSAT Exam AM: PSAT/NMSQT PM: Careers Fair 11th Graders Only B (End of MP1)",
-			"block": "B",
-			"blockFamily": "B",
+			"sourceWording": "PSAT Exam AM: PSAT/NMSQT PM: Careers Fair 11th Graders Only (End of MP1)",
+			"block": null,
+			"blockFamily": null,
 			"category": "school_day",
 			"scheduleType": "PSAT/NMSQT, SAT",
 			"hasInstructionalPeriods": true,
@@ -471,18 +472,8 @@
 		},
 		{
 			"date": "2026-10-26",
-			"sourceWording": "Science Testing A",
-			"block": "A",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 2
-		},
-		{
-			"date": "2026-10-27",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
+			"sourceWording": "Science Testing B",
+			"block": "B",
 			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -490,8 +481,8 @@
 			"sourcePage": 2
 		},
 		{
-			"date": "2026-10-28",
-			"sourceWording": "WL, ELA and Health Testing A1",
+			"date": "2026-10-27",
+			"sourceWording": "Science Testing and CS Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -500,9 +491,9 @@
 			"sourcePage": 2
 		},
 		{
-			"date": "2026-10-29",
-			"sourceWording": "Math Testing, Music, Art Testing B2",
-			"block": "B2",
+			"date": "2026-10-28",
+			"sourceWording": "WL, ELA and Health Testing B1",
+			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -510,10 +501,20 @@
 			"sourcePage": 2
 		},
 		{
-			"date": "2026-10-30",
-			"sourceWording": "Social Studies, Technology Testing (Special Schedule) A2 (Grades by 9 am)",
+			"date": "2026-10-29",
+			"sourceWording": "Math Testing, Music, Art Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 2
+		},
+		{
+			"date": "2026-10-30",
+			"sourceWording": "Social Studies, Technology Testing (Special Schedule) B2 (Grades by 9 am)",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "special_schedule",
 			"scheduleType": null,
 			"hasInstructionalPeriods": false,
@@ -531,10 +532,10 @@
 		},
 		{
 			"date": "2026-11-03",
-			"sourceWording": "Election Day No Students Chancellor’s Conference Day for Staff Development",
-			"block": null,
-			"blockFamily": null,
-			"category": "no_students",
+			"sourceWording": "Election Day Staff will be remote and students will be engaged in remote online learning A",
+			"block": "A",
+			"blockFamily": "A",
+			"category": "remote_learning",
 			"scheduleType": null,
 			"hasInstructionalPeriods": false,
 			"sourcePage": 3
@@ -1171,7 +1172,7 @@
 		},
 		{
 			"date": "2027-01-28",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm",
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | AP US History Final: 9:45 am | Physics Final: 12:45 pm",
 			"block": null,
 			"blockFamily": null,
 			"category": "regents",
@@ -2269,6 +2270,12 @@
 		},
 		{
 			"date": "2027-01-26",
+			"summary": "Geometry Final",
+			"time": "9:45 am",
+			"sourceWording": "Regents Exams | ELA Regents: 8:30 am | Chemistry Regents: 12:30 pm | Old Chemistry: 12:30 pm | Geometry Final: 9:45 am | Music Appreciation: 12:45 pm | Algebra II Final: 12:45 pm"
+		},
+		{
+			"date": "2027-01-26",
 			"summary": "Chemistry Regents",
 			"time": "12:30 pm",
 			"sourceWording": "Regents Exams | ELA Regents: 8:30 am | Chemistry Regents: 12:30 pm | Old Chemistry: 12:30 pm | Geometry Final: 9:45 am | Music Appreciation: 12:45 pm | Algebra II Final: 12:45 pm"
@@ -2281,19 +2288,13 @@
 		},
 		{
 			"date": "2027-01-26",
-			"summary": "Geometry Final",
-			"time": "9:45 am",
-			"sourceWording": "Regents Exams | ELA Regents: 8:30 am | Chemistry Regents: 12:30 pm | Old Chemistry: 12:30 pm | Geometry Final: 9:45 am | Music Appreciation: 12:45 pm | Algebra II Final: 12:45 pm"
-		},
-		{
-			"date": "2027-01-26",
-			"summary": "Music Appreciation",
+			"summary": "Algebra II Final",
 			"time": "12:45 pm",
 			"sourceWording": "Regents Exams | ELA Regents: 8:30 am | Chemistry Regents: 12:30 pm | Old Chemistry: 12:30 pm | Geometry Final: 9:45 am | Music Appreciation: 12:45 pm | Algebra II Final: 12:45 pm"
 		},
 		{
 			"date": "2027-01-26",
-			"summary": "Algebra II Final",
+			"summary": "Music Appreciation",
 			"time": "12:45 pm",
 			"sourceWording": "Regents Exams | ELA Regents: 8:30 am | Chemistry Regents: 12:30 pm | Old Chemistry: 12:30 pm | Geometry Final: 9:45 am | Music Appreciation: 12:45 pm | Algebra II Final: 12:45 pm"
 		},
@@ -2305,13 +2306,13 @@
 		},
 		{
 			"date": "2027-01-27",
-			"summary": "Algebra I Regents",
-			"time": "12:30 pm",
+			"summary": "Pre-Calculus Final",
+			"time": "9:45 am",
 			"sourceWording": "Regents Exams | US History Regents: 8:30 am | Algebra I Regents: 12:30 pm | Physics Regents: 12:30 pm | Old Physics Regents: 12:30 pm | Pre-Calculus Final: 9:45 am | Foundations of CS: 12:45 pm"
 		},
 		{
 			"date": "2027-01-27",
-			"summary": "Physics Regents",
+			"summary": "Algebra I Regents",
 			"time": "12:30 pm",
 			"sourceWording": "Regents Exams | US History Regents: 8:30 am | Algebra I Regents: 12:30 pm | Physics Regents: 12:30 pm | Old Physics Regents: 12:30 pm | Pre-Calculus Final: 9:45 am | Foundations of CS: 12:45 pm"
 		},
@@ -2323,8 +2324,8 @@
 		},
 		{
 			"date": "2027-01-27",
-			"summary": "Pre-Calculus Final",
-			"time": "9:45 am",
+			"summary": "Physics Regents",
+			"time": "12:30 pm",
 			"sourceWording": "Regents Exams | US History Regents: 8:30 am | Algebra I Regents: 12:30 pm | Physics Regents: 12:30 pm | Old Physics Regents: 12:30 pm | Pre-Calculus Final: 9:45 am | Foundations of CS: 12:45 pm"
 		},
 		{
@@ -2341,14 +2342,20 @@
 		},
 		{
 			"date": "2027-01-28",
-			"summary": "Geometry Regents",
-			"time": "12:30 pm",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
+			"summary": "AP US History Final",
+			"time": "9:45 am",
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | AP US History Final: 9:45 am | Physics Final: 12:45 pm"
 		},
 		{
 			"date": "2027-01-28",
 			"summary": "Biology Final",
 			"time": "9:45 am",
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
+		},
+		{
+			"date": "2027-01-28",
+			"summary": "Geometry Regents",
+			"time": "12:30 pm",
 			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
 		},
 		{
@@ -2359,13 +2366,13 @@
 		},
 		{
 			"date": "2027-01-29",
-			"summary": "Biology Regents",
+			"summary": "Algebra II Regents",
 			"time": "8:30 am",
 			"sourceWording": "Regents Exams | Biology Regents: 8:30 am | Algebra II Regents: 8:30 am | Global Studies Final: 9:45 am | AP CS Final: 12:45 pm (Senior Grades)"
 		},
 		{
 			"date": "2027-01-29",
-			"summary": "Algebra II Regents",
+			"summary": "Biology Regents",
 			"time": "8:30 am",
 			"sourceWording": "Regents Exams | Biology Regents: 8:30 am | Algebra II Regents: 8:30 am | Global Studies Final: 9:45 am | AP CS Final: 12:45 pm (Senior Grades)"
 		},
@@ -2455,12 +2462,12 @@
 		}
 	],
 	"validation": {
-		"expectedABSchoolDays": 162,
-		"expectedADays": 81,
-		"expectedBDays": 81,
-		"actualADays": 81,
-		"actualBDays": 81,
-		"actualABSchoolDays": 162,
+		"expectedABSchoolDays": null,
+		"expectedADays": null,
+		"expectedBDays": null,
+		"actualADays": 82,
+		"actualBDays": 82,
+		"actualABSchoolDays": 164,
 		"sourceCalendarABBlockDays": 164,
 		"verifiedGroundTruthExcludesDates": ["2027-04-01", "2027-04-02"],
 		"monthlyCounts": [
@@ -2468,93 +2475,302 @@
 				"month": "2026-09",
 				"A": 7,
 				"B": 7,
-				"total": 14,
-				"expectedA": 7,
-				"expectedB": 7,
-				"matches": true
+				"total": 14
 			},
 			{
 				"month": "2026-10",
-				"A": 11,
+				"A": 10,
 				"B": 10,
-				"total": 21,
-				"expectedA": 11,
-				"expectedB": 10,
-				"matches": true
+				"total": 20
 			},
 			{
 				"month": "2026-11",
-				"A": 8,
+				"A": 9,
 				"B": 9,
-				"total": 17,
-				"expectedA": 8,
-				"expectedB": 9,
-				"matches": true
+				"total": 18
 			},
 			{
 				"month": "2026-12",
 				"A": 9,
 				"B": 8,
-				"total": 17,
-				"expectedA": 9,
-				"expectedB": 8,
-				"matches": true
+				"total": 17
 			},
 			{
 				"month": "2027-01",
 				"A": 7,
 				"B": 8,
-				"total": 15,
-				"expectedA": 7,
-				"expectedB": 8,
-				"matches": true
+				"total": 15
 			},
 			{
 				"month": "2027-02",
 				"A": 7,
 				"B": 7,
-				"total": 14,
-				"expectedA": 7,
-				"expectedB": 7,
-				"matches": true
+				"total": 14
 			},
 			{
 				"month": "2027-03",
 				"A": 11,
 				"B": 10,
-				"total": 21,
-				"expectedA": 11,
-				"expectedB": 10,
-				"matches": true
+				"total": 21
 			},
 			{
 				"month": "2027-04",
-				"A": 7,
-				"B": 8,
-				"total": 15,
-				"expectedA": 7,
-				"expectedB": 8,
-				"matches": true
+				"A": 8,
+				"B": 9,
+				"total": 17
 			},
 			{
 				"month": "2027-05",
 				"A": 10,
 				"B": 9,
-				"total": 19,
-				"expectedA": 10,
-				"expectedB": 9,
-				"matches": true
+				"total": 19
 			},
 			{
 				"month": "2027-06",
 				"A": 4,
 				"B": 5,
-				"total": 9,
-				"expectedA": 4,
-				"expectedB": 5,
-				"matches": true
+				"total": 9
 			}
-		]
+		],
+		"sourceCalendarABBlockDaysVersion10": 164,
+		"sourceCalendarABFamilyCountsVersion10": {
+			"A": 82,
+			"B": 83
+		},
+		"sourceCalendarExactBlockCountsVersion10": {
+			"A": 14,
+			"B": 14,
+			"B1": 34,
+			"A1": 34,
+			"B2": 34,
+			"A2": 34
+		},
+		"priorVerifiedGroundTruthNeedsRecheckAgainstVersion10": true,
+		"version10Changes": [
+			{
+				"date": "2026-09-22",
+				"change": "Removed AIS Start Date annotation; Version 10 places it on September 23."
+			},
+			{
+				"date": "2026-09-23",
+				"change": "Added AIS Start Date annotation."
+			},
+			{
+				"date": "2026-10-26",
+				"change": "Block changed from A to B."
+			},
+			{
+				"date": "2026-10-27",
+				"change": "Block changed from B1 to A1."
+			},
+			{
+				"date": "2026-10-28",
+				"change": "Block changed from A1 to B1."
+			},
+			{
+				"date": "2026-10-29",
+				"change": "Block changed from B2 to A2."
+			},
+			{
+				"date": "2026-10-30",
+				"change": "Block changed from A2 to B2; still marked Special Schedule."
+			},
+			{
+				"date": "2026-11-03",
+				"change": "Election Day is remote online learning, with A block, rather than No Students."
+			},
+			{
+				"date": "2027-01-28",
+				"change": "Added AP US History Final at 9:45 am."
+			},
+			{
+				"date": "2026-10-23",
+				"change": "Removed the B block label; the PSAT/class schedule and End of MP1 annotation remain."
+			}
+		],
+		"sourceLabelCountsVersion10": {
+			"A": 14,
+			"A1": 34,
+			"A2": 34,
+			"B": 14,
+			"B1": 34,
+			"B2": 34
+		},
+		"sourceFamilyCountsVersion10": {
+			"A": 82,
+			"B": 82,
+			"total": 164
+		},
+		"monthlySourceFamilyCountsVersion10": [
+			{
+				"month": "2026-09",
+				"A": 7,
+				"B": 7,
+				"total": 14
+			},
+			{
+				"month": "2026-10",
+				"A": 10,
+				"B": 10,
+				"total": 20
+			},
+			{
+				"month": "2026-11",
+				"A": 9,
+				"B": 9,
+				"total": 18
+			},
+			{
+				"month": "2026-12",
+				"A": 9,
+				"B": 8,
+				"total": 17
+			},
+			{
+				"month": "2027-01",
+				"A": 7,
+				"B": 8,
+				"total": 15
+			},
+			{
+				"month": "2027-02",
+				"A": 7,
+				"B": 7,
+				"total": 14
+			},
+			{
+				"month": "2027-03",
+				"A": 11,
+				"B": 10,
+				"total": 21
+			},
+			{
+				"month": "2027-04",
+				"A": 8,
+				"B": 9,
+				"total": 17
+			},
+			{
+				"month": "2027-05",
+				"A": 10,
+				"B": 9,
+				"total": 19
+			},
+			{
+				"month": "2027-06",
+				"A": 4,
+				"B": 5,
+				"total": 9
+			}
+		],
+		"actualADaysVersion10": 82,
+		"actualBDaysVersion10": 82,
+		"actualABSchoolDaysVersion10": 164,
+		"priorVersion7VerifiedGroundTruth": {
+			"expectedABSchoolDays": 162,
+			"expectedADays": 81,
+			"expectedBDays": 81,
+			"verifiedGroundTruthExcludesDates": ["2027-04-01", "2027-04-02"],
+			"monthlyCounts": [
+				{
+					"month": "2026-09",
+					"A": 7,
+					"B": 7,
+					"total": 14,
+					"expectedA": 7,
+					"expectedB": 7,
+					"matches": true
+				},
+				{
+					"month": "2026-10",
+					"A": 11,
+					"B": 10,
+					"total": 21,
+					"expectedA": 11,
+					"expectedB": 10,
+					"matches": true
+				},
+				{
+					"month": "2026-11",
+					"A": 8,
+					"B": 9,
+					"total": 17,
+					"expectedA": 8,
+					"expectedB": 9,
+					"matches": true
+				},
+				{
+					"month": "2026-12",
+					"A": 9,
+					"B": 8,
+					"total": 17,
+					"expectedA": 9,
+					"expectedB": 8,
+					"matches": true
+				},
+				{
+					"month": "2027-01",
+					"A": 7,
+					"B": 8,
+					"total": 15,
+					"expectedA": 7,
+					"expectedB": 8,
+					"matches": true
+				},
+				{
+					"month": "2027-02",
+					"A": 7,
+					"B": 7,
+					"total": 14,
+					"expectedA": 7,
+					"expectedB": 7,
+					"matches": true
+				},
+				{
+					"month": "2027-03",
+					"A": 11,
+					"B": 10,
+					"total": 21,
+					"expectedA": 11,
+					"expectedB": 10,
+					"matches": true
+				},
+				{
+					"month": "2027-04",
+					"A": 7,
+					"B": 8,
+					"total": 15,
+					"expectedA": 7,
+					"expectedB": 8,
+					"matches": true
+				},
+				{
+					"month": "2027-05",
+					"A": 10,
+					"B": 9,
+					"total": 19,
+					"expectedA": 10,
+					"expectedB": 9,
+					"matches": true
+				},
+				{
+					"month": "2027-06",
+					"A": 4,
+					"B": 5,
+					"total": 9,
+					"expectedA": 4,
+					"expectedB": 5,
+					"matches": true
+				}
+			]
+		},
+		"monthlyCountsMatchesPriorGroundTruth": false,
+		"countInterpretation": "Counts here are based on block labels printed in Version 10, including the November 3 remote-learning A day. The prior Version 7 verified ground truth excluded April 1–2; that prior interpretation has been preserved separately and should not be assumed to match Version 10.",
+		"sourceCalendarFamilyCountsVersion10": {
+			"A": 82,
+			"B": 82,
+			"total": 164
+		}
 	},
 	"icsDesign": {
 		"eventGranularity": "daily",
@@ -2566,10 +2782,10 @@
 		"administrativeDistribution": "one daily timed event spanning Period 1 through Period 10; the Distribution interval is described in the event but does not create a separate period event",
 		"generatedCounts": {
 			"oneDailyTimedInstructionalEvents": 161,
-			"allDayCalendarEvents": 43,
-			"regentsTimedExamEvents": 32,
+			"allDayCalendarEvents": 54,
+			"regentsTimedExamEvents": 33,
 			"parentTeacherAdditionalTimedEvents": 4,
-			"totalVEVENTs": 251
+			"totalVEVENTs": 252
 		}
 	}
 }

@@ -87,7 +87,8 @@ export default function CalendarBanner() {
 		entry &&
 		(entry.category === "special_schedule" ||
 			(entry.scheduleType !== null && entry.scheduleType !== "Regular"));
-	const showChips = isHoliday || isBreak || isTesting || isSpecial;
+	const isRemote = category === "remote_learning";
+	const showChips = isHoliday || isBreak || isTesting || isSpecial || isRemote;
 
 	function go(delta: 1 | -1) {
 		const next = addDays(selected, delta);
@@ -287,6 +288,9 @@ export default function CalendarBanner() {
 								)}
 								{isSpecial && (
 									<span className="text-xs text-mauve">Special Schedule</span>
+								)}
+								{isRemote && (
+									<span className="text-xs text-sapphire">Remote learning</span>
 								)}
 							</div>
 						)}
