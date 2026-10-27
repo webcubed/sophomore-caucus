@@ -22,7 +22,9 @@ type RawEvent = Omit<EventItem, "color"> & { color?: string | null };
 
 export default async function Events() {
 	const rawEvents = await client.fetch<RawEvent[]>(
-		'*[_type == "event"] | order(date asc)'
+		'*[_type == "event"] | order(date asc)',
+		{},
+		{ next: { revalidate: 60 } }
 	);
 	if (rawEvents.length === 0) {
 		return (
