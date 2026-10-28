@@ -39,8 +39,8 @@ const resources: Resources[] = [
 		icon: Newspaper,
 	},
 	{
-		name: "Official Unit 1 AP Chemistry Study Guide 26-27",
-		description: "The official Unit 1 AP Chemistry study guide for 2026-27.",
+		name: "Official AP Chemistry Study Guide 26-27",
+		description: "The official AP Chemistry study guide for 2026-27.",
 		url: "https://docs.google.com/document/d/1Pb7y2LPXEVJjcPq9XA8I_AWsx6f_LlB6rHWG7TWz8CQ/edit?tab=t.d3xer7k4938x",
 		icon: FlaskConical,
 	},
