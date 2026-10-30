@@ -3,12 +3,12 @@
 		"school": "Stuyvesant High School",
 		"schoolYear": "2026-2027",
 		"timezone": "America/New_York",
-		"sourceCalendar": "Stuyvesant High School 2026-2027 School Year Calendar, Version 10",
-		"sourceCalendarFile": "2026-2027 School Year Calendar v 10-5-2026 v 10.pdf",
+		"sourceCalendar": "Stuyvesant High School 2026-2027 School Year Calendar, Version 13",
+		"sourceCalendarFile": "2026-2027 School Year Calendar v 10-29-2026 v 13.pdf",
 		"bellScheduleSource": "Stuyvesant High School Bell Schedule School Year 2026 - 2027, As of 08/27/26",
 		"bellScheduleFile": "Bell Schedule 2026 - 2027.pdf",
-		"calendarVersion": "October 5, 2026, Version 10",
-		"sourceVersionDate": "2026-10-05"
+		"calendarVersion": "October 29, 2026, Version 13",
+		"sourceVersionDate": "2026-10-29"
 	},
 	"bellSchedules": {
 		"Regular": {
@@ -522,9 +522,9 @@
 		},
 		{
 			"date": "2026-11-02",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
+			"sourceWording": "Science Testing and CS Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -542,37 +542,7 @@
 		},
 		{
 			"date": "2026-11-04",
-			"sourceWording": "Math, Music, Art and Tech Testing A1 (Report Cards)",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-05",
-			"sourceWording": "No Testing AMC Exam, Pds.1&2 8:00 am - 9:30 am B2",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-06",
-			"sourceWording": "WL, ELA, SS and Health Testing A2",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-09",
-			"sourceWording": "Science Testing and CS Testing B1",
+			"sourceWording": "Math, Music, Art and Tech Testing B1 (Report Cards)",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -581,10 +551,40 @@
 			"sourcePage": 3
 		},
 		{
-			"date": "2026-11-10",
-			"sourceWording": "Math, Music, Art and Tech Testing A1",
+			"date": "2026-11-05",
+			"sourceWording": "No Testing AMC Exam, Pds.1&2 8:00 am - 9:30 am A2",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-06",
+			"sourceWording": "WL, ELA, SS and Health Testing B2",
+			"block": "B2",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-09",
+			"sourceWording": "Science Testing and CS Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-10",
+			"sourceWording": "Math, Music, Art and Tech Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -602,9 +602,9 @@
 		},
 		{
 			"date": "2026-11-12",
-			"sourceWording": "WL, ELA, SS and Health Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
+			"sourceWording": "WL, ELA, SS and Health Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -612,37 +612,7 @@
 		},
 		{
 			"date": "2026-11-13",
-			"sourceWording": "No Testing AMC Exam, Pds.1&2 8:00 am - 9:30 am A2",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-16",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-17",
-			"sourceWording": "WL, ELA and Health Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-18",
-			"sourceWording": "Math, Music and Art Testing B2",
+			"sourceWording": "No Testing AMC Exam, Pds.1&2 8:00 am - 9:30 am B2",
 			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -651,29 +621,9 @@
 			"sourcePage": 3
 		},
 		{
-			"date": "2026-11-19",
-			"sourceWording": "Social Studies, Technology Testing PT Evening 5:30 pm—8:00 pm A2 (Parent-Teacher)",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "parent_teacher",
-			"scheduleType": "PTC",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-20",
-			"sourceWording": "No Testing PT Afternoon 1:00 pm—3:00 pm B (Parent-Teacher)",
-			"block": "B",
-			"blockFamily": "B",
-			"category": "parent_teacher",
-			"scheduleType": "PTC",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 3
-		},
-		{
-			"date": "2026-11-23",
-			"sourceWording": "Science Testing A",
-			"block": "A",
+			"date": "2026-11-16",
+			"sourceWording": "Science Testing and CS Testing A1",
+			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -681,8 +631,8 @@
 			"sourcePage": 3
 		},
 		{
-			"date": "2026-11-24",
-			"sourceWording": "Math, Music, Art and Tech Testing B1",
+			"date": "2026-11-17",
+			"sourceWording": "WL, ELA and Health Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -691,10 +641,60 @@
 			"sourcePage": 3
 		},
 		{
-			"date": "2026-11-25",
-			"sourceWording": "WL, ELA, SS and Health Testing A1",
+			"date": "2026-11-18",
+			"sourceWording": "Math, Music and Art Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-19",
+			"sourceWording": "Social Studies, Technology Testing PT Evening 5:30 pm—8:00 pm B2 (Parent-Teacher)",
+			"block": "B2",
+			"blockFamily": "B",
+			"category": "parent_teacher",
+			"scheduleType": "PTC",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-20",
+			"sourceWording": "No Testing PT Afternoon 1:00 pm—3:00 pm A (Parent-Teacher)",
+			"block": "A",
+			"blockFamily": "A",
+			"category": "parent_teacher",
+			"scheduleType": "PTC",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-23",
+			"sourceWording": "Science Testing B",
+			"block": "B",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-24",
+			"sourceWording": "Math, Music, Art and Tech Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 3
+		},
+		{
+			"date": "2026-11-25",
+			"sourceWording": "WL, ELA, SS and Health Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -722,9 +722,9 @@
 		},
 		{
 			"date": "2026-11-30",
-			"sourceWording": "No Testing No Full Period Assessments B",
-			"block": "B",
-			"blockFamily": "B",
+			"sourceWording": "No Testing No Full Period Assessments A",
+			"block": "A",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -732,56 +732,6 @@
 		},
 		{
 			"date": "2026-12-01",
-			"sourceWording": "Science Testing and CS Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 4
-		},
-		{
-			"date": "2026-12-02",
-			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Conference",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 4
-		},
-		{
-			"date": "2026-12-03",
-			"sourceWording": "Math Testing, Music, Art Testing A2",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 4
-		},
-		{
-			"date": "2026-12-04",
-			"sourceWording": "Social Studies, Technology Testing B2 (End of MP2)",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 4
-		},
-		{
-			"date": "2026-12-07",
-			"sourceWording": "Science Testing A",
-			"block": "A",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 4
-		},
-		{
-			"date": "2026-12-08",
 			"sourceWording": "Science Testing and CS Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
@@ -791,17 +741,17 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-09",
-			"sourceWording": "WL, ELA and Health Testing A1",
+			"date": "2026-12-02",
+			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
-			"scheduleType": "Regular",
+			"scheduleType": "Conference",
 			"hasInstructionalPeriods": true,
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-10",
+			"date": "2026-12-03",
 			"sourceWording": "Math Testing, Music, Art Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
@@ -811,8 +761,8 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-11",
-			"sourceWording": "Social Studies, Technology Testing A2 (Grades by 9 am)",
+			"date": "2026-12-04",
+			"sourceWording": "Social Studies, Technology Testing A2 (End of MP2)",
 			"block": "A2",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -821,7 +771,7 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-14",
+			"date": "2026-12-07",
 			"sourceWording": "Science Testing B",
 			"block": "B",
 			"blockFamily": "B",
@@ -831,8 +781,8 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-15",
-			"sourceWording": "Science Testing and CS Testing A1 (Report Cards)",
+			"date": "2026-12-08",
+			"sourceWording": "Science Testing and CS Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -841,17 +791,17 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-16",
-			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
+			"date": "2026-12-09",
+			"sourceWording": "WL, ELA and Health Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
-			"scheduleType": "Conference",
+			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-17",
+			"date": "2026-12-10",
 			"sourceWording": "Math Testing, Music, Art Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
@@ -861,8 +811,8 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-18",
-			"sourceWording": "Social Studies, Technology Testing B2",
+			"date": "2026-12-11",
+			"sourceWording": "Social Studies, Technology Testing B2 (Grades by 9 am)",
 			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -871,8 +821,8 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-21",
-			"sourceWording": "Science Testing and CS Testing A",
+			"date": "2026-12-14",
+			"sourceWording": "Science Testing A",
 			"block": "A",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -881,8 +831,28 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-22",
-			"sourceWording": "Math, Music, Art and Tech Testing B2",
+			"date": "2026-12-15",
+			"sourceWording": "Science Testing and CS Testing B1 (Report Cards)",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 4
+		},
+		{
+			"date": "2026-12-16",
+			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Conference",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 4
+		},
+		{
+			"date": "2026-12-17",
+			"sourceWording": "Math Testing, Music, Art Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -891,10 +861,40 @@
 			"sourcePage": 4
 		},
 		{
-			"date": "2026-12-23",
-			"sourceWording": "WL, ELA, SS and Health Testing A2",
+			"date": "2026-12-18",
+			"sourceWording": "Social Studies, Technology Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 4
+		},
+		{
+			"date": "2026-12-21",
+			"sourceWording": "Science Testing and CS Testing B",
+			"block": "B",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 4
+		},
+		{
+			"date": "2026-12-22",
+			"sourceWording": "Math, Music, Art and Tech Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 4
+		},
+		{
+			"date": "2026-12-23",
+			"sourceWording": "WL, ELA, SS and Health Testing B2",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -992,57 +992,7 @@
 		},
 		{
 			"date": "2027-01-04",
-			"sourceWording": "No Testing No Full Period Assessments B",
-			"block": "B",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 5
-		},
-		{
-			"date": "2027-01-05",
-			"sourceWording": "Science Testing and CS Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 5
-		},
-		{
-			"date": "2027-01-06",
-			"sourceWording": "WL, ELA and Health Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 5
-		},
-		{
-			"date": "2027-01-07",
-			"sourceWording": "Math Testing, Music, Art, Tech A2",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 5
-		},
-		{
-			"date": "2027-01-08",
-			"sourceWording": "Social Studies, Technology Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 5
-		},
-		{
-			"date": "2027-01-11",
-			"sourceWording": "Science Testing A",
+			"sourceWording": "No Testing No Full Period Assessments A",
 			"block": "A",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1051,8 +1001,8 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-12",
-			"sourceWording": "Science Testing and CS Testing B1 (In Class Finals)",
+			"date": "2027-01-05",
+			"sourceWording": "Science Testing and CS Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -1061,8 +1011,8 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-13",
-			"sourceWording": "WL, ELA and Health Testing A1 (In Class Finals)",
+			"date": "2027-01-06",
+			"sourceWording": "WL, ELA and Health Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1071,8 +1021,8 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-14",
-			"sourceWording": "Math Testing, Music, Art, Tech B2 (In Class Finals)",
+			"date": "2027-01-07",
+			"sourceWording": "Math Testing, Music, Art, Tech B2",
 			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -1081,10 +1031,60 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-15",
-			"sourceWording": "Social Studies, Technology Testing A2 (In Class Finals)",
+			"date": "2027-01-08",
+			"sourceWording": "Social Studies, Technology Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 5
+		},
+		{
+			"date": "2027-01-11",
+			"sourceWording": "Science Testing B",
+			"block": "B",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 5
+		},
+		{
+			"date": "2027-01-12",
+			"sourceWording": "Science Testing and CS Testing A1 (In Class Finals)",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 5
+		},
+		{
+			"date": "2027-01-13",
+			"sourceWording": "WL, ELA and Health Testing B1 (In Class Finals)",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 5
+		},
+		{
+			"date": "2027-01-14",
+			"sourceWording": "Math Testing, Music, Art, Tech A2 (In Class Finals)",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 5
+		},
+		{
+			"date": "2027-01-15",
+			"sourceWording": "Social Studies, Technology Testing B2 (In Class Finals)",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1102,17 +1102,7 @@
 		},
 		{
 			"date": "2027-01-19",
-			"sourceWording": "Science Testing and CS Testing B1 (In Class Finals)",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 5
-		},
-		{
-			"date": "2027-01-20",
-			"sourceWording": "WL, ELA and Health Testing A1 (In Class Finals)",
+			"sourceWording": "Science Testing and CS Testing A1 (In Class Finals)",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1121,9 +1111,9 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-21",
-			"sourceWording": "Math Testing, Music, Art, Tech B2 (In Class Finals)",
-			"block": "B2",
+			"date": "2027-01-20",
+			"sourceWording": "WL, ELA and Health Testing B1 (In Class Finals)",
+			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -1131,8 +1121,8 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-22",
-			"sourceWording": "Social Studies, Technology Testing A2 (In Class Finals)",
+			"date": "2027-01-21",
+			"sourceWording": "Math Testing, Music, Art, Tech A2 (In Class Finals)",
 			"block": "A2",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1141,10 +1131,20 @@
 			"sourcePage": 5
 		},
 		{
-			"date": "2027-01-25",
-			"sourceWording": "Makeup Exams B (End of MP3)",
-			"block": "B",
+			"date": "2027-01-22",
+			"sourceWording": "Social Studies, Technology Testing B2 (In Class Finals)",
+			"block": "B2",
 			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 5
+		},
+		{
+			"date": "2027-01-25",
+			"sourceWording": "Makeup Exams A (End of MP3)",
+			"block": "A",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1172,7 +1172,7 @@
 		},
 		{
 			"date": "2027-01-28",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | AP US History Final: 9:45 am | Physics Final: 12:45 pm",
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | AP Biology Final: 9:45 am | AP US History Final: 9:45 am | Physics Final: 12:45 pm",
 			"block": null,
 			"blockFamily": null,
 			"category": "regents",
@@ -1202,9 +1202,9 @@
 		},
 		{
 			"date": "2027-02-02",
-			"sourceWording": "Spring Term No Full Period Assessments A1",
-			"block": "A1",
-			"blockFamily": "A",
+			"sourceWording": "Spring Term No Full Period Assessments B1",
+			"block": "B1",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1212,9 +1212,9 @@
 		},
 		{
 			"date": "2027-02-03",
-			"sourceWording": "No Testing No Full Period Assessments B1",
-			"block": "B1",
-			"blockFamily": "B",
+			"sourceWording": "No Testing No Full Period Assessments A1",
+			"block": "A1",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1222,9 +1222,9 @@
 		},
 		{
 			"date": "2027-02-04",
-			"sourceWording": "No Testing No Full Period Assessments A2",
-			"block": "A2",
-			"blockFamily": "A",
+			"sourceWording": "No Testing No Full Period Assessments B2",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1232,9 +1232,9 @@
 		},
 		{
 			"date": "2027-02-05",
-			"sourceWording": "No Testing No Full Period Assessments B2 (Grades by 9 am)",
-			"block": "B2",
-			"blockFamily": "B",
+			"sourceWording": "No Testing No Full Period Assessments A2 (Grades by 9 am)",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1242,9 +1242,9 @@
 		},
 		{
 			"date": "2027-02-08",
-			"sourceWording": "Science Testing A",
-			"block": "A",
-			"blockFamily": "A",
+			"sourceWording": "Science Testing B",
+			"block": "B",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1252,9 +1252,9 @@
 		},
 		{
 			"date": "2027-02-09",
-			"sourceWording": "Science Testing and CS Testing B1 (Report Cards)",
-			"block": "B1",
-			"blockFamily": "B",
+			"sourceWording": "Science Testing and CS Testing A1 (Report Cards)",
+			"block": "A1",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1262,9 +1262,9 @@
 		},
 		{
 			"date": "2027-02-10",
-			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
-			"block": "A1",
-			"blockFamily": "A",
+			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
+			"block": "B1",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Conference",
 			"hasInstructionalPeriods": true,
@@ -1272,9 +1272,9 @@
 		},
 		{
 			"date": "2027-02-11",
-			"sourceWording": "Math Testing, Music, Art Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
+			"sourceWording": "Math Testing, Music, Art Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1282,9 +1282,9 @@
 		},
 		{
 			"date": "2027-02-12",
-			"sourceWording": "Social Studies, Technology Testing A2 (Special Schedule)",
-			"block": "A2",
-			"blockFamily": "A",
+			"sourceWording": "Social Studies, Technology Testing B2 (Special Schedule)",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "special_schedule",
 			"scheduleType": null,
 			"hasInstructionalPeriods": false,
@@ -1342,9 +1342,9 @@
 		},
 		{
 			"date": "2027-02-22",
-			"sourceWording": "No Testing No Full Period Assessments B",
-			"block": "B",
-			"blockFamily": "B",
+			"sourceWording": "No Testing No Full Period Assessments A",
+			"block": "A",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1352,9 +1352,9 @@
 		},
 		{
 			"date": "2027-02-23",
-			"sourceWording": "Science Testing and CS Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
+			"sourceWording": "Science Testing and CS Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1362,18 +1362,8 @@
 		},
 		{
 			"date": "2027-02-24",
-			"sourceWording": "WL, ELA and Health Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 6
-		},
-		{
-			"date": "2027-02-25",
-			"sourceWording": "Math Testing, Music, Art Testing A2",
-			"block": "A2",
+			"sourceWording": "WL, ELA and Health Testing A1",
+			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -1381,8 +1371,8 @@
 			"sourcePage": 6
 		},
 		{
-			"date": "2027-02-26",
-			"sourceWording": "Social Studies, Technology Testing B2",
+			"date": "2027-02-25",
+			"sourceWording": "Math Testing, Music, Art Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -1391,8 +1381,28 @@
 			"sourcePage": 6
 		},
 		{
+			"date": "2027-02-26",
+			"sourceWording": "Social Studies, Technology Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 6
+		},
+		{
 			"date": "2027-03-01",
-			"sourceWording": "Science Testing and CS Testing A1",
+			"sourceWording": "Science Testing and CS Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-02",
+			"sourceWording": "WL, ELA and Health Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1401,20 +1411,10 @@
 			"sourcePage": 7
 		},
 		{
-			"date": "2027-03-02",
-			"sourceWording": "WL, ELA and Health Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
 			"date": "2027-03-03",
-			"sourceWording": "Math Testing, Music, Art, Tech A2 (Conference Day)",
-			"block": "A2",
-			"blockFamily": "A",
+			"sourceWording": "Math Testing, Music, Art, Tech B2 (Conference Day)",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Conference",
 			"hasInstructionalPeriods": true,
@@ -1422,9 +1422,9 @@
 		},
 		{
 			"date": "2027-03-04",
-			"sourceWording": "Social Studies, Technology Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
+			"sourceWording": "Social Studies, Technology Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1432,9 +1432,9 @@
 		},
 		{
 			"date": "2027-03-05",
-			"sourceWording": "SAT Exam AM: SAT Suite PM: Classes A (End of MP1)",
-			"block": "A",
-			"blockFamily": "A",
+			"sourceWording": "SAT Exam AM: SAT Suite PM: Classes B (End of MP1)",
+			"block": "B",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "PSAT/NMSQT, SAT",
 			"hasInstructionalPeriods": true,
@@ -1442,9 +1442,9 @@
 		},
 		{
 			"date": "2027-03-08",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
+			"sourceWording": "Science Testing and CS Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1462,96 +1462,6 @@
 		},
 		{
 			"date": "2027-03-10",
-			"sourceWording": "WL, ELA and Health Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-11",
-			"sourceWording": "Math Testing, Music, Art, Tech B2",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-12",
-			"sourceWording": "Social Studies, Technology Testing A2 (Grades by 9 am)",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-15",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-16",
-			"sourceWording": "WL, ELA and Health Testing A1 (Report Cards)",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-17",
-			"sourceWording": "Math Testing, Music, Art, Tech B2 (Conference Day)",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Conference",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-18",
-			"sourceWording": "Social Studies, Technology Testing PT Evening 5:30 pm—8:00 pm A2 (Parent-Teacher)",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "parent_teacher",
-			"scheduleType": "PTC",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-19",
-			"sourceWording": "SAT Exam (TBD) AM: SAT Suite PM: PT Afternoon 1:00 pm—3:00 pm B (Parent-Teacher)",
-			"block": "B",
-			"blockFamily": "B",
-			"category": "parent_teacher",
-			"scheduleType": "PTC",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-22",
-			"sourceWording": "Science Testing and CS Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 7
-		},
-		{
-			"date": "2027-03-23",
 			"sourceWording": "WL, ELA and Health Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
@@ -1561,8 +1471,8 @@
 			"sourcePage": 7
 		},
 		{
-			"date": "2027-03-24",
-			"sourceWording": "Math Testing, Music, Art Testing A2 Open House",
+			"date": "2027-03-11",
+			"sourceWording": "Math Testing, Music, Art, Tech A2",
 			"block": "A2",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1571,10 +1481,100 @@
 			"sourcePage": 7
 		},
 		{
-			"date": "2027-03-25",
-			"sourceWording": "Social Studies, Technology Testing B2",
+			"date": "2027-03-12",
+			"sourceWording": "Social Studies, Technology Testing B2 (Grades by 9 am)",
 			"block": "B2",
 			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-15",
+			"sourceWording": "Science Testing and CS Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-16",
+			"sourceWording": "WL, ELA and Health Testing B1 (Report Cards)",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-17",
+			"sourceWording": "Math Testing, Music, Art, Tech A2 (Conference Day)",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Conference",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-18",
+			"sourceWording": "Social Studies, Technology Testing PT Evening 5:30 pm—8:00 pm B2 (Parent-Teacher)",
+			"block": "B2",
+			"blockFamily": "B",
+			"category": "parent_teacher",
+			"scheduleType": "PTC",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-19",
+			"sourceWording": "SAT Exam (TBD) AM: SAT Suite PM: PT Afternoon 1:00 pm—3:00 pm A (Parent-Teacher)",
+			"block": "A",
+			"blockFamily": "A",
+			"category": "parent_teacher",
+			"scheduleType": "PTC",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-22",
+			"sourceWording": "Science Testing and CS Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-23",
+			"sourceWording": "WL, ELA and Health Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-24",
+			"sourceWording": "Math Testing, Music, Art Testing A2 Open House",
+			"block": "B2",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 7
+		},
+		{
+			"date": "2027-03-25",
+			"sourceWording": "Social Studies, Technology Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1592,9 +1592,9 @@
 		},
 		{
 			"date": "2027-03-29",
-			"sourceWording": "Science Testing A",
-			"block": "A",
-			"blockFamily": "A",
+			"sourceWording": "Science Testing B",
+			"block": "B",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1602,9 +1602,9 @@
 		},
 		{
 			"date": "2027-03-30",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
+			"sourceWording": "Science Testing and CS Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1612,9 +1612,9 @@
 		},
 		{
 			"date": "2027-03-31",
-			"sourceWording": "WL, ELA and Health Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
+			"sourceWording": "WL, ELA and Health Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1622,56 +1622,6 @@
 		},
 		{
 			"date": "2027-04-01",
-			"sourceWording": "Math Testing, Music, Art Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 8
-		},
-		{
-			"date": "2027-04-02",
-			"sourceWording": "Social Studies, Technology Testing A2",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 8
-		},
-		{
-			"date": "2027-04-05",
-			"sourceWording": "Science Testing B",
-			"block": "B",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 8
-		},
-		{
-			"date": "2027-04-06",
-			"sourceWording": "Science Testing and CS Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 8
-		},
-		{
-			"date": "2027-04-07",
-			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Conference",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 8
-		},
-		{
-			"date": "2027-04-08",
 			"sourceWording": "Math Testing, Music, Art Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
@@ -1681,7 +1631,7 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-09",
+			"date": "2027-04-02",
 			"sourceWording": "Social Studies, Technology Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
@@ -1691,7 +1641,7 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-12",
+			"date": "2027-04-05",
 			"sourceWording": "Science Testing A",
 			"block": "A",
 			"blockFamily": "A",
@@ -1701,7 +1651,7 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-13",
+			"date": "2027-04-06",
 			"sourceWording": "Science Testing and CS Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
@@ -1711,17 +1661,17 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-14",
-			"sourceWording": "WL, ELA and Health Testing A1",
+			"date": "2027-04-07",
+			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
-			"scheduleType": "Regular",
+			"scheduleType": "Conference",
 			"hasInstructionalPeriods": true,
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-15",
+			"date": "2027-04-08",
 			"sourceWording": "Math Testing, Music, Art Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
@@ -1731,7 +1681,7 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-16",
+			"date": "2027-04-09",
 			"sourceWording": "Social Studies, Technology Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
@@ -1741,7 +1691,7 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-19",
+			"date": "2027-04-12",
 			"sourceWording": "Science Testing B",
 			"block": "B",
 			"blockFamily": "B",
@@ -1751,8 +1701,8 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-20",
-			"sourceWording": "Science Testing and CS Testing A1 (Report Cards)",
+			"date": "2027-04-13",
+			"sourceWording": "Science Testing and CS Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1761,18 +1711,18 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-21",
-			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
+			"date": "2027-04-14",
+			"sourceWording": "WL, ELA and Health Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
-			"scheduleType": "Conference",
+			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-22",
-			"sourceWording": "Math, Music and Art Testing A2",
+			"date": "2027-04-15",
+			"sourceWording": "Math Testing, Music, Art Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1781,10 +1731,60 @@
 			"sourcePage": 8
 		},
 		{
-			"date": "2027-04-23",
+			"date": "2027-04-16",
 			"sourceWording": "Social Studies, Technology Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 8
+		},
+		{
+			"date": "2027-04-19",
+			"sourceWording": "Science Testing A",
+			"block": "A",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 8
+		},
+		{
+			"date": "2027-04-20",
+			"sourceWording": "Science Testing and CS Testing B1 (Report Cards)",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 8
+		},
+		{
+			"date": "2027-04-21",
+			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Conference",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 8
+		},
+		{
+			"date": "2027-04-22",
+			"sourceWording": "Math, Music and Art Testing B2",
+			"block": "B2",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 8
+		},
+		{
+			"date": "2027-04-23",
+			"sourceWording": "Social Studies, Technology Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1842,57 +1842,7 @@
 		},
 		{
 			"date": "2027-05-03",
-			"sourceWording": "No Testing No Full Period Assessments A",
-			"block": "A",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-04",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-05",
-			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Conference",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-06",
-			"sourceWording": "Math Testing, Music, Art Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-07",
-			"sourceWording": "Social Studies, Technology Testing A2 (Grades by 9 am)",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-10",
-			"sourceWording": "Science Testing B",
+			"sourceWording": "No Testing No Full Period Assessments B",
 			"block": "B",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -1901,8 +1851,8 @@
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-11",
-			"sourceWording": "Science Testing and CS Testing A1 (Report Cards)",
+			"date": "2027-05-04",
+			"sourceWording": "Science Testing and CS Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -1911,17 +1861,17 @@
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-12",
-			"sourceWording": "WL, ELA and Health Testing B1",
+			"date": "2027-05-05",
+			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
 			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
-			"scheduleType": "Regular",
+			"scheduleType": "Conference",
 			"hasInstructionalPeriods": true,
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-13",
+			"date": "2027-05-06",
 			"sourceWording": "Math Testing, Music, Art Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
@@ -1931,10 +1881,60 @@
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-14",
-			"sourceWording": "Social Studies, Technology Testing B2",
+			"date": "2027-05-07",
+			"sourceWording": "Social Studies, Technology Testing B2 (Grades by 9 am)",
 			"block": "B2",
 			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-10",
+			"sourceWording": "Science Testing A",
+			"block": "A",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-11",
+			"sourceWording": "Science Testing and CS Testing B1 (Report Cards)",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-12",
+			"sourceWording": "WL, ELA and Health Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-13",
+			"sourceWording": "Math Testing, Music, Art Testing B2",
+			"block": "B2",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-14",
+			"sourceWording": "Social Studies, Technology Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -1952,56 +1952,6 @@
 		},
 		{
 			"date": "2027-05-18",
-			"sourceWording": "Science Testing and CS Testing A1",
-			"block": "A1",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-19",
-			"sourceWording": "WL, ELA and Health Testing B1 (Conference Day)",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Conference",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-20",
-			"sourceWording": "Math, Music and Art Testing A2",
-			"block": "A2",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-21",
-			"sourceWording": "Social Studies, Technology Testing B2",
-			"block": "B2",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-24",
-			"sourceWording": "Science Testing A",
-			"block": "A",
-			"blockFamily": "A",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 9
-		},
-		{
-			"date": "2027-05-25",
 			"sourceWording": "Science Testing and CS Testing B1",
 			"block": "B1",
 			"blockFamily": "B",
@@ -2011,18 +1961,18 @@
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-26",
-			"sourceWording": "WL, ELA and Health Testing A1",
+			"date": "2027-05-19",
+			"sourceWording": "WL, ELA and Health Testing A1 (Conference Day)",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
-			"scheduleType": "Regular",
+			"scheduleType": "Conference",
 			"hasInstructionalPeriods": true,
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-27",
-			"sourceWording": "Math Testing, Music, Art Testing B2",
+			"date": "2027-05-20",
+			"sourceWording": "Math, Music and Art Testing B2",
 			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
@@ -2031,10 +1981,60 @@
 			"sourcePage": 9
 		},
 		{
-			"date": "2027-05-28",
+			"date": "2027-05-21",
 			"sourceWording": "Social Studies, Technology Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-24",
+			"sourceWording": "Science Testing B",
+			"block": "B",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-25",
+			"sourceWording": "Science Testing and CS Testing A1",
+			"block": "A1",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-26",
+			"sourceWording": "WL, ELA and Health Testing B1",
+			"block": "B1",
+			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-27",
+			"sourceWording": "Math Testing, Music, Art Testing A2",
+			"block": "A2",
+			"blockFamily": "A",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 9
+		},
+		{
+			"date": "2027-05-28",
+			"sourceWording": "Social Studies, Technology Testing B2",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -2052,17 +2052,7 @@
 		},
 		{
 			"date": "2027-06-01",
-			"sourceWording": "Science Testing and CS Testing B1",
-			"block": "B1",
-			"blockFamily": "B",
-			"category": "school_day",
-			"scheduleType": "Regular",
-			"hasInstructionalPeriods": true,
-			"sourcePage": 10
-		},
-		{
-			"date": "2027-06-02",
-			"sourceWording": "WL, ELA and Health Testing A1",
+			"sourceWording": "Science Testing and CS Testing A1",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -2071,9 +2061,9 @@
 			"sourcePage": 10
 		},
 		{
-			"date": "2027-06-03",
-			"sourceWording": "Math, Music and Art Testing B2",
-			"block": "B2",
+			"date": "2027-06-02",
+			"sourceWording": "WL, ELA and Health Testing B1",
+			"block": "B1",
 			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -2081,8 +2071,8 @@
 			"sourcePage": 10
 		},
 		{
-			"date": "2027-06-04",
-			"sourceWording": "Social Studies, Technology Testing A2",
+			"date": "2027-06-03",
+			"sourceWording": "Math, Music and Art Testing A2",
 			"block": "A2",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -2091,9 +2081,9 @@
 			"sourcePage": 10
 		},
 		{
-			"date": "2027-06-07",
-			"sourceWording": "Science Testing and CS Testing B1 (In Class Finals)",
-			"block": "B1",
+			"date": "2027-06-04",
+			"sourceWording": "Social Studies, Technology Testing B2",
+			"block": "B2",
 			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
@@ -2101,8 +2091,8 @@
 			"sourcePage": 10
 		},
 		{
-			"date": "2027-06-08",
-			"sourceWording": "WL, ELA and Health Testing A1 (In Class Finals)",
+			"date": "2027-06-07",
+			"sourceWording": "Science Testing and CS Testing A1 (In Class Finals)",
 			"block": "A1",
 			"blockFamily": "A",
 			"category": "school_day",
@@ -2111,10 +2101,20 @@
 			"sourcePage": 10
 		},
 		{
-			"date": "2027-06-09",
-			"sourceWording": "Math, Music and Art Testing Awards Night B2 (In Class Finals)",
-			"block": "B2",
+			"date": "2027-06-08",
+			"sourceWording": "WL, ELA and Health Testing B1 (In Class Finals)",
+			"block": "B1",
 			"blockFamily": "B",
+			"category": "school_day",
+			"scheduleType": "Regular",
+			"hasInstructionalPeriods": true,
+			"sourcePage": 10
+		},
+		{
+			"date": "2027-06-09",
+			"sourceWording": "Math, Music and Art Testing Awards Night A2 (In Class Finals)",
+			"block": "A2",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -2132,9 +2132,9 @@
 		},
 		{
 			"date": "2027-06-11",
-			"sourceWording": "Social Studies, Technology Testing A2 (In Class Finals)",
-			"block": "A2",
-			"blockFamily": "A",
+			"sourceWording": "Social Studies, Technology Testing B2 (In Class Finals)",
+			"block": "B2",
+			"blockFamily": "B",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -2142,9 +2142,9 @@
 		},
 		{
 			"date": "2027-06-14",
-			"sourceWording": "Makeup Exams B (End of MP3)",
-			"block": "B",
-			"blockFamily": "B",
+			"sourceWording": "Makeup Exams A (End of MP3)",
+			"block": "A",
+			"blockFamily": "A",
 			"category": "school_day",
 			"scheduleType": "Regular",
 			"hasInstructionalPeriods": true,
@@ -2338,31 +2338,41 @@
 			"date": "2027-01-28",
 			"summary": "Global Regents",
 			"time": "8:30 am",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm",
+			"title": "",
+			"name": ""
 		},
 		{
 			"date": "2027-01-28",
 			"summary": "AP US History Final",
 			"time": "9:45 am",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | AP US History Final: 9:45 am | Physics Final: 12:45 pm"
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | AP US History Final: 9:45 am | Physics Final: 12:45 pm",
+			"title": "",
+			"name": ""
 		},
 		{
 			"date": "2027-01-28",
 			"summary": "Biology Final",
 			"time": "9:45 am",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm",
+			"title": "",
+			"name": ""
 		},
 		{
 			"date": "2027-01-28",
 			"summary": "Geometry Regents",
 			"time": "12:30 pm",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm",
+			"title": "",
+			"name": ""
 		},
 		{
 			"date": "2027-01-28",
 			"summary": "Physics Final",
 			"time": "12:45 pm",
-			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm"
+			"sourceWording": "Regents Exams | Global Regents: 8:30 am | Geometry Regents: 12:30 pm | Biology Final: 9:45 am | Physics Final: 12:45 pm",
+			"title": "",
+			"name": ""
 		},
 		{
 			"date": "2027-01-29",
@@ -2770,7 +2780,36 @@
 			"A": 82,
 			"B": 82,
 			"total": 164
-		}
+		},
+		"version13Changes": [
+			{
+				"date": "2026-11-02 onward",
+				"change": "A/B rotation labels swapped from Version 10, with November 3 remaining A for remote synchronous learning."
+			},
+			{
+				"date": "2027-01-28",
+				"change": "Biology Final renamed AP Biology Final."
+			},
+			{
+				"date": "2026-10-23",
+				"change": "Still has no A/B block label."
+			}
+		],
+		"sourceLabelCountsVersion13": {
+			"A": 15,
+			"A1": 34,
+			"A2": 34,
+			"B": 13,
+			"B1": 34,
+			"B2": 34
+		},
+		"sourceFamilyCountsVersion13": {
+			"A": 83,
+			"B": 81,
+			"total": 164
+		},
+		"sourceCalendarABBlockDaysVersion13": 164,
+		"countInterpretationVersion13": "Counts are based on printed block labels in Version 13."
 	},
 	"icsDesign": {
 		"eventGranularity": "daily",
