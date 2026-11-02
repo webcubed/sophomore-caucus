@@ -83,6 +83,20 @@
 				"2-10": "8:45 am - 3:35 pm"
 			}
 		},
+		"Election Day": {
+			"periods": [
+				["08:15", "08:35"],
+				["08:39", "08:59"],
+				["09:03", "09:23"],
+				["09:27", "09:47"],
+				["09:51", "10:11"],
+				["10:15", "10:35"],
+				["10:39", "10:59"],
+				["11:03", "11:23"],
+				["11:27", "11:47"],
+				["11:51", "12:11"]
+			]
+		},
 		"Administrative Distribution": {
 			"periods": [
 				["08:00", "08:41"],
@@ -536,8 +550,8 @@
 			"block": "A",
 			"blockFamily": "A",
 			"category": "remote_learning",
-			"scheduleType": null,
-			"hasInstructionalPeriods": false,
+			"scheduleType": "Election Day",
+			"hasInstructionalPeriods": true,
 			"sourcePage": 3
 		},
 		{
