@@ -3,6 +3,16 @@ import path from "path";
 
 const nextConfig: NextConfig = {
 	outputFileTracingRoot: path.resolve(process.cwd()),
+	async headers() {
+		return [
+			{
+				source: "/:path*",
+				headers: [
+					{ key: "X-Robots-Tag", value: "noai, noimageai, noindex" },
+				],
+			},
+		];
+	},
 	images: {
 		remotePatterns: [
 			{
