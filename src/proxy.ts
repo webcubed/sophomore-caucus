@@ -21,14 +21,11 @@ const BLOCKED_USER_AGENTS = [
 	"deepseekbot",
 	"cohere-ai",
 	"youbot",
-	// search crawlers (robots.txt already blocks these; this enforces it)
-	"googlebot",
-	"bingbot",
-	"duckduckbot",
-	"yandexbot",
 	// SEO scrapers
 	"ahrefsbot",
 	"semrushbot",
+	// Search crawlers deliberately NOT blocked: they must reach the pages to
+	// read X-Robots-Tag: noindex and permanently delist the site.
 ];
 
 export function proxy(request: NextRequest) {
