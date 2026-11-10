@@ -100,7 +100,7 @@ export default function Resources() {
 			<iframe
 				src="https://www.google.com/maps/d/embed?mid=1mrPR5pzLzQE78MsK0zgHrBFKs6CKnyo"
 				width="100%"
-				height="1000"
+				height="750"
 				style={{ border: 0 }}
 				loading="lazy"
 			></iframe>
