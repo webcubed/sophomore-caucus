@@ -2,6 +2,7 @@
 
 import type { MemberDirectoryEntry } from "@/lib/members";
 import { ExpandableImage } from "@/components/ExpandableImage";
+import { memberImageBlur, memberImageVariants } from "@/lib/memberImages";
 import { roleMeta, roleStyles } from "@/lib/members";
 import { X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -24,6 +25,11 @@ export function CabinetContactModal({
 }) {
 	const [copiedField, setCopiedField] = useState<string | null>(null);
 	const copiedTimeoutRef = useRef<number | null>(null);
+	const [modalImageFailed, setModalImageFailed] = useState(false);
+
+	useEffect(() => {
+		setModalImageFailed(false);
+	}, [member]);
 
 	useEffect(() => {
 		if (!member) return;
@@ -97,25 +103,45 @@ export function CabinetContactModal({
 					className="max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-t-2xl border border-overlay1/80 bg-mantle/96 shadow-2xl sm:rounded-2xl"
 					onClick={(event) => event.stopPropagation()}
 				>
-					{member.image && member.imageConfig?.enabled !== false && (
-						<ExpandableImage
-							src={member.image}
-							alt={member.name}
-							label={`View full image of ${member.name}`}
-							className="group relative block h-48 w-full cursor-pointer overflow-hidden sm:h-56"
-						>
-							<img
+					{member.image &&
+						member.imageConfig?.enabled !== false &&
+						!modalImageFailed && (
+							<ExpandableImage
 								src={member.image}
 								alt={member.name}
-								className="h-full w-full object-cover"
-								style={{
-									objectPosition:
-										member.imageConfig?.objectPosition ?? "center 28%",
-								}}
-							/>
-							<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-base/55 via-transparent to-transparent" />
-						</ExpandableImage>
-					)}
+								label={`View full image of ${member.name}`}
+								className="group relative block h-48 w-full cursor-pointer overflow-hidden sm:h-56"
+							>
+								{memberImageBlur[member.image] ? (
+									<div
+										aria-hidden
+										className="absolute inset-0 bg-cover bg-center"
+										style={{
+											backgroundImage: `url("${memberImageBlur[member.image]}")`,
+										}}
+									/>
+								) : null}
+								<img
+									src={memberImageVariants[member.image]?.w800 ?? member.image}
+									srcSet={
+										memberImageVariants[member.image]
+											? `${memberImageVariants[member.image].w400} 400w, ${memberImageVariants[member.image].w800} 800w, ${memberImageVariants[member.image].w1600} 1600w`
+											: undefined
+									}
+									sizes="(min-width: 640px) 48rem, 100vw"
+									alt={member.name}
+									loading="lazy"
+									decoding="async"
+									className="absolute inset-0 h-full w-full object-cover"
+									style={{
+										objectPosition:
+											member.imageConfig?.objectPosition ?? "center 28%",
+									}}
+									onError={() => setModalImageFailed(true)}
+								/>
+								<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-base/55 via-transparent to-transparent" />
+							</ExpandableImage>
+						)}
 					<div className="flex items-start justify-between gap-4 px-4 py-4 sm:px-6">
 						<div className="min-w-0">
 							<p

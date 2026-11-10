@@ -2,9 +2,13 @@
 
 import type { MemberDirectoryEntry } from "@/lib/members";
 import { Stagger } from "@/components/TransitionProvider";
-import { memberDirectory, roleMeta, roleOrder, roleStyles } from "@/lib/members";
-import { useEffect, useMemo, useState, useCallback } from "react";
-import { Suspense } from "react";
+import {
+	memberDirectory,
+	roleMeta,
+	roleOrder,
+	roleStyles,
+} from "@/lib/members";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { CabinetContactModal } from "./components/CabinetContactModal";
 import { DevModeButton } from "./components/DevModeButton";
 import { Profile } from "./components/Profile";
@@ -22,6 +26,8 @@ function groupMembersByRole(directory: MemberDirectoryEntry[]) {
 		.filter((group) => group.members.length > 0);
 }
 
+const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
+
 export default function CabinetPage() {
 	const [activeRole, setActiveRole] = useState<
 		keyof typeof roleMeta | undefined
@@ -31,7 +37,6 @@ export default function CabinetPage() {
 		useState<MemberDirectoryEntry | null>(null);
 	const [devMode, setDevMode] = useState(false);
 	const [copiedAll, setCopiedAll] = useState(false);
-	const roles = Object.keys(roleMeta) as Array<keyof typeof roleMeta>;
 	const ActiveRoleIcon = activeRole ? roleMeta[activeRole].icon : undefined;
 	const [devConfigs, setDevConfigs] = useState<
 		Record<string, { fit?: string; objectPosition: string }>
@@ -42,8 +47,8 @@ export default function CabinetPage() {
 			(m) => m.image && m.imageConfig?.enabled !== false
 		);
 		const blocks = membersWithImages.map((m) => {
-			const cfg =
-				devConfigs[m.name] ?? m.imageConfig ?? {
+			const cfg = devConfigs[m.name] ??
+				m.imageConfig ?? {
 					fit: "cover",
 					objectPosition: "center 28%",
 				};
@@ -56,25 +61,45 @@ export default function CabinetPage() {
 	}, [devConfigs]);
 
 	useEffect(() => {
-		const isMobile = globalThis.matchMedia("(max-width: 1023px)").matches;
-		const rootMargin = isMobile ? "-112px 0px -70% 0px" : "-96px 0px -70% 0px";
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				for (const entry of entries) {
-					if (entry.isIntersecting)
-						setActiveRole(entry.target.id as keyof typeof roleMeta);
+		// Highlight the last heading that has reached its scroll-margin offset.
+		// (An IntersectionObserver band missed two cases: reloading at the page
+		// bottom — the last heading is already above the band — and short last
+		// sections that can never scroll their heading into the band.)
+		const update = () => {
+			const width = window.innerWidth;
+			// Matches scroll-mt-36 / sm:scroll-mt-32 / lg:scroll-mt-28 on headings.
+			const threshold = width >= 1024 ? 112 : width >= 640 ? 128 : 144;
+			const atBottom =
+				window.innerHeight + window.scrollY >=
+				document.documentElement.scrollHeight - 2;
+			let current: keyof typeof roleMeta | undefined;
+			for (const role of roles) {
+				const heading = document.getElementById(role);
+				if (!heading) continue;
+				if (atBottom || heading.getBoundingClientRect().top <= threshold) {
+					current = role;
 				}
-			},
-			{ rootMargin, threshold: 0 }
-		);
-		for (const role of roles) {
-			const element = document.querySelector(`#${role}`);
-			if (element) observer.observe(element);
-		}
+			}
+			setActiveRole((previous) => (previous === current ? previous : current));
+		};
 
-		return () => observer.disconnect();
-	}, [roles]);
+		let frame = 0;
+		const onScroll = () => {
+			if (frame) return;
+			frame = requestAnimationFrame(() => {
+				frame = 0;
+				update();
+			});
+		};
+		update();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		window.addEventListener("resize", onScroll);
+		return () => {
+			window.removeEventListener("scroll", onScroll);
+			window.removeEventListener("resize", onScroll);
+			if (frame) cancelAnimationFrame(frame);
+		};
+	}, []);
 
 	const groupedMembers = useMemo(() => groupMembersByRole(memberDirectory), []);
 
@@ -100,9 +125,7 @@ export default function CabinetPage() {
 									{roleMeta[activeRole].label}
 								</span>
 							) : (
-								<span className="font-medium text-text">
-									Jump to section
-								</span>
+								<span className="font-medium text-text">Jump to section</span>
 							)}
 							<svg
 								className={`h-4 w-4 shrink-0 text-subtext1 transition-transform duration-200 ${tocOpen ? "rotate-180" : ""}`}
@@ -214,9 +237,13 @@ export default function CabinetPage() {
 														liveConfig={
 															devConfigs[member.name]
 																? {
-																		fit: devConfigs[member.name].fit ?? member.imageConfig?.fit ?? "cover",
-																		objectPosition: devConfigs[member.name].objectPosition,
-																  }
+																		fit:
+																			devConfigs[member.name].fit ??
+																			member.imageConfig?.fit ??
+																			"cover",
+																		objectPosition:
+																			devConfigs[member.name].objectPosition,
+																	}
 																: undefined
 														}
 														onConfigChange={(cfg) =>
@@ -226,9 +253,7 @@ export default function CabinetPage() {
 															}))
 														}
 													/>
-													<span className="sr-only">
-														View contact info
-													</span>
+													<span className="sr-only">View contact info</span>
 												</button>
 											</Stagger>
 										</div>
