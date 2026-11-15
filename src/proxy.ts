@@ -12,7 +12,6 @@ const BLOCKED_USER_AGENTS = [
 	"claude-web",
 	"anthropic-ai",
 	"perplexitybot",
-	"google-extended",
 	"ccbot",
 	"bytespider",
 	"amazonbot",
