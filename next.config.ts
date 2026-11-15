@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 			{
 				source: "/:path*",
 				headers: [
-					{ key: "X-Robots-Tag", value: "noai, noimageai, noindex" },
+					{ key: "X-Robots-Tag", value: "noai, noimageai" },
 				],
 			},
 		];
