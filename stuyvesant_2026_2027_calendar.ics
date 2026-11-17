@@ -1,0 +1,2313 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Stuyvesant Calendar//2026-2027//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Stuyvesant High School 2026-2027
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:daily-2026-09-11-839062bb430d754e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260911T080000
+DTEND;TZID=America/New_York:20260911T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:No Testing No Full Period Assessments B | Schedule: Regular | S
+ tuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-14-fd1c8f0bc6d8af8f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260914T080000
+DTEND;TZID=America/New_York:20260914T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:No Testing No Full Period Assessments A | Schedule: Regular | S
+ tuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-15-6e30818daa6d5b00@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260915T080000
+DTEND;TZID=America/New_York:20260915T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:No Testing No Full Period Assessments B1 | Schedule: Regular | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-16-11e44fabf447e858@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260916T080000
+DTEND;TZID=America/New_York:20260916T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:No Testing No Full Period Assessments A1 | Schedule: Regular | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-17-e14439a0fedaa7e5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260917T080000
+DTEND;TZID=America/New_York:20260917T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:No Testing No Full Period Assessments B2 | Schedule: Regular | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-18-a0100c970b29fa33@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260918T080000
+DTEND;TZID=America/New_York:20260918T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:No Testing No Full Period Assessments A2 | Schedule: Regular | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-22-3d79f6bdcf3f6996@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260922T080000
+DTEND;TZID=America/New_York:20260922T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-23-954310a739523d23@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260923T080000
+DTEND;TZID=America/New_York:20260923T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 (AIS Start Date) | Schedule: Reg
+ ular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-24-7a6a5a1304d94dc3@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260924T080000
+DTEND;TZID=America/New_York:20260924T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-25-858972476c41fa34@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260925T080000
+DTEND;TZID=America/New_York:20260925T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-28-793d066a9cb7b928@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260928T080000
+DTEND;TZID=America/New_York:20260928T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing B | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-29-fc2d2ee59f881fa7@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260929T080000
+DTEND;TZID=America/New_York:20260929T153500
+SUMMARY:Stuyvesant — A1 — Administrative Distribution
+DESCRIPTION:Science Testing and CS Testing Administrative Distribution A1 (
+ Special Schedule) | Schedule: Administrative Distribution | Stuyvesant Hig
+ h School 2026-2027 (November 10\, 2026\, Version 14) | Includes Distributi
+ on 10:12-10:33 (see bell schedule)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-09-30-c812a52233b63378@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20260930T080000
+DTEND;TZID=America/New_York:20260930T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-01-e4372f4b46ba25e6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261001T080000
+DTEND;TZID=America/New_York:20261001T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-02-bb541cfe4a26cc32@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261002T080000
+DTEND;TZID=America/New_York:20261002T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-05-8c5a8d9324264048@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261005T080000
+DTEND;TZID=America/New_York:20261005T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-06-a495260c45024162@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261006T080000
+DTEND;TZID=America/New_York:20261006T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-07-e477bf0d4ee95ac8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261007T080000
+DTEND;TZID=America/New_York:20261007T144600
+SUMMARY:Stuyvesant — A2 — Conference
+DESCRIPTION:Math\, Music and Art Testing A2 (Conference Day) | Schedule: Co
+ nference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 
+ 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-08-228d26eeff622629@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261008T080000
+DTEND;TZID=America/New_York:20261008T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-09-3595c1eb468e80e4@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261009T125400
+DTEND;TZID=America/New_York:20261009T145000
+SUMMARY:Stuyvesant — A — PSAT/NMSQT\, SAT
+DESCRIPTION:PSAT Exam AM: PSAT/NMSQT PM: Classes 11th Graders Only A | Sche
+ dule: PSAT/NMSQT\, SAT | Stuyvesant High School 2026-2027 (November 10\, 2
+ 026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-13-bd509513a10dcf67@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261013T080000
+DTEND;TZID=America/New_York:20261013T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-14-1c74406360037998@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261014T080000
+DTEND;TZID=America/New_York:20261014T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing Open House A1 | Schedule: Regular |
+  Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-15-33d095e82d7a2bc2@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261015T080000
+DTEND;TZID=America/New_York:20261015T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math\, Music and Art Testing Open House B2 | Schedule: Regular 
+ | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-16-f21bc7158ed369fc@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261016T080000
+DTEND;TZID=America/New_York:20261016T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-19-6924f47116606596@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261019T080000
+DTEND;TZID=America/New_York:20261019T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-20-6895c1ef40eaf6ab@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261020T080000
+DTEND;TZID=America/New_York:20261020T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-21-804adb308c571f05@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261021T080000
+DTEND;TZID=America/New_York:20261021T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math\, Music and Art Testing B2 | Schedule: Regular | Stuyvesan
+ t High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-22-9c623e6e961c2b98@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261022T080000
+DTEND;TZID=America/New_York:20261022T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-23-c2978a9c76e1d398@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261023T125400
+DTEND;TZID=America/New_York:20261023T145000
+SUMMARY:Stuyvesant — No block — PSAT/NMSQT\, SAT
+DESCRIPTION:PSAT Exam AM: PSAT/NMSQT PM: Careers Fair 11th Graders Only (En
+ d of MP1) | Schedule: PSAT/NMSQT\, SAT | Stuyvesant High School 2026-2027 
+ (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-26-38557f49bc41d115@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261026T080000
+DTEND;TZID=America/New_York:20261026T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing B | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-27-b96d76371b51696f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261027T080000
+DTEND;TZID=America/New_York:20261027T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-28-bd163e013cd6ddd6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261028T080000
+DTEND;TZID=America/New_York:20261028T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-10-29-132e02826cbcca43@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261029T080000
+DTEND;TZID=America/New_York:20261029T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-02-62f972663c1b21a0@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261102T080000
+DTEND;TZID=America/New_York:20261102T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-03-6d9f5f413f927769@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261103T081500
+DTEND;TZID=America/New_York:20261103T121100
+SUMMARY:Stuyvesant — A — Election Day
+DESCRIPTION:Election Day Staff will be remote and students will be synchron
+ ous. A | Schedule: Election Day | Stuyvesant High School 2026-2027 (Novemb
+ er 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-04-a6bd21ebd1072c23@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261104T080000
+DTEND;TZID=America/New_York:20261104T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Math\, Music\, Art and Tech Testing B1 (Report Cards) | Schedul
+ e: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versio
+ n 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-05-30d17e47b8e146ae@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261105T080000
+DTEND;TZID=America/New_York:20261105T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:No Testing AMC Exam\, Pds.1&2 8:00 am - 9:30 am A2 | Schedule: 
+ Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-06-8c71edddf3c0224a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261106T080000
+DTEND;TZID=America/New_York:20261106T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:WL\, ELA\, SS and Health Testing B2 | Schedule: Regular | Stuyv
+ esant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-09-47cb39156d95f799@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261109T080000
+DTEND;TZID=America/New_York:20261109T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-10-b5003f7f31c7d5b3@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261110T080000
+DTEND;TZID=America/New_York:20261110T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Math\, Music\, Art and Tech Testing B1 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-12-aa7dfda95bdcf39e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261112T080000
+DTEND;TZID=America/New_York:20261112T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:WL\, ELA\, SS and Health Testing A2 | Schedule: Regular | Stuyv
+ esant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-13-727e12460995b50f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261113T080000
+DTEND;TZID=America/New_York:20261113T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:No Testing AMC Exam\, Pds.1&2 8:00 am - 9:30 am B2 | Schedule: 
+ Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-16-5eb02d2ffcd4a268@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261116T080000
+DTEND;TZID=America/New_York:20261116T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-17-34d886bc46b03a7d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261117T080000
+DTEND;TZID=America/New_York:20261117T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-18-ac47053c0a1ff7e9@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261118T080000
+DTEND;TZID=America/New_York:20261118T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math\, Music and Art Testing A2 | Schedule: Regular | Stuyvesan
+ t High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-19-cd020080c88cf465@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261119T081500
+DTEND;TZID=America/New_York:20261119T121100
+SUMMARY:Stuyvesant — B2 — PTC
+DESCRIPTION:Social Studies\, Technology Testing PT Evening 5:30 pm—8:00 p
+ m B2 (Parent-Teacher) | Schedule: PTC | Stuyvesant High School 2026-2027 (
+ November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-20-90f646aa90fb1b90@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261120T081500
+DTEND;TZID=America/New_York:20261120T121100
+SUMMARY:Stuyvesant — A — PTC
+DESCRIPTION:No Testing PT Afternoon 1:00 pm—3:00 pm A (Parent-Teacher) | 
+ Schedule: PTC | Stuyvesant High School 2026-2027 (November 10\, 2026\, Ver
+ sion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-23-33fc5f7e3c905ba0@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261123T080000
+DTEND;TZID=America/New_York:20261123T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing and CS Testing B | Schedule: Regular | Stuyvesa
+ nt High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-24-0ba86b8583745819@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261124T080000
+DTEND;TZID=America/New_York:20261124T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Math\, Music\, Art and Tech Testing A1 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-25-227a3fb6eb59581d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261125T080000
+DTEND;TZID=America/New_York:20261125T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA\, SS and Health Testing B1 | Schedule: Regular | Stuyv
+ esant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-11-30-35830f46c3f47cf3@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261130T080000
+DTEND;TZID=America/New_York:20261130T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:No Testing No Full Period Assessments A | Schedule: Regular | S
+ tuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-01-5f21415b7e2ef4a1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261201T080000
+DTEND;TZID=America/New_York:20261201T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-02-11a99ddd4005b96b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261202T080000
+DTEND;TZID=America/New_York:20261202T144600
+SUMMARY:Stuyvesant — A1 — Conference
+DESCRIPTION:WL\, ELA and Health Testing A1 (Conference Day) | Schedule: Con
+ ference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-03-d44ed8be9edebe79@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261203T080000
+DTEND;TZID=America/New_York:20261203T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-04-f5275a7812ec4eab@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261204T080000
+DTEND;TZID=America/New_York:20261204T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 (End of MP2) | Schedule:
+  Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 
+ 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-07-eb7d925a5809851e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261207T080000
+DTEND;TZID=America/New_York:20261207T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing B | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-08-a923bfe006482da4@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261208T080000
+DTEND;TZID=America/New_York:20261208T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-09-b3f534fa5dfa284f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261209T080000
+DTEND;TZID=America/New_York:20261209T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-10-df000f4768ac498f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261210T080000
+DTEND;TZID=America/New_York:20261210T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-11-22b35afbd5e86852@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261211T080000
+DTEND;TZID=America/New_York:20261211T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 (Grades by 9 am) | Sched
+ ule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Vers
+ ion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-14-f0c3df4fbe2ec9a2@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261214T080000
+DTEND;TZID=America/New_York:20261214T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:Science Testing A | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-15-e98d59c28396d5ae@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261215T080000
+DTEND;TZID=America/New_York:20261215T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 (Report Cards) | Schedule: Re
+ gular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-16-7cddc527a7a425b7@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261216T080000
+DTEND;TZID=America/New_York:20261216T144600
+SUMMARY:Stuyvesant — A1 — Conference
+DESCRIPTION:WL\, ELA and Health Testing A1 (Conference Day) | Schedule: Con
+ ference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-17-e935f964d6e02b56@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261217T080000
+DTEND;TZID=America/New_York:20261217T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-18-a723788286dd8b4d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261218T080000
+DTEND;TZID=America/New_York:20261218T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-21-e84ffbdb27ab8210@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261221T080000
+DTEND;TZID=America/New_York:20261221T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing and CS Testing B | Schedule: Regular | Stuyvesa
+ nt High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-22-8a109ff5b08869ef@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261222T080000
+DTEND;TZID=America/New_York:20261222T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math\, Music\, Art and Tech Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2026-12-23-4052ccb18041cbac@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261223T080000
+DTEND;TZID=America/New_York:20261223T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:WL\, ELA\, SS and Health Testing B2 | Schedule: Regular | Stuyv
+ esant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-04-7a7fbeaa2dd982e1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270104T080000
+DTEND;TZID=America/New_York:20270104T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:No Testing No Full Period Assessments A | Schedule: Regular | S
+ tuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-05-4ff3ca77a1dc7d6a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270105T080000
+DTEND;TZID=America/New_York:20270105T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-06-d04debd65fbaedf3@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270106T080000
+DTEND;TZID=America/New_York:20270106T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-07-b0238cec7d2fefda@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270107T080000
+DTEND;TZID=America/New_York:20270107T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art\, Tech B2 | Schedule: Regular | Stuy
+ vesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-08-ac5cad98498dd615@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270108T080000
+DTEND;TZID=America/New_York:20270108T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-11-42df6fa9a06cb830@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270111T080000
+DTEND;TZID=America/New_York:20270111T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing B | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-12-4424fb772d4d30ae@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270112T080000
+DTEND;TZID=America/New_York:20270112T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-13-1edcb00db487685f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270113T080000
+DTEND;TZID=America/New_York:20270113T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-14-951c03b144cc16e5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270114T080000
+DTEND;TZID=America/New_York:20270114T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-15-75f4870ae5ef34e6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270115T080000
+DTEND;TZID=America/New_York:20270115T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-19-776e3a5b02e0529b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270119T080000
+DTEND;TZID=America/New_York:20270119T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 (In Class Finals) | Schedule:
+  Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 
+ 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-20-0c046f1e971bfa1b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270120T080000
+DTEND;TZID=America/New_York:20270120T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 (In Class Finals) | Schedule: Re
+ gular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-21-60e26c79401854ff@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270121T080000
+DTEND;TZID=America/New_York:20270121T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art\, Tech A2 (In Class Finals) | Schedu
+ le: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versi
+ on 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-22-298e3c7e5b92bdf2@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270122T080000
+DTEND;TZID=America/New_York:20270122T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 (In Class Finals) | Sche
+ dule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Ver
+ sion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-01-25-c67fedafea701c33@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270125T080000
+DTEND;TZID=America/New_York:20270125T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:Makeup Exams A (End of MP3) | Schedule: Regular | Stuyvesant Hi
+ gh School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-02-7da5e1ac3146f0eb@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270202T080000
+DTEND;TZID=America/New_York:20270202T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Spring Term No Full Period Assessments A1 | Schedule: Regular |
+  Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-03-7abe21d68b0d2a7e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270203T080000
+DTEND;TZID=America/New_York:20270203T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:No Testing No Full Period Assessments B1 | Schedule: Regular | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-04-8e701c4c7ee7cfbd@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270204T080000
+DTEND;TZID=America/New_York:20270204T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:No Testing No Full Period Assessments A2 | Schedule: Regular | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-05-e18ec8c5f96868c8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270205T080000
+DTEND;TZID=America/New_York:20270205T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:No Testing No Full Period Assessments B2 (Grades by 9 am) | Sch
+ edule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Ve
+ rsion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-08-a832d431b8051bc9@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270208T080000
+DTEND;TZID=America/New_York:20270208T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:Science Testing A | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-09-30ffb9cdbd9c424b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270209T080000
+DTEND;TZID=America/New_York:20270209T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 (Report Cards) | Schedule: Re
+ gular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-10-5bc6474158a474bf@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270210T080000
+DTEND;TZID=America/New_York:20270210T144600
+SUMMARY:Stuyvesant — A1 — Conference
+DESCRIPTION:WL\, ELA and Health Testing A1 (Conference Day) | Schedule: Con
+ ference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-11-9f7110c2aebafba7@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270211T080000
+DTEND;TZID=America/New_York:20270211T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-22-c829fcc72d2bb565@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270222T080000
+DTEND;TZID=America/New_York:20270222T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:No Testing No Full Period Assessments B | Schedule: Regular | S
+ tuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-23-f27ee29294088a80@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270223T080000
+DTEND;TZID=America/New_York:20270223T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-24-942b9ce3d976b894@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270224T080000
+DTEND;TZID=America/New_York:20270224T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-25-6d3a9c00a4a486db@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270225T080000
+DTEND;TZID=America/New_York:20270225T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-02-26-1e19404287b9ff6c@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270226T080000
+DTEND;TZID=America/New_York:20270226T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-01-cf906da57851ab73@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270301T080000
+DTEND;TZID=America/New_York:20270301T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-02-a171ba4564f7e796@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270302T080000
+DTEND;TZID=America/New_York:20270302T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-03-de0e51f49347a1ad@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270303T080000
+DTEND;TZID=America/New_York:20270303T144600
+SUMMARY:Stuyvesant — A2 — Conference
+DESCRIPTION:Math Testing\, Music\, Art\, Tech A2 (Conference Day) | Schedul
+ e: Conference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Ver
+ sion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-04-acf7ac23de91a423@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270304T080000
+DTEND;TZID=America/New_York:20270304T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-05-0c5638c1e31fe0cd@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270305T125400
+DTEND;TZID=America/New_York:20270305T145000
+SUMMARY:Stuyvesant — A — PSAT/NMSQT\, SAT
+DESCRIPTION:SAT Exam AM: SAT Suite PM: Classes A (End of MP1) | Schedule: P
+ SAT/NMSQT\, SAT | Stuyvesant High School 2026-2027 (November 10\, 2026\, V
+ ersion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-08-f2eca4bb426eedb2@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270308T080000
+DTEND;TZID=America/New_York:20270308T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-10-7541a9dd74ecdbc7@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270310T080000
+DTEND;TZID=America/New_York:20270310T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-11-815e51b086e8f2a5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270311T080000
+DTEND;TZID=America/New_York:20270311T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art\, Tech B2 | Schedule: Regular | Stuy
+ vesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-12-b08a91c0d04f31dd@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270312T080000
+DTEND;TZID=America/New_York:20270312T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 (Grades by 9 am) | Sched
+ ule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Vers
+ ion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-15-c4179fc02a49f274@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270315T080000
+DTEND;TZID=America/New_York:20270315T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-16-9538a0ed62573ea0@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270316T080000
+DTEND;TZID=America/New_York:20270316T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 (Report Cards) | Schedule: Regul
+ ar | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-17-c8989dd19cec3c06@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270317T080000
+DTEND;TZID=America/New_York:20270317T144600
+SUMMARY:Stuyvesant — B2 — Conference
+DESCRIPTION:Math Testing\, Music\, Art\, Tech B2 (Conference Day) | Schedul
+ e: Conference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Ver
+ sion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-18-2f78476d68bcdbf8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270318T081500
+DTEND;TZID=America/New_York:20270318T121100
+SUMMARY:Stuyvesant — A2 — PTC
+DESCRIPTION:Social Studies\, Technology Testing PT Evening 5:30 pm—8:00 p
+ m A2 (Parent-Teacher) | Schedule: PTC | Stuyvesant High School 2026-2027 (
+ November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-19-ee1db1755a308df6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270319T081500
+DTEND;TZID=America/New_York:20270319T121100
+SUMMARY:Stuyvesant — B — PTC
+DESCRIPTION:SAT Exam (TBD) AM: SAT Suite PM: PT Afternoon 1:00 pm—3:00 pm
+  B (Parent-Teacher) | Schedule: PTC | Stuyvesant High School 2026-2027 (No
+ vember 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-22-1b5c7ef4d5a015ff@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270322T080000
+DTEND;TZID=America/New_York:20270322T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-23-c02a62af5b537e2c@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270323T080000
+DTEND;TZID=America/New_York:20270323T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-24-30b1ea9e818d133e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270324T080000
+DTEND;TZID=America/New_York:20270324T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art\, Tech Open House A2 | Schedule: Reg
+ ular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-25-8672aa38dc9797ab@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270325T080000
+DTEND;TZID=America/New_York:20270325T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-29-5eef8dbd5c37aaaa@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270329T080000
+DTEND;TZID=America/New_York:20270329T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:Science Testing A | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-30-93baa1d95b4f3143@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270330T080000
+DTEND;TZID=America/New_York:20270330T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-03-31-6f380cb7b769fa80@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270331T080000
+DTEND;TZID=America/New_York:20270331T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-01-416d74675f365c02@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270401T080000
+DTEND;TZID=America/New_York:20270401T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-02-add0a3bce995e6fb@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270402T080000
+DTEND;TZID=America/New_York:20270402T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-05-36ef5b3305c7d4d6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270405T080000
+DTEND;TZID=America/New_York:20270405T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing B | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-06-ab55d16e6839b7e3@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270406T080000
+DTEND;TZID=America/New_York:20270406T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-07-4585f761828c0907@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270407T080000
+DTEND;TZID=America/New_York:20270407T144600
+SUMMARY:Stuyvesant — B1 — Conference
+DESCRIPTION:WL\, ELA and Health Testing B1 (Conference Day) | Schedule: Con
+ ference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-08-806afd6deb4f5646@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270408T080000
+DTEND;TZID=America/New_York:20270408T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-09-276f522ca5e580b3@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270409T080000
+DTEND;TZID=America/New_York:20270409T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-12-c1da28a3bce43e65@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270412T080000
+DTEND;TZID=America/New_York:20270412T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:Science Testing A | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-13-147a000e0b3984f0@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270413T080000
+DTEND;TZID=America/New_York:20270413T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-14-7b44e0753a7f21c4@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270414T080000
+DTEND;TZID=America/New_York:20270414T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-15-a597fb1b7ac2624a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270415T080000
+DTEND;TZID=America/New_York:20270415T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-16-27a3661d67ee5111@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270416T080000
+DTEND;TZID=America/New_York:20270416T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-19-1999121c3f8cdd3a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270419T080000
+DTEND;TZID=America/New_York:20270419T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing and CS Testing B | Schedule: Regular | Stuyvesa
+ nt High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-20-101c7da0bbbbffab@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270420T080000
+DTEND;TZID=America/New_York:20270420T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Math\, Music\, Art and Tech Testing A1 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-04-21-6c24a9d46ce6739d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270421T080000
+DTEND;TZID=America/New_York:20270421T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA\, SS and Health Testing B1 (End of MP2) | Schedule: Re
+ gular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-03-d3bfa5ff6159ee4b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270503T080000
+DTEND;TZID=America/New_York:20270503T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:No Testing No Full Period Assessments A | Schedule: Regular | S
+ tuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-04-bde8f15b1ce1778a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270504T080000
+DTEND;TZID=America/New_York:20270504T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-05-f95542d9bb29f443@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270505T080000
+DTEND;TZID=America/New_York:20270505T144600
+SUMMARY:Stuyvesant — A1 — Conference
+DESCRIPTION:WL\, ELA and Health Testing A1 (Conference Day) | Schedule: Con
+ ference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-06-de24ab0718dfb14f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270506T080000
+DTEND;TZID=America/New_York:20270506T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-07-fe343b4b32c6cac5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270507T080000
+DTEND;TZID=America/New_York:20270507T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 (Grades by 9 am) | Sched
+ ule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Vers
+ ion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-10-ed0c282427331802@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270510T080000
+DTEND;TZID=America/New_York:20270510T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Science Testing B | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-11-256e2ed5e9cb9f16@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270511T080000
+DTEND;TZID=America/New_York:20270511T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 (Report Cards) | Schedule: Re
+ gular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-12-3a5d92dec614c0a6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270512T080000
+DTEND;TZID=America/New_York:20270512T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing B1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-13-390f864205c60531@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270513T080000
+DTEND;TZID=America/New_York:20270513T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing A2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-14-b6757e5fd1234cdf@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270514T080000
+DTEND;TZID=America/New_York:20270514T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-18-0dcbce169ef166e7@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270518T080000
+DTEND;TZID=America/New_York:20270518T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:Science Testing and CS Testing A1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-19-2a303616f66f0f85@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270519T080000
+DTEND;TZID=America/New_York:20270519T144600
+SUMMARY:Stuyvesant — B1 — Conference
+DESCRIPTION:WL\, ELA and Health Testing B1 (Conference Day) | Schedule: Con
+ ference | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 1
+ 4)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-20-0d4879d20e288ab5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270520T080000
+DTEND;TZID=America/New_York:20270520T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Math\, Music and Art Testing A2 | Schedule: Regular | Stuyvesan
+ t High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-21-c98fe63034b063a4@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270521T080000
+DTEND;TZID=America/New_York:20270521T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing B2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-24-abc1a7b1313b1457@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270524T080000
+DTEND;TZID=America/New_York:20270524T153500
+SUMMARY:Stuyvesant — A — Regular
+DESCRIPTION:Science Testing A | Schedule: Regular | Stuyvesant High School 
+ 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-25-d56b3cf30fd4979e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270525T080000
+DTEND;TZID=America/New_York:20270525T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-26-7c243b13ab0a667a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270526T080000
+DTEND;TZID=America/New_York:20270526T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-27-53005183e069a615@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270527T080000
+DTEND;TZID=America/New_York:20270527T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math Testing\, Music\, Art Testing B2 | Schedule: Regular | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-05-28-38f637bdd0880896@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270528T080000
+DTEND;TZID=America/New_York:20270528T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-01-f9c5a26b69084549@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270601T080000
+DTEND;TZID=America/New_York:20270601T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 | Schedule: Regular | Stuyves
+ ant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-02-2e5e3793833bced8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270602T080000
+DTEND;TZID=America/New_York:20270602T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 | Schedule: Regular | Stuyvesant
+  High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-03-166a28b49acaa362@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270603T080000
+DTEND;TZID=America/New_York:20270603T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math\, Music and Art Testing B2 | Schedule: Regular | Stuyvesan
+ t High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-04-859b3d3fef84bc35@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270604T080000
+DTEND;TZID=America/New_York:20270604T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 | Schedule: Regular | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-07-55dbde98396751ec@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270607T080000
+DTEND;TZID=America/New_York:20270607T153500
+SUMMARY:Stuyvesant — B1 — Regular
+DESCRIPTION:Science Testing and CS Testing B1 (In Class Finals) | Schedule:
+  Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 
+ 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-08-afece8c4cb3809dc@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270608T080000
+DTEND;TZID=America/New_York:20270608T153500
+SUMMARY:Stuyvesant — A1 — Regular
+DESCRIPTION:WL\, ELA and Health Testing A1 (In Class Finals) | Schedule: Re
+ gular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-09-d6fdb06f1430e36e@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270609T080000
+DTEND;TZID=America/New_York:20270609T153500
+SUMMARY:Stuyvesant — B2 — Regular
+DESCRIPTION:Math\, Music and Art Testing Awards Night B2 (In Class Finals) 
+ | Schedule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026
+ \, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-11-b5bdbbb3e64e1804@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270611T080000
+DTEND;TZID=America/New_York:20270611T153500
+SUMMARY:Stuyvesant — A2 — Regular
+DESCRIPTION:Social Studies\, Technology Testing A2 (In Class Finals) | Sche
+ dule: Regular | Stuyvesant High School 2026-2027 (November 10\, 2026\, Ver
+ sion 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:daily-2027-06-14-12fee618d23f5984@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270614T080000
+DTEND;TZID=America/New_York:20270614T153500
+SUMMARY:Stuyvesant — B — Regular
+DESCRIPTION:Makeup Exams B (End of MP3) | Schedule: Regular | Stuyvesant Hi
+ gh School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-09-07-7ae2a895c014c731@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY:Stuyvesant — Labor Day
+DESCRIPTION:Labor Day | Stuyvesant High School 2026-2027 (November 10\, 202
+ 6\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-09-08-30d571daa8a33659@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:Stuyvesant — No Students Chancellor’s Conference Day for Staff 
+ Development
+DESCRIPTION:No Students Chancellor’s Conference Day for Staff Development
+  | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-09-09-cab4a96944c9d44a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:Stuyvesant — No Students Chancellor’s Conference Day for Staff 
+ Development
+DESCRIPTION:No Students Chancellor’s Conference Day for Staff Development
+  | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-09-10-ed3b8dc727970a2d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260911
+SUMMARY:Stuyvesant — Fall Term No Full Period Assessments A (Special Sche
+ dule)
+DESCRIPTION:Fall Term No Full Period Assessments A (Special Schedule) | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14) | Special 
+ Schedule (no bell mapping\; no times invented)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-09-21-9c5d81abf8a138ad@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:Stuyvesant — Yom Kippur
+DESCRIPTION:Yom Kippur | Stuyvesant High School 2026-2027 (November 10\, 20
+ 26\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-10-12-42bf92553ffb87d8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Stuyvesant — Italian Heritage and Indigenous Peoples’ Day
+DESCRIPTION:Italian Heritage and Indigenous Peoples’ Day | Stuyvesant Hig
+ h School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-10-17-7e91f80bb57705d6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:Stuyvesant — PSAT Exam AM: PSAT/NMSQT PM: PSAT/NMSQT 10th Graders
+  Only
+DESCRIPTION:PSAT Exam AM: PSAT/NMSQT PM: PSAT/NMSQT 10th Graders Only | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-10-30-23bc5ec6b7bd0d40@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Stuyvesant — Social Studies\, Technology Testing (Special Schedul
+ e) B2 (Grades by 9 am)
+DESCRIPTION:Social Studies\, Technology Testing (Special Schedule) B2 (Grad
+ es by 9 am) | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versi
+ on 14) | Special Schedule (no bell mapping\; no times invented)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-11-11-5a805cdb0883feaf@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:Stuyvesant — Veterans Day
+DESCRIPTION:Veterans Day | Stuyvesant High School 2026-2027 (November 10\, 
+ 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-11-26-b913bb76c6ba1100@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Stuyvesant — Thanksgiving
+DESCRIPTION:Thanksgiving | Stuyvesant High School 2026-2027 (November 10\, 
+ 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-11-27-25b44737632278e4@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Stuyvesant — Thanksgiving
+DESCRIPTION:Thanksgiving | Stuyvesant High School 2026-2027 (November 10\, 
+ 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-12-24-962a17c062d52bdf@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-12-25-7d6e1e7dc67f9415@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-12-28-32bce9614a37cf13@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-12-29-926a9f463ff0f3b5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-12-30-ef493f73a2ce7ad1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2026-12-31-c908088f07ee12bc@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-01-01-cc4959d1a4029fe1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Stuyvesant — Winter Recess
+DESCRIPTION:Winter Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-01-18-5236307cf53bd0da@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:Stuyvesant — Rev. Dr. Martin Luther King Jr. Day
+DESCRIPTION:Rev. Dr. Martin Luther King Jr. Day | Stuyvesant High School 20
+ 26-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-01-c7ed3744c06d9c11@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:Stuyvesant — Professional Development Day
+DESCRIPTION:Professional Development Day | Stuyvesant High School 2026-2027
+  (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-12-69803d66d51e2176@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:Stuyvesant — Social Studies\, Technology Testing A2 (Special Sche
+ dule)
+DESCRIPTION:Social Studies\, Technology Testing A2 (Special Schedule) | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14) | Special 
+ Schedule (no bell mapping\; no times invented)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-15-21c6cb179a73b4e6@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Stuyvesant — Midwinter Recess
+DESCRIPTION:Midwinter Recess | Stuyvesant High School 2026-2027 (November 1
+ 0\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-16-403e7b55433ac419@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270216
+DTEND;VALUE=DATE:20270217
+SUMMARY:Stuyvesant — Midwinter Recess
+DESCRIPTION:Midwinter Recess | Stuyvesant High School 2026-2027 (November 1
+ 0\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-17-88918ad8773dd834@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:Stuyvesant — Midwinter Recess
+DESCRIPTION:Midwinter Recess | Stuyvesant High School 2026-2027 (November 1
+ 0\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-18-11ef4973d2041a39@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270219
+SUMMARY:Stuyvesant — Midwinter Recess
+DESCRIPTION:Midwinter Recess | Stuyvesant High School 2026-2027 (November 1
+ 0\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-02-19-315eecb403f35c38@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270220
+SUMMARY:Stuyvesant — Midwinter Recess
+DESCRIPTION:Midwinter Recess | Stuyvesant High School 2026-2027 (November 1
+ 0\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-03-09-a855a28ee50ff56a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270310
+SUMMARY:Stuyvesant — Eid al-Fitr
+DESCRIPTION:Eid al-Fitr | Stuyvesant High School 2026-2027 (November 10\, 2
+ 026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-03-26-f98391b77c8334ff@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+SUMMARY:Stuyvesant — Good Friday
+DESCRIPTION:Good Friday | Stuyvesant High School 2026-2027 (November 10\, 2
+ 026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-22-3815176d099c86a5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270422
+DTEND;VALUE=DATE:20270423
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-23-b8be9bea3854fbd8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-26-628b74951c974de2@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270427
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-27-c61f5d9a7cea89bc@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270427
+DTEND;VALUE=DATE:20270428
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-28-511de157811440cd@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270429
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-29-008701d30bea8031@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270429
+DTEND;VALUE=DATE:20270430
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-04-30-8c8099873753ec6a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270501
+SUMMARY:Stuyvesant — Spring Recess
+DESCRIPTION:Spring Recess | Stuyvesant High School 2026-2027 (November 10\,
+  2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-05-17-299f735941a977d1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+SUMMARY:Stuyvesant — Eid al-Adha
+DESCRIPTION:Eid al-Adha | Stuyvesant High School 2026-2027 (November 10\, 2
+ 026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-05-31-66c2cd0f7b1e64e5@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Stuyvesant — Memorial Day
+DESCRIPTION:Memorial Day | Stuyvesant High School 2026-2027 (November 10\, 
+ 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-06-10-50125f03ecf3d80c@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270610
+DTEND;VALUE=DATE:20270611
+SUMMARY:Stuyvesant — Anniversary Day/ Chancellor’s Conference Day for S
+ taff Development
+DESCRIPTION:Anniversary Day/ Chancellor’s Conference Day for Staff Develo
+ pment | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-06-18-d699ec9c2c018030@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270618
+DTEND;VALUE=DATE:20270619
+SUMMARY:Stuyvesant — No Students Rating Day for Staff
+DESCRIPTION:No Students Rating Day for Staff | Stuyvesant High School 2026-
+ 2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-06-25-d44957a0c58fa234@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270625
+DTEND;VALUE=DATE:20270626
+SUMMARY:Stuyvesant — Rating Day
+DESCRIPTION:Rating Day | Stuyvesant High School 2026-2027 (November 10\, 20
+ 26\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-06-28-fa4b7bbb657c2aad@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270628
+DTEND;VALUE=DATE:20270629
+SUMMARY:Stuyvesant — Last Day of School for Students\, Teachers\, Paras\,
+  Aides
+DESCRIPTION:Last Day of School for Students\, Teachers\, Paras\, Aides | St
+ uyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:allday-2027-06-30-93623bda5ba49486@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Stuyvesant — Last Day for 10 Month Supervisors\, School Counselor
+ s & Secretaries
+DESCRIPTION:Last Day for 10 Month Supervisors\, School Counselors & Secreta
+ ries | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-26-30bee4f164c8cc3b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270126T123000
+DTEND;TZID=America/New_York:20270126T133000
+SUMMARY:Regents — Chemistry Regents
+DESCRIPTION:Chemistry Regents at 12:30 pm | Source: Regents Exams ELA Regen
+ ts: 8:30 am Chemistry Regents: 12:30 pm Old Chemistry: 12:30 pm Geometry F
+ inal: 9:45 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-2
+ 027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour 
+ window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-26-07019fd01ee6fc5b@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270126T123000
+DTEND;TZID=America/New_York:20270126T133000
+SUMMARY:Regents — Old Chemistry
+DESCRIPTION:Old Chemistry at 12:30 pm | Source: Regents Exams ELA Regents: 
+ 8:30 am Chemistry Regents: 12:30 pm Old Chemistry: 12:30 pm Geometry Final
+ : 9:45 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-2027 
+ (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour wind
+ ow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-26-5fa9c7fe2c080fd9@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270126T124500
+DTEND;TZID=America/New_York:20270126T134500
+SUMMARY:Regents — Music Appreciation
+DESCRIPTION:Music Appreciation at 12:45 pm | Source: Regents Exams ELA Rege
+ nts: 8:30 am Chemistry Regents: 12:30 pm Old Chemistry: 12:30 pm Geometry 
+ Final: 9:45 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-
+ 2027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour
+  window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-26-ea10e46f0e01c815@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270126T083000
+DTEND;TZID=America/New_York:20270126T093000
+SUMMARY:Regents — ELA Regents
+DESCRIPTION:ELA Regents at 8:30 am | Source: Regents Exams ELA Regents: 8:3
+ 0 am Chemistry Regents: 12:30 pm Old Chemistry: 12:30 pm Geometry Final: 9
+ :45 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-2027 (No
+ vember 10\, 2026\, Version 14) | Source prints start only\; 1-hour window 
+ is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-26-c055cb1662f6c5bf@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270126T094500
+DTEND;TZID=America/New_York:20270126T104500
+SUMMARY:Regents — Geometry Final
+DESCRIPTION:Geometry Final at 9:45 am | Source: Regents Exams ELA Regents: 
+ 8:30 am Chemistry Regents: 12:30 pm Old Chemistry: 12:30 pm Geometry Final
+ : 9:45 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-2027 
+ (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour wind
+ ow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-27-4f70f12e42c160c9@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270127T123000
+DTEND;TZID=America/New_York:20270127T133000
+SUMMARY:Regents — Algebra I Regents
+DESCRIPTION:Algebra I Regents at 12:30 pm | Source: Regents Exams US Histor
+ y Regents: 8:30 am Algebra I Regents: 12:30 pm Physics Regents: 12:30 pm O
+ ld Physics Regents: 12:30 pm Pre-Calculus Final: 9:45 am Foundations of CS
+ : 12:45 pm | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versio
+ n 14) | Source prints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-27-a3041c86d12b6161@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270127T123000
+DTEND;TZID=America/New_York:20270127T133000
+SUMMARY:Regents — Old Physics Regents
+DESCRIPTION:Old Physics Regents at 12:30 pm | Source: Regents Exams US Hist
+ ory Regents: 8:30 am Algebra I Regents: 12:30 pm Physics Regents: 12:30 pm
+  Old Physics Regents: 12:30 pm Pre-Calculus Final: 9:45 am Foundations of 
+ CS: 12:45 pm | Stuyvesant High School 2026-2027 (November 10\, 2026\, Vers
+ ion 14) | Source prints start only\; 1-hour window is for calendar display
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-27-8cddda913fce9fa1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270127T123000
+DTEND;TZID=America/New_York:20270127T133000
+SUMMARY:Regents — Physics Regents
+DESCRIPTION:Physics Regents at 12:30 pm | Source: Regents Exams US History 
+ Regents: 8:30 am Algebra I Regents: 12:30 pm Physics Regents: 12:30 pm Old
+  Physics Regents: 12:30 pm Pre-Calculus Final: 9:45 am Foundations of CS: 
+ 12:45 pm | Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 
+ 14) | Source prints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-27-2f78d23652b9e65a@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270127T124500
+DTEND;TZID=America/New_York:20270127T134500
+SUMMARY:Regents — Foundations of CS
+DESCRIPTION:Foundations of CS at 12:45 pm | Source: Regents Exams US Histor
+ y Regents: 8:30 am Algebra I Regents: 12:30 pm Physics Regents: 12:30 pm O
+ ld Physics Regents: 12:30 pm Pre-Calculus Final: 9:45 am Foundations of CS
+ : 12:45 pm | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versio
+ n 14) | Source prints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-27-19c06af063b3c651@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270127T083000
+DTEND;TZID=America/New_York:20270127T093000
+SUMMARY:Regents — US History Regents
+DESCRIPTION:US History Regents at 8:30 am | Source: Regents Exams US Histor
+ y Regents: 8:30 am Algebra I Regents: 12:30 pm Physics Regents: 12:30 pm O
+ ld Physics Regents: 12:30 pm Pre-Calculus Final: 9:45 am Foundations of CS
+ : 12:45 pm | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versio
+ n 14) | Source prints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-27-6a7659e5fd2e9908@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270127T094500
+DTEND;TZID=America/New_York:20270127T104500
+SUMMARY:Regents — Pre-Calculus Final
+DESCRIPTION:Pre-Calculus Final at 9:45 am | Source: Regents Exams US Histor
+ y Regents: 8:30 am Algebra I Regents: 12:30 pm Physics Regents: 12:30 pm O
+ ld Physics Regents: 12:30 pm Pre-Calculus Final: 9:45 am Foundations of CS
+ : 12:45 pm | Stuyvesant High School 2026-2027 (November 10\, 2026\, Versio
+ n 14) | Source prints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-28-a7ee41bbc4339791@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270128T123000
+DTEND;TZID=America/New_York:20270128T133000
+SUMMARY:Regents — Geometry Regents
+DESCRIPTION:Geometry Regents at 12:30 pm | Source: Regents Exams Global Reg
+ ents: 8:30 am Geometry Regents: 12:30 pm Algebra II Final: 9:45 am AP Biol
+ ogy Final: 9:45 am Physics Final: 12:45 pm | Stuyvesant High School 2026-2
+ 027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour 
+ window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-28-7797dc66d7f90026@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270128T124500
+DTEND;TZID=America/New_York:20270128T134500
+SUMMARY:Regents — Physics Final
+DESCRIPTION:Physics Final at 12:45 pm | Source: Regents Exams Global Regent
+ s: 8:30 am Geometry Regents: 12:30 pm Algebra II Final: 9:45 am AP Biology
+  Final: 9:45 am Physics Final: 12:45 pm | Stuyvesant High School 2026-2027
+  (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour win
+ dow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-28-7fd294ac4c4d6093@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270128T083000
+DTEND;TZID=America/New_York:20270128T093000
+SUMMARY:Regents — Global Regents
+DESCRIPTION:Global Regents at 8:30 am | Source: Regents Exams Global Regent
+ s: 8:30 am Geometry Regents: 12:30 pm Algebra II Final: 9:45 am AP Biology
+  Final: 9:45 am Physics Final: 12:45 pm | Stuyvesant High School 2026-2027
+  (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour win
+ dow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-28-e204efbd1b3a447c@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270128T094500
+DTEND;TZID=America/New_York:20270128T104500
+SUMMARY:Regents — AP Biology Final
+DESCRIPTION:AP Biology Final at 9:45 am | Source: Regents Exams Global Rege
+ nts: 8:30 am Geometry Regents: 12:30 pm Algebra II Final: 9:45 am AP Biolo
+ gy Final: 9:45 am Physics Final: 12:45 pm | Stuyvesant High School 2026-20
+ 27 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour w
+ indow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-28-292d062630400642@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270128T094500
+DTEND;TZID=America/New_York:20270128T104500
+SUMMARY:Regents — Algebra II Final
+DESCRIPTION:Algebra II Final at 9:45 am | Source: Regents Exams Global Rege
+ nts: 8:30 am Geometry Regents: 12:30 pm Algebra II Final: 9:45 am AP Biolo
+ gy Final: 9:45 am Physics Final: 12:45 pm | Stuyvesant High School 2026-20
+ 27 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour w
+ indow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-29-7618695566e5ed11@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270129T124500
+DTEND;TZID=America/New_York:20270129T134500
+SUMMARY:Regents — AP CS Final
+DESCRIPTION:AP CS Final at 12:45 pm | Source: Regents Exams Biology Regents
+ : 8:30 am Algebra II Regents: 8:30 am Global Studies Final: 9:45 am AP US 
+ History Final: 9:45 am AP CS Final: 12:45 pm (Senior Grades) | Stuyvesant 
+ High School 2026-2027 (November 10\, 2026\, Version 14) | Source prints st
+ art only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-29-79fdf07156e3b2bd@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270129T083000
+DTEND;TZID=America/New_York:20270129T093000
+SUMMARY:Regents — Algebra II Regents
+DESCRIPTION:Algebra II Regents at 8:30 am | Source: Regents Exams Biology R
+ egents: 8:30 am Algebra II Regents: 8:30 am Global Studies Final: 9:45 am 
+ AP US History Final: 9:45 am AP CS Final: 12:45 pm (Senior Grades) | Stuyv
+ esant High School 2026-2027 (November 10\, 2026\, Version 14) | Source pri
+ nts start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-29-4f1947057f6f2d9f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270129T083000
+DTEND;TZID=America/New_York:20270129T093000
+SUMMARY:Regents — Biology Regents
+DESCRIPTION:Biology Regents at 8:30 am | Source: Regents Exams Biology Rege
+ nts: 8:30 am Algebra II Regents: 8:30 am Global Studies Final: 9:45 am AP 
+ US History Final: 9:45 am AP CS Final: 12:45 pm (Senior Grades) | Stuyvesa
+ nt High School 2026-2027 (November 10\, 2026\, Version 14) | Source prints
+  start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-29-a059db4f1bde2841@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270129T094500
+DTEND;TZID=America/New_York:20270129T104500
+SUMMARY:Regents — AP US History Final
+DESCRIPTION:AP US History Final at 9:45 am | Source: Regents Exams Biology 
+ Regents: 8:30 am Algebra II Regents: 8:30 am Global Studies Final: 9:45 am
+  AP US History Final: 9:45 am AP CS Final: 12:45 pm (Senior Grades) | Stuy
+ vesant High School 2026-2027 (November 10\, 2026\, Version 14) | Source pr
+ ints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-01-29-9150dfe2c60b1f15@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270129T094500
+DTEND;TZID=America/New_York:20270129T104500
+SUMMARY:Regents — Global Studies Final
+DESCRIPTION:Global Studies Final at 9:45 am | Source: Regents Exams Biology
+  Regents: 8:30 am Algebra II Regents: 8:30 am Global Studies Final: 9:45 a
+ m AP US History Final: 9:45 am AP CS Final: 12:45 pm (Senior Grades) | Stu
+ yvesant High School 2026-2027 (November 10\, 2026\, Version 14) | Source p
+ rints start only\; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-15-70e5180d0ec7878f@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270615T124500
+DTEND;TZID=America/New_York:20270615T134500
+SUMMARY:Regents — Music Appreciation
+DESCRIPTION:Music Appreciation at 12:45 pm | Source: Regents Exams ELA Rege
+ nts: 9:15 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-20
+ 27 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour w
+ indow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-15-9a0ee4f6f8baa52d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270615T091500
+DTEND;TZID=America/New_York:20270615T101500
+SUMMARY:Regents — ELA Regents
+DESCRIPTION:ELA Regents at 9:15 am | Source: Regents Exams ELA Regents: 9:1
+ 5 am Music Appreciation: 12:45 pm | Stuyvesant High School 2026-2027 (Nove
+ mber 10\, 2026\, Version 14) | Source prints start only\; 1-hour window is
+  for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-16-ec792e74346ce952@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270616T131500
+DTEND;TZID=America/New_York:20270616T141500
+SUMMARY:Regents — Algebra I Regents
+DESCRIPTION:Algebra I Regents at 1:15 pm | Source: Regents Exams Global Reg
+ ents: 9:15 am Algebra I Regents: 1:15 pm | Stuyvesant High School 2026-202
+ 7 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour wi
+ ndow is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-16-2ac58b7d5200a5d7@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270616T091500
+DTEND;TZID=America/New_York:20270616T101500
+SUMMARY:Regents — Global Regents
+DESCRIPTION:Global Regents at 9:15 am | Source: Regents Exams Global Regent
+ s: 9:15 am Algebra I Regents: 1:15 pm | Stuyvesant High School 2026-2027 (
+ November 10\, 2026\, Version 14) | Source prints start only\; 1-hour windo
+ w is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-17-e81fc7ca75174995@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270617T131500
+DTEND;TZID=America/New_York:20270617T141500
+SUMMARY:Regents — Algebra II Regents
+DESCRIPTION:Algebra II Regents at 1:15 pm | Source: Regents Exam Biology Re
+ gents: 9:15 am Algebra II Regents: 1:15 pm | Stuyvesant High School 2026-2
+ 027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour 
+ window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-17-03a2460629499d2d@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270617T091500
+DTEND;TZID=America/New_York:20270617T101500
+SUMMARY:Regents — Regents Exam Biology Regents
+DESCRIPTION:Regents Exam Biology Regents at 9:15 am | Source: Regents Exam 
+ Biology Regents: 9:15 am Algebra II Regents: 1:15 pm | Stuyvesant High Sch
+ ool 2026-2027 (November 10\, 2026\, Version 14) | Source prints start only
+ \; 1-hour window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-21-4581a5afae32c581@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270621T091500
+DTEND;TZID=America/New_York:20270621T101500
+SUMMARY:Regents — LOTE
+DESCRIPTION:LOTE at 9:15 am | Source: Regents Exams LOTE: 9:15 am Stamp: 9:
+ 15 am All Grades & Seniors (Grades by 9 am) | Stuyvesant High School 2026-
+ 2027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour
+  window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-21-d505f9d712421373@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270621T091500
+DTEND;TZID=America/New_York:20270621T101500
+SUMMARY:Regents — Stamp
+DESCRIPTION:Stamp at 9:15 am | Source: Regents Exams LOTE: 9:15 am Stamp: 9
+ :15 am All Grades & Seniors (Grades by 9 am) | Stuyvesant High School 2026
+ -2027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hou
+ r window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-22-6b7536132e0f31f0@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270622T131500
+DTEND;TZID=America/New_York:20270622T141500
+SUMMARY:Regents — Geometry Regents
+DESCRIPTION:Geometry Regents at 1:15 pm | Source: Regents Exams US History 
+ Regents: 9:15 am Geometry Regents: 1:15 pm | Stuyvesant High School 2026-2
+ 027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hour 
+ window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-22-ff29777957254811@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270622T091500
+DTEND;TZID=America/New_York:20270622T101500
+SUMMARY:Regents — US History Regents
+DESCRIPTION:US History Regents at 9:15 am | Source: Regents Exams US Histor
+ y Regents: 9:15 am Geometry Regents: 1:15 pm | Stuyvesant High School 2026
+ -2027 (November 10\, 2026\, Version 14) | Source prints start only\; 1-hou
+ r window is for calendar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-23-c14bcb68c7c2f2d8@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270623T091500
+DTEND;TZID=America/New_York:20270623T101500
+SUMMARY:Regents — Chemistry Regents
+DESCRIPTION:Chemistry Regents at 9:15 am | Source: Regents Exams Chemistry 
+ Regents: 9:15 am | Stuyvesant High School 2026-2027 (November 10\, 2026\, 
+ Version 14) | Source prints start only\; 1-hour window is for calendar dis
+ play.
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-2027-06-24-443b1c9e214e06e1@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270624T091500
+DTEND;TZID=America/New_York:20270624T101500
+SUMMARY:Regents — Physics Regents
+DESCRIPTION:Physics Regents at 9:15 am | Source: Regents Exams Physics Rege
+ nts: 9:15 am (Graduation) | Stuyvesant High School 2026-2027 (November 10\
+ , 2026\, Version 14) | Source prints start only\; 1-hour window is for cal
+ endar display.
+END:VEVENT
+BEGIN:VEVENT
+UID:ptwindow-2026-11-19-a71a14e8cad2db07@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261119T173000
+DTEND;TZID=America/New_York:20261119T200000
+SUMMARY:Stuyvesant — Parent-Teacher Evening
+DESCRIPTION:Social Studies\, Technology Testing PT Evening 5:30 pm—8:00 p
+ m B2 (Parent-Teacher) | Stuyvesant High School 2026-2027 (November 10\, 20
+ 26\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:ptwindow-2026-11-20-97b1f2d6d99dbcb4@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20261120T130000
+DTEND;TZID=America/New_York:20261120T150000
+SUMMARY:Stuyvesant — Parent-Teacher Afternoon
+DESCRIPTION:No Testing PT Afternoon 1:00 pm—3:00 pm A (Parent-Teacher) | 
+ Stuyvesant High School 2026-2027 (November 10\, 2026\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:ptwindow-2027-03-18-64c616474052399c@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270318T173000
+DTEND;TZID=America/New_York:20270318T200000
+SUMMARY:Stuyvesant — Parent-Teacher Evening
+DESCRIPTION:Social Studies\, Technology Testing PT Evening 5:30 pm—8:00 p
+ m A2 (Parent-Teacher) | Stuyvesant High School 2026-2027 (November 10\, 20
+ 26\, Version 14)
+END:VEVENT
+BEGIN:VEVENT
+UID:ptwindow-2027-03-19-61225ceffb61b524@stuyvesant-calendar.local
+DTSTAMP:20261117T013013Z
+DTSTART;TZID=America/New_York:20270319T130000
+DTEND;TZID=America/New_York:20270319T150000
+SUMMARY:Stuyvesant — Parent-Teacher Afternoon
+DESCRIPTION:SAT Exam (TBD) AM: SAT Suite PM: PT Afternoon 1:00 pm—3:00 pm
+  B (Parent-Teacher) | Stuyvesant High School 2026-2027 (November 10\, 2026
+ \, Version 14)
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stuyvesant-calendar.local/schema/stuyvesant_2026_2027_calendar.json",
+  "title": "Stuyvesant High School 2026-2027 Calendar",
+  "description": "Canonical calendar data for webcubed/sophomore-caucus (src/data/calendar.json). Do not break existing field names; extend only when necessary.",
+  "type": "object",
+  "required": ["calendar", "bellSchedules", "days", "regentsTimedEvents", "validation", "icsDesign"],
+  "properties": {
+    "calendar": {
+      "type": "object",
+      "required": ["school", "schoolYear", "timezone", "sourceCalendar", "sourceCalendarFile", "bellScheduleSource", "bellScheduleFile", "calendarVersion", "sourceVersionDate"],
+      "properties": {
+        "school": {"const": "Stuyvesant High School"},
+        "schoolYear": {"const": "2026-2027"},
+        "timezone": {"const": "America/New_York"},
+        "sourceCalendar": {"type": "string"},
+        "sourceCalendarFile": {"type": "string"},
+        "bellScheduleSource": {"type": "string"},
+        "bellScheduleFile": {"type": "string"},
+        "calendarVersion": {"type": "string", "pattern": "^[A-Z][a-z]+ \\d+, \\d{4}, Version \\d+$"},
+        "sourceVersionDate": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}
+      },
+      "additionalProperties": true
+    },
+    "bellSchedules": {
+      "type": "object",
+      "required": ["Regular", "Conference", "PSAT/NMSQT, SAT", "PTC", "Administrative Distribution", "Election Day"],
+      "additionalProperties": {
+        "type": "object",
+        "required": ["periods"],
+        "properties": {
+          "periods": {
+            "type": "array",
+            "minItems": 10,
+            "maxItems": 10,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {"type": "string", "pattern": "^\\d{2}:\\d{2}$"}
+            }
+          },
+          "teacherTime": {
+            "type": "object",
+            "properties": {
+              "1-9": {"type": "string"},
+              "2-10": {"type": "string"}
+            }
+          },
+          "additionalEvents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["summary", "start", "end"],
+              "properties": {
+                "summary": {"type": "string"},
+                "start": {"type": "string", "pattern": "^\\d{2}:\\d{2}$"},
+                "end": {"type": "string", "pattern": "^\\d{2}:\\d{2}$"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "sourceWording", "block", "blockFamily", "category", "scheduleType", "hasInstructionalPeriods", "sourcePage"],
+        "properties": {
+          "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "sourceWording": {"type": "string", "minLength": 1},
+          "block": {"enum": ["A", "A1", "A2", "B", "B1", "B2", null]},
+          "blockFamily": {"enum": ["A", "B", null]},
+          "category": {"enum": ["school_day", "holiday", "recess", "regents", "no_students", "professional_development", "rating_day", "special_schedule", "remote_learning", "parent_teacher", "exam_day", "last_day"]},
+          "scheduleType": {"type": ["string", "null"]},
+          "hasInstructionalPeriods": {"type": "boolean"},
+          "sourcePage": {"type": "integer", "minimum": 1, "maximum": 10}
+        }
+      }
+    },
+    "regentsTimedEvents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "summary", "time", "sourceWording"],
+        "properties": {
+          "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "summary": {"type": "string"},
+          "time": {"type": "string", "pattern": "^\\d{1,2}:\\d{2} [ap]m$"},
+          "sourceWording": {"type": "string"}
+        },
+        "not": {"required": ["end", "endTime", "end_time"]},
+        "description": "Start only. Do not invent end times."
+      }
+    },
+    "validation": {"type": "object"},
+    "icsDesign": {"type": "object"}
+  }
+}
