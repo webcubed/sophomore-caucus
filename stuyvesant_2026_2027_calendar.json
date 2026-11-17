@@ -850,7 +850,7 @@
       "block": "B2",
       "blockFamily": "B",
       "category": "parent_teacher",
-      "scheduleType": "PTC",
+      "scheduleType": "Regular",
       "hasInstructionalPeriods": true,
       "sourcePage": 3
     },
@@ -2733,11 +2733,12 @@
       }
     ],
     "sourceVersion": "November 10, 2026, Version 14",
-    "validatedAt": "2026-11-16T20:30:13.075210-05:00",
+    "validatedAt": "2026-11-17T06:50:12.596229-05:00",
     "notes": [
       "Counts calculated from day records, not hardcoded.",
       "Election Day bell schedule is not in bell-schedule PDF; copied from PTC (prior repo data).",
-      "Regents end times are not printed in source; JSON stores start only."
+      "Regents end times are not printed in source; JSON stores start only.",
+      "2026-11-19 (Thu) manually set to Regular bell per user instruction (PDF lists Parent-Teacher; PT Evening 5:30-8:00 kept as separate event). Revert if school publishes otherwise."
     ],
     "version10Changes": [
       {

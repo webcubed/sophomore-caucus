@@ -438,14 +438,14 @@ DESCRIPTION:Math\, Music and Art Testing A2 | Schedule: Regular | Stuyvesan
  t High School 2026-2027 (November 10\, 2026\, Version 14)
 END:VEVENT
 BEGIN:VEVENT
-UID:daily-2026-11-19-cd020080c88cf465@stuyvesant-calendar.local
+UID:daily-2026-11-19-c23272236c2fdb51@stuyvesant-calendar.local
 DTSTAMP:20261117T013013Z
-DTSTART;TZID=America/New_York:20261119T081500
-DTEND;TZID=America/New_York:20261119T121100
-SUMMARY:Stuyvesant — B2 — PTC
+DTSTART;TZID=America/New_York:20261119T080000
+DTEND;TZID=America/New_York:20261119T153500
+SUMMARY:Stuyvesant — B2 — Regular
 DESCRIPTION:Social Studies\, Technology Testing PT Evening 5:30 pm—8:00 p
- m B2 (Parent-Teacher) | Schedule: PTC | Stuyvesant High School 2026-2027 (
- November 10\, 2026\, Version 14)
+ m B2 (Parent-Teacher) | Schedule: Regular | Stuyvesant High School 2026-20
+ 27 (November 10\, 2026\, Version 14)
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-2026-11-20-90f646aa90fb1b90@stuyvesant-calendar.local
