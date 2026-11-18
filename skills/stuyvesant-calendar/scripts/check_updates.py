@@ -5,17 +5,25 @@ Pipeline:
  1. Lock (fcntl, non-blocking) — exit 0 quietly if already running.
  2. Resolve + download latest PDFs (or reuse cached if unchanged fetch fails).
  3. Hash-compare with state.json. Same hash -> log "no change", exit.
+    Exception: if Google Calendar is out of sync for that hash, retry the
+    Google rollover (same hash, Google step failed previously).
  4. Different hash -> save new PDF (keep old), extract, compare with previous
     JSON (human-readable change report), generate JSON+ICS, validate,
     publish via git (unless --no-publish).
- 5. Update state.json, append to run log.
+ 5. Google Calendar rollover (unless --skip-google / STUY_SKIP_GOOGLE=1):
+    create new calendar, import ICS, enable new / disable old. Recorded in
+    state as google_calendar_*. A Google failure after a successful git
+    publish leaves git files published but returns non-zero and the next run
+    retries the Google step (see step 3).
+ 6. Update state.json, append to run log.
 
 Never publishes incomplete files: any extraction/validation failure aborts
 before git operations and leaves repo files untouched.
 
 Usage:
   python3 check_updates.py --repo DIR [--state-dir DIR] [--dry-run] [--no-publish]
-  Env: STUY_REPO, STUY_STATE_DIR override defaults.
+                           [--skip-google]
+  Env: STUY_REPO, STUY_STATE_DIR, STUY_SKIP_GOOGLE override defaults.
 
 State dir default: ~/.hermes/stuyvesant-calendar (survives repo clones).
 Repo default: ~/work/stuy/sophomore-caucus (override with --repo / STUY_REPO).
@@ -45,6 +53,22 @@ def log(state_dir: Path, msg: str):
 def run(cmd: list[str], cwd: Path | None = None) -> tuple[int, str]:
     r = subprocess.run(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                        text=True, timeout=300)
+    return r.returncode, r.stdout
+
+
+def run_google_rollover(scripts: Path, ics_path: Path, version: str, sha: str,
+                        state_dir: Path) -> tuple[int, str]:
+    """Run google_calendar_rollover.py with Hermes venv python (has googleapiclient)."""
+    gscript = scripts / "google_calendar_rollover.py"
+    if not gscript.exists():
+        return 2, f"google_calendar_rollover.py not found: {gscript}"
+    venv = Path.home() / ".hermes/hermes-agent/.venv/bin/python"
+    py = str(venv) if venv.exists() else sys.executable
+    cmd = [py, str(gscript), "--ics", str(ics_path), "--version", version,
+           "--sha256", sha, "--state-dir", str(state_dir)]
+    # google import of ~239 events can take a while; allow 600s
+    r = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                       text=True, timeout=600)
     return r.returncode, r.stdout
 
 
@@ -99,8 +123,11 @@ def main() -> int:
     ap.add_argument("--state-dir", default=os.environ.get("STUY_STATE_DIR", str(Path.home() / ".hermes/stuyvesant-calendar")))
     ap.add_argument("--dry-run", action="store_true", help="Generate + validate but never publish.")
     ap.add_argument("--no-publish", action="store_true", help="Same as --dry-run (alias).")
+    ap.add_argument("--skip-google", action="store_true",
+                    help="Publish to git but skip Google Calendar rollover.")
     args = ap.parse_args()
     dry = args.dry_run or args.no_publish
+    skip_google = args.skip_google or os.environ.get("STUY_SKIP_GOOGLE", "") == "1"
 
     repo = Path(args.repo).resolve()
     state_dir = Path(args.state_dir).resolve()
@@ -155,6 +182,32 @@ def main() -> int:
     # 2) Hash compare
     prev_hash = state.get("calendar_sha256")
     if prev_hash == cal_hash:
+        # Same PDF, but Google rollover may still be pending (previous publish
+        # succeeded in git but Google failed). Retry it from the repo ICS.
+        google_synced = state.get("google_calendar_sha256") == cal_hash
+        if dry:
+            state["last_check"] = {"at": datetime.now(timezone.utc).isoformat(), "result": "dry_run_no_change", "sha256": cal_hash}
+            save_state(state_dir, state)
+            log(state_dir, f"dry-run: no change (sha256 {cal_hash[:12]}...); google_synced={google_synced}; no writes.")
+            return 0
+        if not skip_google and not google_synced:
+            ics_path = repo / "stuyvesant_2026_2027_calendar.ics"
+            ver = state.get("calendar_version", "")
+            log(state_dir, f"google rollover pending for sha {cal_hash[:12]}...; retrying ver={ver!r} ics={ics_path}")
+            rc, out = run_google_rollover(scripts, ics_path, ver, cal_hash, state_dir)
+            log(state_dir, f"google_calendar_rollover rc={rc}\n{out}")
+            if rc != 0:
+                state["last_failure"] = {"stage": "google_calendar", "at": datetime.now(timezone.utc).isoformat(), "msg": out[-2000:]}
+                state["last_check"] = {"at": datetime.now(timezone.utc).isoformat(), "result": "google_failed", "sha256": cal_hash}
+                save_state(state_dir, state)
+                log(state_dir, "ERROR: google rollover retry failed; old calendar left enabled.")
+                return 2
+            # google script updated state.json; reload so we don't clobber it
+            state = load_state(state_dir)
+            state["last_check"] = {"at": datetime.now(timezone.utc).isoformat(), "result": "google_synced", "sha256": cal_hash}
+            save_state(state_dir, state)
+            log(state_dir, f"google rollover synced on retry for sha {cal_hash[:12]}...")
+            return 0
         state["last_check"] = {"at": datetime.now(timezone.utc).isoformat(), "result": "no_change", "sha256": cal_hash}
         save_state(state_dir, state)
         log(state_dir, f"no change (sha256 {cal_hash[:12]}...). Exit.")
@@ -247,6 +300,24 @@ def main() -> int:
     state.pop("last_failure", None)
     save_state(state_dir, state)
     log(state_dir, f"published {new_ver} commit={commit}")
+
+    # 9) Google Calendar rollover (after git publish; failure does not roll back git)
+    if skip_google:
+        log(state_dir, "skip_google set; Google Calendar rollover skipped (will try next run).")
+        return 0
+    ics_path = repo / "stuyvesant_2026_2027_calendar.ics"
+    rc, out = run_google_rollover(scripts, ics_path, new_ver, cal_hash, state_dir)
+    log(state_dir, f"google_calendar_rollover rc={rc}\n{out}")
+    if rc != 0:
+        # reload state (google script may have recorded pending id), then mark failure
+        state = load_state(state_dir)
+        state["last_failure"] = {"stage": "google_calendar", "at": datetime.now(timezone.utc).isoformat(), "msg": out[-2000:]}
+        save_state(state_dir, state)
+        log(state_dir, "ERROR: git publish succeeded but Google rollover failed; next run will retry Google step. Old calendar left enabled.")
+        return 2
+    # google script updated state.json; reload and preserve google_* fields
+    state = load_state(state_dir)
+    log(state_dir, f"google rollover complete for {new_ver} calendar={state.get('google_calendar_summary')}")
     return 0
 
 
